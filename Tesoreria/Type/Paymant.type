@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="kapow.robot.common.domain.Type" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.6.0.4</version>
+      <version>11.0.0.0</version>
+    </saved-by-versions>
+    <file-type>type</file-type>
+  </prologue>
+  <property name="attributes" class="kapow.robot.common.domain.Attributes">
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">CodiceBeneficiarioPiteco</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="0"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SocietàCodPiteco</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">RP - REPLY SPA</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">CodSocietà</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Importo</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.DoubleAttributeType"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Società</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Beneficiario</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Causale</property>
+      <property name="type" idref="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Iban</property>
+      <property name="type" idref="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Esito</property>
+      <property name="type" idref="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Error</property>
+      <property name="type" idref="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">MessaggioRegistrazione</property>
+      <property name="type" idref="0"/>
+    </object>
+  </property>
+</object>
