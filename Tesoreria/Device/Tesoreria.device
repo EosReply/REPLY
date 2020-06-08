@@ -1,0 +1,7 @@
+#Hub Mapping
+#Thu Mar 12 10:11:33 CET 2020
+cluster=NonProduction
+managementConsoleUuid=21d17db6-5d97-4589-b0b9-d8275f0f8bef
+type=mc
+labels=Tesoreria
+managementConsoleName=Management Console
