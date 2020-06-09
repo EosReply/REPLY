@@ -2143,11 +2143,11 @@ VALUES
       </object>
       <object class="TransitionEdge">
         <from idref="96"/>
-        <to idref="87"/>
+        <to idref="86"/>
       </object>
       <object class="TransitionEdge">
         <from idref="97"/>
-        <to idref="87"/>
+        <to idref="86"/>
       </object>
       <object class="TransitionEdge">
         <from idref="100"/>
