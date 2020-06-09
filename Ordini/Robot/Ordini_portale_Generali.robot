@@ -23,10 +23,12 @@
       <typed-variable name="Request" type-name="InputRequest"/>
     </typed-variables>
     <global-variables>
+      <variable name="WriteFileConfReport"/>
       <variable name="WriteFileConfiguration"/>
       <variable name="Request"/>
     </global-variables>
     <parameters>
+      <parameter name="WriteFileConfReport" type-name="ConfigurationWriteFile"/>
       <parameter name="WriteFileConfiguration" type-name="ConfigurationWriteFile"/>
       <parameter name="Request" type-name="InputRequest"/>
     </parameters>
@@ -74,6 +76,8 @@
     </object>
     <object class="Variable" serializationversion="1">
       <property name="name" class="String">WriteFileConfReport</property>
+      <property name="parameter" class="Boolean">true</property>
+      <property name="global" class="Boolean">true</property>
       <property name="initialAssignment" class="InitialVariableAssignment">
         <property name="type" class="TypeReference" serializationversion="0" id="7">
           <property name="typeName" class="String">ConfigurationWriteFile</property>
