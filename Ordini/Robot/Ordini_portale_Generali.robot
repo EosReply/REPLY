@@ -211,7 +211,7 @@
         </property>
         <property name="assignments" class="AttributeAssignments">
           <property name="DataFrom" class="AttributeAssignment">
-            <property name="attributeValue" class="String">2020-03-01 09:52:53.362</property>
+            <property name="attributeValue" class="String">2020-06-09 18:57:37.236</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" class="java.lang.Class" id="15">kapow.robot.plugin.common.domain.DateAttributeType</property>
           </property>
