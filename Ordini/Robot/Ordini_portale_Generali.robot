@@ -117,6 +117,13 @@
         <property name="type" class="TypeReference" serializationversion="0">
           <property name="typeName" class="String">Order</property>
         </property>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="Cliente" class="AttributeAssignment">
+            <property name="attributeValue" class="String">Generali</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="8"/>
+          </property>
+        </property>
       </property>
     </object>
     <object class="Variable" serializationversion="1">
