@@ -153,7 +153,7 @@
         <property name="name" idref="6"/>
         <property name="stepAction" class="ExecuteCommandLine" serializationversion="0">
           <property name="commandLineExpression" class="Expression" serializationversion="1">
-            <property name="text" class="String">"net use "+ WriteFileConfiguration.Letter + ": \""+ WriteFileConfiguration.Root + " " + WriteFileConfiguration.Password +" "+"\" /user:" + WriteFileConfiguration.User </property>
+            <property name="text" class="String">"net use "+ WriteFileConfiguration.Letter + ": \""+ WriteFileConfiguration.Root + "\" " + WriteFileConfiguration.Password +" "+" /user:" + WriteFileConfiguration.User </property>
           </property>
           <property name="extractionType" class="kapow.robot.plugin.common.stateprocessor.executecommandline.StdErrExtractionType">
             <property name="storeDataIn" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -186,9 +186,9 @@
             <property name="value" class="String">test</property>
           </property>
           <property name="message" class="Expression" serializationversion="1">
-            <property name="text" class="String">"net use "+ WriteFileConfiguration.Letter + ": \""+ WriteFileConfiguration.Root + " " + WriteFileConfiguration.Password +" "+"\" /user:" + WriteFileConfiguration.User +
+            <property name="text" class="String">"net use "+ WriteFileConfiguration.Letter + ": \""+ WriteFileConfiguration.Root + "\" " + WriteFileConfiguration.Password +" "+" /user:" + WriteFileConfiguration.User +
 
-"error code : " +errorcode + " error " + error</property>
+" error code : " +errorcode + " error " + error</property>
           </property>
           <property name="mailServer" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
             <property name="value" class="String">smtprelay.replynet.prv</property>
