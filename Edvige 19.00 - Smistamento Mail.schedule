@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <schedule id="1">
-  <id>93087085445000</id>
+  <id>109739032552800</id>
   <name>Edvige 19.00 - Smistamento Mail</name>
   <blockJob id="2">
     <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
       <project id="4"/>
-      <name>Edvige 19.00 - Smistamento Mail1591870982224</name>
+      <name>Edvige 19.00 - Smistamento Mail1591887634788</name>
       <namedBlock>false</namedBlock>
       <childReference id="5">
         <child class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="6">
@@ -54,7 +54,7 @@
   &lt;__inputObjects&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige 19.00 - Smistamento Mail1591870982224#0#Edvige 19.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#WriteFileConfReport&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige 19.00 - Smistamento Mail1591887634788#0#Edvige 19.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#WriteFileConfReport&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -64,7 +64,7 @@
       &lt;__attributes&gt;
         &lt;Attribute&gt;
           &lt;type&gt;SHORT_TEXT&lt;/type&gt;
-          &lt;value&gt;https://admdocs.reply.com/sites/ISO9001/0.Riepiloghi REY e RPS&lt;/value&gt;
+          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001&lt;/value&gt;
           &lt;__name&gt;Root&lt;/__name&gt;
           &lt;required&gt;false&lt;/required&gt;
           &lt;visible&gt;true&lt;/visible&gt;
@@ -104,7 +104,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige 19.00 - Smistamento Mail1591870982224#0#Edvige 19.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#WriteFileConfiguration&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige 19.00 - Smistamento Mail1591887634788#0#Edvige 19.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#WriteFileConfiguration&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -114,7 +114,7 @@
       &lt;__attributes&gt;
         &lt;Attribute&gt;
           &lt;type&gt;SHORT_TEXT&lt;/type&gt;
-          &lt;value&gt;https://admdocs.reply.com/sites/ISO9001/0.Riepiloghi REY e RPS&lt;/value&gt;
+          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001&lt;/value&gt;
           &lt;__name&gt;Root&lt;/__name&gt;
           &lt;required&gt;false&lt;/required&gt;
           &lt;visible&gt;true&lt;/visible&gt;
@@ -154,7 +154,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige 19.00 - Smistamento Mail1591870982224#0#Edvige 19.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#mailconfiguration&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige 19.00 - Smistamento Mail1591887634788#0#Edvige 19.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#mailconfiguration&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -245,12 +245,12 @@
   <scheduler class="org.quartz.impl.StdScheduler" id="15">
     <scheduler/></scheduler>
   <trigger class="org.quartz.impl.triggers.SimpleTriggerImpl" id="16">
-    <name>93087085445000</name>
+    <name>109739032552800</name>
     <start id="17">2020-06-10 17:00:00.0 UTC</start>
     <interval>86400000</interval>
     <repeatCount>-1</repeatCount>
   </trigger>
   <revisionNumber>local</revisionNumber>
-  <lastModified id="18">2020-06-11 10:23:02.0 UTC</lastModified>
+  <lastModified id="18">2020-06-11 15:00:35.0 UTC</lastModified>
   <serializationVersion>1</serializationVersion>
 </schedule>
