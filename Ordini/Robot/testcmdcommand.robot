@@ -96,7 +96,7 @@
     <blockBeginStep class="BlockBeginStep" id="4"/>
     <steps class="ArrayList">
       <object class="Transition" serializationversion="3" id="5">
-        <property name="name" class="String">Execute Command Line</property>
+        <property name="name" class="String" id="6">Execute Command Line</property>
         <property name="stepAction" class="ExecuteCommandLine" serializationversion="0">
           <property name="commandLineExpression" class="Expression" serializationversion="1">
             <property name="text" class="String">"net use "+ WriteFileConfiguration.Letter + ": \""+ WriteFileConfiguration.Root + "\" /user:" + WriteFileConfiguration.User + " " + WriteFileConfiguration.Password</property>
@@ -119,8 +119,8 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="6">
-        <property name="name" class="String">Send Email</property>
+      <object class="Transition" serializationversion="3" id="7">
+        <property name="name" class="String" id="8">Send Email</property>
         <property name="stepAction" class="SendEmail">
           <property name="fromAddress" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
             <property name="value" class="String">noreply@reply.it</property>
@@ -149,7 +149,60 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="7"/>
+      <object class="Transition" serializationversion="3" id="9">
+        <property name="name" idref="6"/>
+        <property name="stepAction" class="ExecuteCommandLine" serializationversion="0">
+          <property name="commandLineExpression" class="Expression" serializationversion="1">
+            <property name="text" class="String">"net use "+ WriteFileConfiguration.Letter + ": \""+ WriteFileConfiguration.Root + "\" " + WriteFileConfiguration.Password +" "+" /user:" + WriteFileConfiguration.User </property>
+          </property>
+          <property name="extractionType" class="kapow.robot.plugin.common.stateprocessor.executecommandline.StdErrExtractionType">
+            <property name="storeDataIn" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">error</property>
+            </property>
+          </property>
+          <property name="exitCodeStoredIn" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">errorcode</property>
+          </property>
+          <property name="executeInRoboMaker" class="Boolean">true</property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="10">
+        <property name="name" idref="8"/>
+        <property name="stepAction" class="SendEmail">
+          <property name="fromAddress" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">noreply@reply.it</property>
+          </property>
+          <property name="toAddress" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">s.lazzarato@reply.it</property>
+          </property>
+          <property name="subject" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">test</property>
+          </property>
+          <property name="message" class="Expression" serializationversion="1">
+            <property name="text" class="String">"net use "+ WriteFileConfiguration.Letter + ": \""+ WriteFileConfiguration.Root + "\" " + WriteFileConfiguration.Password +" "+" /user:" + WriteFileConfiguration.User +
+
+" error code : " +errorcode + " error " + error</property>
+          </property>
+          <property name="mailServer" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">smtprelay.replynet.prv</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="End" id="11"/>
     </steps>
     <blockEndStep class="BlockEndStep"/>
     <edges class="ArrayList">
@@ -159,11 +212,19 @@
       </object>
       <object class="TransitionEdge">
         <from idref="5"/>
-        <to idref="6"/>
+        <to idref="7"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="6"/>
-        <to idref="7"/>
+        <from idref="7"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="9"/>
+        <to idref="10"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="10"/>
+        <to idref="11"/>
       </object>
     </edges>
   </property>
