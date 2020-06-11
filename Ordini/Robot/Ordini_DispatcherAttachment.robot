@@ -218,7 +218,7 @@ Fatto suca
             <property name="lastKnownAttributeType" class="java.lang.Class" id="12">kapow.robot.plugin.common.domain.PasswordAttributeType</property>
           </property>
           <property name="Root" class="AttributeAssignment">
-            <property name="attributeValue" class="String">http://testqbodocs13.reply.eu/sites/ISO9001/0.Riepiloghi REY e RPS</property>
+            <property name="attributeValue" class="String">https://admdocs.reply.com/sites/ISO9001/0.Riepiloghi REY e RPS</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="0"/>
           </property>
@@ -228,7 +228,7 @@ Fatto suca
             <property name="lastKnownAttributeType" idref="0"/>
           </property>
           <property name="relativePath" class="AttributeAssignment">
-            <property name="attributeValue" class="String">:\_anno\Ordini in sospeso\Report ordini</property>
+            <property name="attributeValue" class="String">:\_anno\Ordini sospesi\__Report ordini</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="0"/>
           </property>
@@ -253,7 +253,7 @@ Fatto suca
             <property name="lastKnownAttributeType" idref="12"/>
           </property>
           <property name="Root" class="AttributeAssignment">
-            <property name="attributeValue" class="String">http://testqbodocs13.reply.eu/sites/ISO9001/0.Riepiloghi REY e RPS</property>
+            <property name="attributeValue" class="String">https://admdocs.reply.com/sites/ISO9001/0.Riepiloghi REY e RPS</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="0"/>
           </property>
@@ -263,7 +263,7 @@ Fatto suca
             <property name="lastKnownAttributeType" idref="0"/>
           </property>
           <property name="relativePath" class="AttributeAssignment">
-            <property name="attributeValue" class="String">:\_anno\Ordini in sospeso\_mese\_filename</property>
+            <property name="attributeValue" class="String">:\_anno\Ordini sospesi\_mese\_filename</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="0"/>
           </property>
@@ -759,6 +759,7 @@ and DateTimeExtraction &lt; (select DateTimeExtraction from ordini_email where o
           </property>
           <property name="appendToFile" class="Boolean">true</property>
           <property name="createDirectories" class="Boolean">true</property>
+          <property name="executeInRoboMaker" class="Boolean">true</property>
         </property>
         <property name="elementFinders" class="ElementFinders"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0">
