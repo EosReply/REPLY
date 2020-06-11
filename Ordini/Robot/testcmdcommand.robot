@@ -38,6 +38,18 @@
         <property name="type" class="TypeReference" serializationversion="0">
           <property name="typeName" class="String">ConfigurationWriteFile</property>
         </property>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="Letter" class="AttributeAssignment">
+            <property name="attributeValue" class="String">T</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class">kapow.robot.plugin.common.domain.StringAttributeType</property>
+          </property>
+          <property name="Password" class="AttributeAssignment">
+            <property name="attributeValue" class="String">EncryptedPassword(1){zWidVa0NNyeBWeYI}</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class">kapow.robot.plugin.common.domain.PasswordAttributeType</property>
+          </property>
+        </property>
       </property>
     </object>
   </property>
@@ -73,6 +85,11 @@
           <property name="commandLineExpression" class="Expression" serializationversion="1">
             <property name="text" class="String">"net use "+ WriteFileConfiguration.Letter + ": \""+ WriteFileConfiguration.Root + "\" /user:" + WriteFileConfiguration.User + " " + WriteFileConfiguration.Password</property>
           </property>
+          <property name="extractionType" class="kapow.robot.plugin.common.stateprocessor.executecommandline.StdErrExtractionType">
+            <property name="storeDataIn" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">WriteFileConfiguration.relativePath</property>
+            </property>
+          </property>
           <property name="exitCodeStoredIn" class="kapow.robot.plugin.common.support.AttributeName2">
             <property name="name" class="String">WriteFileConfiguration.Letter</property>
           </property>
@@ -93,7 +110,7 @@
             <property name="name" idref="0"/>
           </property>
         </property>
-        <property name="elementFinders" class="ElementFinders"/>
+        <property name="elementFinders" class="ElementFinders" id="6"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -101,7 +118,34 @@
         <property name="enabled" idref="2"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="6"/>
+      <object class="Transition" serializationversion="3" id="7">
+        <property name="name" class="String">Send Email</property>
+        <property name="stepAction" class="SendEmail">
+          <property name="fromAddress" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">noreply@reply.it</property>
+          </property>
+          <property name="toAddress" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">s.lazzarato@reply.it</property>
+          </property>
+          <property name="subject" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">test</property>
+          </property>
+          <property name="message" class="Expression" serializationversion="1">
+            <property name="text" class="String">"error code : " +WriteFileConfiguration.Letter + " _" + WriteFileConfiguration.relativePath</property>
+          </property>
+          <property name="mailServer" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">smtprelay.replynet.prv</property>
+          </property>
+        </property>
+        <property name="elementFinders" idref="6"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="2"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="End" id="8"/>
     </steps>
     <blockEndStep class="BlockEndStep"/>
     <edges class="ArrayList">
@@ -115,7 +159,11 @@
       </object>
       <object class="TransitionEdge">
         <from idref="5"/>
-        <to idref="6"/>
+        <to idref="7"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="7"/>
+        <to idref="8"/>
       </object>
     </edges>
   </property>
