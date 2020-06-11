@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <schedule id="1">
-  <id>105695692920600</id>
+  <id>106917110292300</id>
   <name>Schedule 1</name>
   <blockJob id="2">
     <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
       <project id="4"/>
-      <name>Schedule 11591883591297</name>
+      <name>Schedule 11591884812765</name>
       <namedBlock>false</namedBlock>
       <childReference id="5">
         <child class="concurrentBlock" id="6">
@@ -40,7 +40,7 @@
   &lt;__inputObjects&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Schedule 11591883591297#0#Schedule 1:middleBlock#0#Ordini/Robot/testcmdcommand#WriteFileConfiguration&lt;/__variableName&gt;
+      &lt;__variableName&gt;Schedule 11591884812765#0#Schedule 1:middleBlock#0#Ordini/Robot/testcmdcommand#WriteFileConfiguration&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -50,7 +50,7 @@
       &lt;__attributes&gt;
         &lt;Attribute&gt;
           &lt;type&gt;SHORT_TEXT&lt;/type&gt;
-          &lt;value&gt;https://admdocs.reply.com/sites/ISO9001/0.Riepiloghi REY e RPS&lt;/value&gt;
+          &lt;value&gt;\\admdocs.reply.com@SSL\DavWWWRoot\sites\ISO9001\0.Riepiloghi REY e RPS&lt;/value&gt;
           &lt;__name&gt;Root&lt;/__name&gt;
           &lt;required&gt;false&lt;/required&gt;
           &lt;visible&gt;true&lt;/visible&gt;
@@ -107,12 +107,12 @@
   <scheduler class="org.quartz.impl.StdScheduler" id="12">
     <scheduler/></scheduler>
   <trigger class="org.quartz.impl.triggers.SimpleTriggerImpl" id="13">
-    <name>105695692920600</name>
+    <name>106917110292300</name>
     <start id="14">2020-06-11 11:50:00.0 UTC</start>
     <interval>3600000</interval>
     <repeatCount>-1</repeatCount>
   </trigger>
   <revisionNumber>local</revisionNumber>
-  <lastModified id="15">2020-06-11 13:53:11.0 UTC</lastModified>
+  <lastModified id="15">2020-06-11 14:13:33.0 UTC</lastModified>
   <serializationVersion>1</serializationVersion>
 </schedule>
