@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <schedule id="1">
-  <id>114240596121900</id>
+  <id>114937451068400</id>
   <name>Dobby - Portale Generali</name>
   <blockJob id="2">
     <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
       <project id="4"/>
-      <name>Dobby - Portale Generali1591892136513</name>
+      <name>Dobby - Portale Generali1591892833389</name>
       <namedBlock>false</namedBlock>
       <childReference id="5">
         <child class="concurrentBlock" id="6">
@@ -40,7 +40,7 @@
   &lt;__inputObjects&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Dobby - Portale Generali1591892136513#0#Dobby - Portale Generali:middleBlock#0#Ordini/Robot/Ordini_portale_Generali#Request&lt;/__variableName&gt;
+      &lt;__variableName&gt;Dobby - Portale Generali1591892833389#0#Dobby - Portale Generali:middleBlock#0#Ordini/Robot/Ordini_portale_Generali#Request&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -82,7 +82,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Dobby - Portale Generali1591892136513#0#Dobby - Portale Generali:middleBlock#0#Ordini/Robot/Ordini_portale_Generali#WriteFileConfReport&lt;/__variableName&gt;
+      &lt;__variableName&gt;Dobby - Portale Generali1591892833389#0#Dobby - Portale Generali:middleBlock#0#Ordini/Robot/Ordini_portale_Generali#WriteFileConfReport&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -92,7 +92,7 @@
       &lt;__attributes&gt;
         &lt;Attribute&gt;
           &lt;type&gt;SHORT_TEXT&lt;/type&gt;
-          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001&lt;/value&gt;
+          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001/0.Riepiloghi REY e RPS&lt;/value&gt;
           &lt;__name&gt;Root&lt;/__name&gt;
           &lt;required&gt;false&lt;/required&gt;
           &lt;visible&gt;true&lt;/visible&gt;
@@ -132,7 +132,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Dobby - Portale Generali1591892136513#0#Dobby - Portale Generali:middleBlock#0#Ordini/Robot/Ordini_portale_Generali#WriteFileConfiguration&lt;/__variableName&gt;
+      &lt;__variableName&gt;Dobby - Portale Generali1591892833389#0#Dobby - Portale Generali:middleBlock#0#Ordini/Robot/Ordini_portale_Generali#WriteFileConfiguration&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -142,7 +142,7 @@
       &lt;__attributes&gt;
         &lt;Attribute&gt;
           &lt;type&gt;SHORT_TEXT&lt;/type&gt;
-          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001&lt;/value&gt;
+          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001/0.Riepiloghi REY e RPS&lt;/value&gt;
           &lt;__name&gt;Root&lt;/__name&gt;
           &lt;required&gt;false&lt;/required&gt;
           &lt;visible&gt;true&lt;/visible&gt;
@@ -201,12 +201,12 @@
   <scheduler class="org.quartz.impl.StdScheduler" id="12">
     <scheduler/></scheduler>
   <trigger class="org.quartz.impl.triggers.SimpleTriggerImpl" id="13">
-    <name>114240596121900</name>
+    <name>114937451068400</name>
     <start id="14">2020-06-10 16:00:00.0 UTC</start>
     <interval>86400000</interval>
     <repeatCount>-1</repeatCount>
   </trigger>
   <revisionNumber>local</revisionNumber>
-  <lastModified id="15">2020-06-11 16:15:37.0 UTC</lastModified>
+  <lastModified id="15">2020-06-11 16:27:13.0 UTC</lastModified>
   <serializationVersion>1</serializationVersion>
 </schedule>
