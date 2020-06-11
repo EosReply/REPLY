@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <schedule id="1">
-  <id>95865140066600</id>
+  <id>105820218794100</id>
   <name>Edvige 13.00 - Smistamento Mail</name>
   <blockJob id="2">
     <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
       <project id="4"/>
-      <name>Edvige 13.00 - Smistamento Mail1591873760376</name>
+      <name>Edvige 13.00 - Smistamento Mail1591883715827</name>
       <namedBlock>false</namedBlock>
       <childReference id="5">
         <child class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="6">
@@ -54,7 +54,7 @@
   &lt;__inputObjects&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige 13.00 - Smistamento Mail1591873760376#0#Edvige 13.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#WriteFileConfReport&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige 13.00 - Smistamento Mail1591883715827#0#Edvige 13.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#WriteFileConfReport&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -88,7 +88,7 @@
         &lt;/Attribute&gt;
         &lt;Attribute&gt;
           &lt;type&gt;SHORT_TEXT&lt;/type&gt;
-          &lt;value&gt;Z&lt;/value&gt;
+          &lt;value&gt;T&lt;/value&gt;
           &lt;__name&gt;Letter&lt;/__name&gt;
           &lt;required&gt;false&lt;/required&gt;
           &lt;visible&gt;true&lt;/visible&gt;
@@ -104,7 +104,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige 13.00 - Smistamento Mail1591873760376#0#Edvige 13.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#WriteFileConfiguration&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige 13.00 - Smistamento Mail1591883715827#0#Edvige 13.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#WriteFileConfiguration&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -138,7 +138,7 @@
         &lt;/Attribute&gt;
         &lt;Attribute&gt;
           &lt;type&gt;SHORT_TEXT&lt;/type&gt;
-          &lt;value&gt;Z&lt;/value&gt;
+          &lt;value&gt;T&lt;/value&gt;
           &lt;__name&gt;Letter&lt;/__name&gt;
           &lt;required&gt;false&lt;/required&gt;
           &lt;visible&gt;true&lt;/visible&gt;
@@ -154,7 +154,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige 13.00 - Smistamento Mail1591873760376#0#Edvige 13.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#mailconfiguration&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige 13.00 - Smistamento Mail1591883715827#0#Edvige 13.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#mailconfiguration&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -230,28 +230,27 @@
     <active>false</active>
     <displayNameMap>{"1Ordini/Robot/Ordini_DispatcherAttachment":"Ordini/Robot/Ordini_DispatcherAttachment","0Ordini/Robot/Ordini_processFolderMail":"Ordini/Robot/Ordini_processFolderMail"}</displayNameMap>
   </blockJob>
-  <totalRuns>3</totalRuns>
+  <totalRuns>0</totalRuns>
   <active>false</active>
   <useEmailNotification>true</useEmailNotification>
   <emails>s.lazzarato@reply.it</emails>
-  <previousRun id="13">2020-06-11 11:32:22.0 UTC</previousRun>
-  <nextRun id="14">2020-06-12 11:00:00.0 UTC</nextRun>
+  <nextRun id="13">2020-06-12 11:00:00.0 UTC</nextRun>
   <maxRuntime>-1</maxRuntime>
   <maxObjectsExtracted>-1</maxObjectsExtracted>
   <createdBy>admin</createdBy>
   <modifiedBy>admin</modifiedBy>
-  <cluster id="15">
+  <cluster id="14">
     <name>NonProduction</name>
   </cluster>
-  <scheduler class="org.quartz.impl.StdScheduler" id="16">
+  <scheduler class="org.quartz.impl.StdScheduler" id="15">
     <scheduler/></scheduler>
-  <trigger class="org.quartz.impl.triggers.SimpleTriggerImpl" id="17">
-    <name>95865140066600</name>
-    <start id="18">2020-06-10 11:00:00.0 UTC</start>
+  <trigger class="org.quartz.impl.triggers.SimpleTriggerImpl" id="16">
+    <name>105820218794100</name>
+    <start id="17">2020-06-10 11:00:00.0 UTC</start>
     <interval>86400000</interval>
     <repeatCount>-1</repeatCount>
   </trigger>
   <revisionNumber>local</revisionNumber>
-  <lastModified id="19">2020-06-11 11:09:20.0 UTC</lastModified>
+  <lastModified id="18">2020-06-11 13:55:16.0 UTC</lastModified>
   <serializationVersion>1</serializationVersion>
 </schedule>
