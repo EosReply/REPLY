@@ -2851,7 +2851,7 @@
                                 "version":0
                               },
                               "gizmo":{
-                                "text": { "string": "10" }
+                                "text": { "string": "20" }
                               }
                             }
                           }
