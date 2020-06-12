@@ -182,7 +182,7 @@
         <property name="name" class="String" id="11">Test Value</property>
         <property name="stepAction" class="TestValue" serializationversion="0">
           <property name="condition" class="Expression" serializationversion="1">
-            <property name="text" class="String">toLowerCase(cassettoFiscaleConfigurationWs.Operation) == "search"</property>
+            <property name="text" class="String">toLowerCase(cassettoFiscaleConfigurationWs.Operation) == "search" &amp;&amp; cassettoFiscaleSearchRequest.piva != ""</property>
           </property>
         </property>
         <property name="elementFinders" class="ElementFinders" id="12"/>
@@ -353,7 +353,7 @@
         <property name="name" idref="11"/>
         <property name="stepAction" class="TestValue" serializationversion="0">
           <property name="condition" class="Expression" serializationversion="1">
-            <property name="text" class="String">toLowerCase(cassettoFiscaleConfigurationWs.Operation) == "searchall"</property>
+            <property name="text" class="String">toLowerCase(cassettoFiscaleConfigurationWs.Operation) == "search" &amp;&amp; cassettoFiscaleSearchRequest.piva ==""</property>
           </property>
         </property>
         <property name="elementFinders" idref="12"/>
@@ -498,7 +498,7 @@
         <property name="name" idref="11"/>
         <property name="stepAction" class="TestValue" serializationversion="0">
           <property name="condition" class="Expression" serializationversion="1">
-            <property name="text" class="String">toLowerCase(cassettoFiscaleConfigurationWs.Operation) == "match"</property>
+            <property name="text" class="String">toLowerCase(cassettoFiscaleConfigurationWs.Operation) == "match" &amp;&amp; cassettoFiscaleSearchRequest.piva != ""</property>
           </property>
         </property>
         <property name="elementFinders" idref="12"/>
@@ -643,7 +643,7 @@
         <property name="name" idref="11"/>
         <property name="stepAction" class="TestValue" serializationversion="0">
           <property name="condition" class="Expression" serializationversion="1">
-            <property name="text" class="String">toLowerCase(cassettoFiscaleConfigurationWs.Operation) == "matchall"</property>
+            <property name="text" class="String">toLowerCase(cassettoFiscaleConfigurationWs.Operation) == "match" &amp;&amp; cassettoFiscaleSearchRequest.piva ==""</property>
           </property>
         </property>
         <property name="elementFinders" class="ElementFinders"/>
