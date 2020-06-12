@@ -646,7 +646,7 @@
                                     "version":0
                                   },
                                   "gizmo":{
-                                    "text": { "string": "C:\\Users\\s.lazzarato\\Documents\\Piteco\\PitecoLauncher.exe" }
+                                    "text": { "string": "=Conf.PathPiteco" }
                                   }
                                 }
                               }
