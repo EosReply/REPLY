@@ -36,6 +36,7 @@
     <parameters>
       <parameter name="configurationWriteFile" type-name="ConfigurationWriteFile"/>
       <parameter name="configurationWriteFileParcheggi" type-name="ConfigurationWriteFile"/>
+      <parameter name="mailConfiguration" type-name="MailConfiguration"/>
     </parameters>
     <return-variables/>
     <store-in-database-variables>
@@ -187,6 +188,7 @@
     </object>
     <object class="Variable" serializationversion="1">
       <property name="name" class="String">mailConfiguration</property>
+      <property name="parameter" class="Boolean">true</property>
       <property name="global" class="Boolean">true</property>
       <property name="initialAssignment" class="InitialVariableAssignment">
         <property name="type" class="TypeReference" serializationversion="0">
