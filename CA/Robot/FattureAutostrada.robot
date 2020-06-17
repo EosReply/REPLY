@@ -3287,11 +3287,6 @@
                 <property name="value" class="String">'Fatture Passive'!</property>
               </property>
               <property name="usage" class="CellFromRange">
-                <property name="columnId" class="ByIndexExcelColumnId">
-                  <property name="offset" class="kapow.robot.plugin.common.support.expression.integerexpr.ValueIntegerExpression">
-                    <property name="value" class="Integer">1</property>
-                  </property>
-                </property>
                 <property name="rowId" class="ByIndexExcelRowId">
                   <property name="offset" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
                     <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
