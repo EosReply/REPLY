@@ -252,6 +252,34 @@
       </property>
     </object>
     <object class="Variable" serializationversion="1">
+      <property name="name" class="String">indexrowGeneralReport</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="14"/>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="value" class="AttributeAssignment">
+            <property name="attributeValue" class="String">1</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="15"/>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">indexDocDownload</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="14"/>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="value" class="AttributeAssignment">
+            <property name="attributeValue" class="String">0</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="15"/>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
       <property name="name" class="String" id="18">contratto</property>
       <property name="initialAssignment" class="InitialVariableAssignment">
         <property name="type" idref="5"/>
@@ -3443,15 +3471,15 @@
       </object>
       <object class="End" id="212"/>
       <object class="Transition" serializationversion="3" id="213">
-        <property name="name" class="String">Assign Data</property>
+        <property name="name" class="String">Assign Datanow</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
-              <property name="name" idref="0"/>
+              <property name="name" class="String">caConfigurazioneAutostrade.Data</property>
             </property>
           </property>
           <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
-            <property name="name" class="String">caConfigurazioneAutostrade.Data</property>
+            <property name="name" idref="0"/>
           </property>
         </property>
         <property name="elementFinders" idref="30"/>
