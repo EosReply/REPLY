@@ -1994,7 +1994,7 @@ VALUES
           <property name="createDirectories" class="Boolean">true</property>
           <property name="executeInRoboMaker" class="Boolean">true</property>
         </property>
-        <property name="elementFinders" class="ElementFinders" id="106"/>
+        <property name="elementFinders" class="ElementFinders"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -2002,7 +2002,7 @@ VALUES
         <property name="enabled" idref="14"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="107">
+      <object class="Transition" serializationversion="3" id="106">
         <property name="name" idref="46"/>
         <property name="stepAction" class="WriteFile" serializationversion="0">
           <property name="fileNameExpression" class="Expression" serializationversion="1">
@@ -2016,7 +2016,7 @@ VALUES
           <property name="createDirectories" class="Boolean">true</property>
           <property name="executeInRoboMaker" class="Boolean">true</property>
         </property>
-        <property name="elementFinders" idref="106"/>
+        <property name="elementFinders" class="ElementFinders"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -2024,7 +2024,7 @@ VALUES
         <property name="enabled" idref="14"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="108">
+      <object class="Transition" serializationversion="3" id="107">
         <property name="name" idref="18"/>
         <property name="stepAction" class="ExecuteCommandLine" serializationversion="0">
           <property name="commandLineExpression" class="Expression" serializationversion="1">
@@ -2040,7 +2040,7 @@ VALUES
         <property name="enabled" idref="14"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="109"/>
+      <object class="End" id="108"/>
     </steps>
     <blockEndStep class="BlockEndStep"/>
     <edges class="ArrayList">
@@ -2370,15 +2370,15 @@ VALUES
       </object>
       <object class="TransitionEdge">
         <from idref="105"/>
+        <to idref="106"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="106"/>
         <to idref="107"/>
       </object>
       <object class="TransitionEdge">
         <from idref="107"/>
         <to idref="108"/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="108"/>
-        <to idref="109"/>
       </object>
     </edges>
   </property>
