@@ -251,7 +251,7 @@ Fatto suca
             <property name="lastKnownAttributeType" idref="0"/>
           </property>
           <property name="relativePath" class="AttributeAssignment">
-            <property name="attributeValue" class="String">:\_anno\Ordini sospesi\__Report ordini</property>
+            <property name="attributeValue" class="String">:\_anno\Ordini in Sospeso\__Report ordini</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="0"/>
           </property>
@@ -286,7 +286,7 @@ Fatto suca
             <property name="lastKnownAttributeType" idref="0"/>
           </property>
           <property name="relativePath" class="AttributeAssignment">
-            <property name="attributeValue" class="String">:\_anno\Ordini sospesi\_mese\_filename</property>
+            <property name="attributeValue" class="String">:\_anno\Ordini in Sospeso\_mese\_filename</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="0"/>
           </property>
@@ -1333,8 +1333,19 @@ where IdMail='&lt;&lt; +idMail + &gt;&gt;'&lt;&lt;</property>
         <property name="name" idref="20"/>
         <property name="stepAction" class="ExecuteCommandLine" serializationversion="0">
           <property name="commandLineExpression" class="Expression" serializationversion="1">
-            <property name="text" class="String">&gt;&gt;jar -cMf &lt;&lt; + dir + &gt;&gt;.zip &lt;&lt; + dir </property>
+            <property name="text" class="String">
+
+&gt;&gt;\\TO0EOSRPAT01\Utils\EOS_ZipManager\EOS_ZipManager.exe "&lt;&lt; + dir + &gt;&gt;" &lt;&lt; + Ordine.NumeroOrdine + "_"+Ordine.Cliente+idatt+"_allegati"+ attachment.AttachmentName</property>
           </property>
+          <property name="extractionType" class="kapow.robot.plugin.common.stateprocessor.executecommandline.JoinedStdOutAndErrExtractionType">
+            <property name="storeDataIn" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" idref="12"/>
+            </property>
+          </property>
+          <property name="exitCodeStoredIn" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" idref="6"/>
+          </property>
+          <property name="executeInRoboMaker" class="Boolean">true</property>
         </property>
         <property name="elementFinders" idref="56"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
