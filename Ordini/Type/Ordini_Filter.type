@@ -100,5 +100,9 @@ This is different than the Account if you are trying to read someone else's inbo
       <property name="type" class="kapow.robot.plugin.common.domain.BooleanAttributeType"/>
       <property name="defaultValue" class="String">true</property>
     </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">multiOrder</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.BooleanAttributeType"/>
+    </object>
   </property>
 </object>
