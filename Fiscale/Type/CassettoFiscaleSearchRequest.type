@@ -13,6 +13,11 @@
       <property name="required" class="Boolean">true</property>
     </object>
     <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Emesse</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.BooleanAttributeType"/>
+      <property name="defaultValue" class="String">false</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
       <property name="name" class="String">pin</property>
       <property name="type" class="kapow.robot.plugin.common.domain.PasswordAttributeType" id="0"/>
       <property name="required" class="Boolean">true</property>

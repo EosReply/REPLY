@@ -80,7 +80,7 @@
         </property>
         <property name="assignments" class="AttributeAssignments">
           <property name="Operation" class="AttributeAssignment">
-            <property name="attributeValue" class="String">search</property>
+            <property name="attributeValue" class="String">match</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" class="java.lang.Class" id="3">kapow.robot.plugin.common.domain.StringAttributeType</property>
           </property>
@@ -141,34 +141,39 @@
             <property name="lastKnownAttributeType" class="java.lang.Class">kapow.robot.plugin.common.domain.BooleanAttributeType</property>
           </property>
           <property name="endDate" class="AttributeAssignment">
-            <property name="attributeValue" class="String">2020-06-12 09:46:24.967</property>
+            <property name="attributeValue" class="String">2020-06-03 09:46:24.967</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" class="java.lang.Class" id="5">kapow.robot.plugin.common.domain.DateAttributeType</property>
           </property>
           <property name="group" class="AttributeAssignment">
-            <property name="attributeValue" class="String">reply</property>
+            <property name="attributeValue" class="String">ccno</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="3"/>
           </property>
           <property name="login" class="AttributeAssignment">
-            <property name="attributeValue" class="String">DMRSFN79B43L219Q</property>
+            <property name="attributeValue" class="String">ccno_login</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="3"/>
           </property>
           <property name="password" class="AttributeAssignment">
-            <property name="attributeValue" class="String">EncryptedPassword(1){u1d4IY/jUkGdb74=}</property>
+            <property name="attributeValue" class="String">EncryptedPassword(1){3WiZT6oKZ2jBr/QZTA==}</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" class="java.lang.Class" id="6">kapow.robot.plugin.common.domain.PasswordAttributeType</property>
           </property>
           <property name="pin" class="AttributeAssignment">
-            <property name="attributeValue" class="String">EncryptedPassword(1){rjdgE4PMPS6GcA==}</property>
+            <property name="attributeValue" class="String">EncryptedPassword(1){3WiZT6oKb2M=}</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="6"/>
           </property>
           <property name="startDate" class="AttributeAssignment">
-            <property name="attributeValue" class="String">2020-04-12 09:46:23.371</property>
+            <property name="attributeValue" class="String">2020-06-01 09:46:23.371</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="5"/>
+          </property>
+          <property name="typeRequest" class="AttributeAssignment">
+            <property name="attributeValue" class="String">1</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class">kapow.robot.plugin.common.domain.IntegerAttributeType</property>
           </property>
         </property>
       </property>
@@ -843,6 +848,7 @@
  "Downloadfile": &lt;&lt;+cassettoFiscaleSearchRequest.downloadFile+&gt;&gt;,
   "Downloadmetadati": &lt;&lt;+cassettoFiscaleSearchRequest.downloadMetadati+&gt;&gt;,
   "Downloadreport": &lt;&lt;+cassettoFiscaleSearchRequest.downloadReport+&gt;&gt;,
+  "Emesse":&lt;&lt;+cassettoFiscaleSearchRequest.Emesse+&gt;&gt;,
   "password": "&lt;&lt;+cassettoFiscaleSearchRequest.password+&gt;&gt;"
 }&lt;&lt;</property>
               </property>
@@ -857,6 +863,7 @@
             </property>
           </property>
           <property name="browserConfigurationSpecification" class="BrowserConfigurationSpecificationWebKit" serializationversion="26">
+            <property name="timeout" class="Double">6000.0</property>
             <property name="headerProvider" class="kapow.robot.plugin.common.support.browser2.requestheaders.ListHeaderProvider">
               <property name="headers" class="BeanList">
                 <object class="kapow.robot.plugin.common.support.browser2.requestheaders.RequestHeader">
@@ -871,6 +878,7 @@
             <property name="ancestorProvider" class="BrowserConfigurationSpecificationAncestorProviderForStep"/>
             <property name="changedProperties" class="java.util.HashSet">
               <element class="String">headerProvider</element>
+              <element class="String">timeout</element>
             </property>
           </property>
         </property>
