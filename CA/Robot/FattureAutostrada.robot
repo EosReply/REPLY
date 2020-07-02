@@ -4388,7 +4388,7 @@
             </property>
           </property>
           <property name="sql" class="Expression" serializationversion="1">
-            <property name="text" class="String">"delete from reply_rpa.ca_documentoautostrade where contratto = 0 or numero = 0"</property>
+            <property name="text" class="String">"delete from reply_rpa.ca_documentoautostrade where contratto = '0' or numero = '0'"</property>
           </property>
         </property>
         <property name="elementFinders" class="ElementFinders"/>
