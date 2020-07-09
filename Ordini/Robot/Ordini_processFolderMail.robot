@@ -3317,7 +3317,8 @@ Later we download all the attachment names and check them more throughly</proper
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
       <object class="End" id="174"/>
-      <object class="Transition" serializationversion="3" id="175">
+      <object class="Try" id="175"/>
+      <object class="Transition" serializationversion="3" id="176">
         <property name="name" class="String">Assign ID MAIL</property>
         <property name="stepAction" class="CalculateKey" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
@@ -3328,7 +3329,11 @@ Later we download all the attachment names and check them more throughly</proper
           </property>
         </property>
         <property name="elementFinders" idref="159"/>
-        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative"/>
+        </property>
         <property name="comment">
           <null/>
         </property>
@@ -3337,7 +3342,7 @@ Later we download all the attachment names and check them more throughly</proper
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="176">
+      <object class="Transition" serializationversion="3" id="177">
         <property name="name" class="String">Salvataggio sul db attachment</property>
         <property name="stepAction" class="StoreInDatabase" serializationversion="0">
           <property name="db" class="kapow.robot.plugin.common.support.expression.stringexpr.DBNameValueStringExpression">
@@ -3359,16 +3364,17 @@ Later we download all the attachment names and check them more throughly</proper
           <element class="String">name</element>
         </property>
       </object>
-      <object class="End" id="177"/>
-      <object class="Group" id="178">
+      <object class="End" id="178"/>
+      <object class="End" id="179"/>
+      <object class="Group" id="180">
         <name class="String">Mark Email in Outlook as "processed"</name>
         <comment>
           <null/>
         </comment>
-        <blockBeginStep class="BlockBeginStep" id="179"/>
+        <blockBeginStep class="BlockBeginStep" id="181"/>
         <steps class="ArrayList">
-          <object class="Try" id="180"/>
-          <object class="Transition" serializationversion="3" id="181">
+          <object class="Try" id="182"/>
+          <object class="Transition" serializationversion="3" id="183">
             <property name="name" class="String">mark as read?</property>
             <property name="stepAction" class="TestValue" serializationversion="0">
               <property name="condition" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -3391,7 +3397,7 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Transition" serializationversion="3" id="182">
+          <object class="Transition" serializationversion="3" id="184">
             <property name="name" class="String">Assign Is Read</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -3409,14 +3415,14 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Group" id="183">
+          <object class="Group" id="185">
             <name class="String">EWS:Mark Email as Read</name>
             <comment>
               <null/>
             </comment>
-            <blockBeginStep class="BlockBeginStep" id="184"/>
+            <blockBeginStep class="BlockBeginStep" id="186"/>
             <steps class="ArrayList">
-              <object class="Transition" serializationversion="3" id="185">
+              <object class="Transition" serializationversion="3" id="187">
                 <property name="name" idref="35"/>
                 <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
                   <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -3435,7 +3441,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="186">
+              <object class="Transition" serializationversion="3" id="188">
                 <property name="name" idref="24"/>
                 <property name="stepAction" class="SetTagStepAction" serializationversion="0">
                   <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -3458,7 +3464,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="187">
+              <object class="Transition" serializationversion="3" id="189">
                 <property name="name" class="String">Set Attribute Id</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -3484,7 +3490,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="188">
+              <object class="Transition" serializationversion="3" id="190">
                 <property name="name" class="String">Set Attribute ChangeKey</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -3510,7 +3516,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="189">
+              <object class="Transition" serializationversion="3" id="191">
                 <property name="name" class="String">EWS:Mark as Read</property>
                 <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
                   <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -3581,7 +3587,7 @@ Later we download all the attachment names and check them more throughly</proper
                   <element class="String">name</element>
                 </property>
               </object>
-              <object class="Transition" serializationversion="3" id="190">
+              <object class="Transition" serializationversion="3" id="192">
                 <property name="name" idref="28"/>
                 <property name="stepAction" class="ViewAsXML"/>
                 <property name="elementFinders" class="ElementFinders"/>
@@ -3593,16 +3599,8 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
             </steps>
-            <blockEndStep class="BlockEndStep" id="191"/>
+            <blockEndStep class="BlockEndStep" id="193"/>
             <edges class="ArrayList">
-              <object class="TransitionEdge">
-                <from idref="184"/>
-                <to idref="185"/>
-              </object>
-              <object class="TransitionEdge">
-                <from idref="185"/>
-                <to idref="186"/>
-              </object>
               <object class="TransitionEdge">
                 <from idref="186"/>
                 <to idref="187"/>
@@ -3623,16 +3621,24 @@ Later we download all the attachment names and check them more throughly</proper
                 <from idref="190"/>
                 <to idref="191"/>
               </object>
+              <object class="TransitionEdge">
+                <from idref="191"/>
+                <to idref="192"/>
+              </object>
+              <object class="TransitionEdge">
+                <from idref="192"/>
+                <to idref="193"/>
+              </object>
             </edges>
           </object>
-          <object class="Group" id="192">
+          <object class="Group" id="194">
             <name class="String">EWS:Categorize Email as "Robot Prcoessed"</name>
             <comment>
               <null/>
             </comment>
-            <blockBeginStep class="BlockBeginStep" id="193"/>
+            <blockBeginStep class="BlockBeginStep" id="195"/>
             <steps class="ArrayList">
-              <object class="Transition" serializationversion="3" id="194">
+              <object class="Transition" serializationversion="3" id="196">
                 <property name="name" idref="35"/>
                 <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
                   <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -3651,7 +3657,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="195">
+              <object class="Transition" serializationversion="3" id="197">
                 <property name="name" idref="24"/>
                 <property name="stepAction" class="SetTagStepAction" serializationversion="0">
                   <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -3674,7 +3680,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="196">
+              <object class="Transition" serializationversion="3" id="198">
                 <property name="name" class="String">Set Attribute Id</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -3700,7 +3706,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="197">
+              <object class="Transition" serializationversion="3" id="199">
                 <property name="name" class="String">Set Attribute ChangeKey</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -3726,7 +3732,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="198">
+              <object class="Transition" serializationversion="3" id="200">
                 <property name="name" class="String">Set Category</property>
                 <property name="stepAction" class="SetText">
                   <property name="text" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
@@ -3749,7 +3755,7 @@ Later we download all the attachment names and check them more throughly</proper
                   <element class="String">name</element>
                 </property>
               </object>
-              <object class="Transition" serializationversion="3" id="199">
+              <object class="Transition" serializationversion="3" id="201">
                 <property name="name" class="String">EWS:Categorize as "Robot Procesed"</property>
                 <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
                   <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -3820,7 +3826,7 @@ Later we download all the attachment names and check them more throughly</proper
                   <element class="String">name</element>
                 </property>
               </object>
-              <object class="Transition" serializationversion="3" id="200">
+              <object class="Transition" serializationversion="3" id="202">
                 <property name="name" idref="28"/>
                 <property name="stepAction" class="ViewAsXML"/>
                 <property name="elementFinders" class="ElementFinders"/>
@@ -3832,16 +3838,8 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
             </steps>
-            <blockEndStep class="BlockEndStep" id="201"/>
+            <blockEndStep class="BlockEndStep" id="203"/>
             <edges class="ArrayList">
-              <object class="TransitionEdge">
-                <from idref="193"/>
-                <to idref="194"/>
-              </object>
-              <object class="TransitionEdge">
-                <from idref="194"/>
-                <to idref="195"/>
-              </object>
               <object class="TransitionEdge">
                 <from idref="195"/>
                 <to idref="196"/>
@@ -3866,10 +3864,18 @@ Later we download all the attachment names and check them more throughly</proper
                 <from idref="200"/>
                 <to idref="201"/>
               </object>
+              <object class="TransitionEdge">
+                <from idref="201"/>
+                <to idref="202"/>
+              </object>
+              <object class="TransitionEdge">
+                <from idref="202"/>
+                <to idref="203"/>
+              </object>
             </edges>
           </object>
-          <object class="Try" id="202"/>
-          <object class="Transition" serializationversion="3" id="203">
+          <object class="Try" id="204"/>
+          <object class="Transition" serializationversion="3" id="205">
             <property name="name" class="String">move to OutBox?</property>
             <property name="stepAction" class="TestValue" serializationversion="0">
               <property name="condition" class="Expression" serializationversion="1">
@@ -3890,14 +3896,14 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Group" id="204">
+          <object class="Group" id="206">
             <name class="String">EWS:Find Outbox</name>
             <comment>
               <null/>
             </comment>
-            <blockBeginStep class="BlockBeginStep" id="205"/>
+            <blockBeginStep class="BlockBeginStep" id="207"/>
             <steps class="ArrayList">
-              <object class="Transition" serializationversion="3" id="206">
+              <object class="Transition" serializationversion="3" id="208">
                 <property name="name" class="String">Assign Outbox Folder Name</property>
                 <property name="stepAction" class="AssignVariable" serializationversion="4">
                   <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -3917,7 +3923,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="207">
+              <object class="Transition" serializationversion="3" id="209">
                 <property name="name" idref="35"/>
                 <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
                   <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -3936,7 +3942,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="208">
+              <object class="Transition" serializationversion="3" id="210">
                 <property name="name" idref="24"/>
                 <property name="stepAction" class="SetTagStepAction" serializationversion="0">
                   <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -3959,7 +3965,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="209">
+              <object class="Transition" serializationversion="3" id="211">
                 <property name="name" class="String">Set Attribute Value</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -3985,7 +3991,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="210">
+              <object class="Transition" serializationversion="3" id="212">
                 <property name="name" class="String">Set Attribute Id</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -4011,7 +4017,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="211">
+              <object class="Transition" serializationversion="3" id="213">
                 <property name="name" class="String">Set Attribute ChangeKey</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -4037,7 +4043,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="212">
+              <object class="Transition" serializationversion="3" id="214">
                 <property name="name" class="String">EWS:Read Inbox</property>
                 <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
                   <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -4108,7 +4114,7 @@ Later we download all the attachment names and check them more throughly</proper
                   <element class="String">name</element>
                 </property>
               </object>
-              <object class="Transition" serializationversion="3" id="213">
+              <object class="Transition" serializationversion="3" id="215">
                 <property name="name" idref="28"/>
                 <property name="stepAction" class="ViewAsXML"/>
                 <property name="elementFinders" class="ElementFinders"/>
@@ -4119,7 +4125,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="214">
+              <object class="Transition" serializationversion="3" id="216">
                 <property name="name" class="String">Extract Outbox Folder Id</property>
                 <property name="stepAction" class="ExtractTagAttribute2" serializationversion="3">
                   <property name="tagAttr" class="String">Id</property>
@@ -4141,7 +4147,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="215">
+              <object class="Transition" serializationversion="3" id="217">
                 <property name="name" class="String">Extract Outbox Folder Change Key</property>
                 <property name="stepAction" class="ExtractTagAttribute2" serializationversion="3">
                   <property name="tagAttr" class="String">ChangeKey</property>
@@ -4164,16 +4170,8 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
             </steps>
-            <blockEndStep class="BlockEndStep" id="216"/>
+            <blockEndStep class="BlockEndStep" id="218"/>
             <edges class="ArrayList">
-              <object class="TransitionEdge">
-                <from idref="205"/>
-                <to idref="206"/>
-              </object>
-              <object class="TransitionEdge">
-                <from idref="206"/>
-                <to idref="207"/>
-              </object>
               <object class="TransitionEdge">
                 <from idref="207"/>
                 <to idref="208"/>
@@ -4210,16 +4208,24 @@ Later we download all the attachment names and check them more throughly</proper
                 <from idref="215"/>
                 <to idref="216"/>
               </object>
+              <object class="TransitionEdge">
+                <from idref="216"/>
+                <to idref="217"/>
+              </object>
+              <object class="TransitionEdge">
+                <from idref="217"/>
+                <to idref="218"/>
+              </object>
             </edges>
           </object>
-          <object class="Group" id="217">
+          <object class="Group" id="219">
             <name class="String">EWS:Move to Folder</name>
             <comment>
               <null/>
             </comment>
-            <blockBeginStep class="BlockBeginStep" id="218"/>
+            <blockBeginStep class="BlockBeginStep" id="220"/>
             <steps class="ArrayList">
-              <object class="Transition" serializationversion="3" id="219">
+              <object class="Transition" serializationversion="3" id="221">
                 <property name="name" idref="35"/>
                 <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
                   <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -4238,7 +4244,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="220">
+              <object class="Transition" serializationversion="3" id="222">
                 <property name="name" idref="24"/>
                 <property name="stepAction" class="SetTagStepAction" serializationversion="0">
                   <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -4261,7 +4267,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="221">
+              <object class="Transition" serializationversion="3" id="223">
                 <property name="name" class="String">Set Attribute Id</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -4287,7 +4293,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="222">
+              <object class="Transition" serializationversion="3" id="224">
                 <property name="name" class="String">Set Attribute ChangeKey</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -4313,7 +4319,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="223">
+              <object class="Transition" serializationversion="3" id="225">
                 <property name="name" class="String">Set Attribute ChangeKey</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -4339,7 +4345,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="224">
+              <object class="Transition" serializationversion="3" id="226">
                 <property name="name" class="String">Set Attribute Id</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -4365,7 +4371,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="225">
+              <object class="Transition" serializationversion="3" id="227">
                 <property name="name" class="String">EWS: Move to Folder</property>
                 <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
                   <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -4436,7 +4442,7 @@ Later we download all the attachment names and check them more throughly</proper
                   <element class="String">name</element>
                 </property>
               </object>
-              <object class="Transition" serializationversion="3" id="226">
+              <object class="Transition" serializationversion="3" id="228">
                 <property name="name" idref="28"/>
                 <property name="stepAction" class="ViewAsXML"/>
                 <property name="elementFinders" class="ElementFinders"/>
@@ -4448,16 +4454,8 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
             </steps>
-            <blockEndStep class="BlockEndStep" id="227"/>
+            <blockEndStep class="BlockEndStep" id="229"/>
             <edges class="ArrayList">
-              <object class="TransitionEdge">
-                <from idref="218"/>
-                <to idref="219"/>
-              </object>
-              <object class="TransitionEdge">
-                <from idref="219"/>
-                <to idref="220"/>
-              </object>
               <object class="TransitionEdge">
                 <from idref="220"/>
                 <to idref="221"/>
@@ -4486,23 +4484,19 @@ Later we download all the attachment names and check them more throughly</proper
                 <from idref="226"/>
                 <to idref="227"/>
               </object>
+              <object class="TransitionEdge">
+                <from idref="227"/>
+                <to idref="228"/>
+              </object>
+              <object class="TransitionEdge">
+                <from idref="228"/>
+                <to idref="229"/>
+              </object>
             </edges>
           </object>
         </steps>
-        <blockEndStep class="BlockEndStep" id="228"/>
+        <blockEndStep class="BlockEndStep" id="230"/>
         <edges class="ArrayList">
-          <object class="TransitionEdge">
-            <from idref="179"/>
-            <to idref="180"/>
-          </object>
-          <object class="TransitionEdge">
-            <from idref="180"/>
-            <to idref="181"/>
-          </object>
-          <object class="TransitionEdge">
-            <from idref="180"/>
-            <to idref="192"/>
-          </object>
           <object class="TransitionEdge">
             <from idref="181"/>
             <to idref="182"/>
@@ -4512,36 +4506,48 @@ Later we download all the attachment names and check them more throughly</proper
             <to idref="183"/>
           </object>
           <object class="TransitionEdge">
+            <from idref="182"/>
+            <to idref="194"/>
+          </object>
+          <object class="TransitionEdge">
             <from idref="183"/>
-            <to idref="192"/>
+            <to idref="184"/>
           </object>
           <object class="TransitionEdge">
-            <from idref="192"/>
-            <to idref="202"/>
+            <from idref="184"/>
+            <to idref="185"/>
           </object>
           <object class="TransitionEdge">
-            <from idref="202"/>
-            <to idref="203"/>
+            <from idref="185"/>
+            <to idref="194"/>
           </object>
           <object class="TransitionEdge">
-            <from idref="202"/>
-            <to idref="228"/>
-          </object>
-          <object class="TransitionEdge">
-            <from idref="203"/>
+            <from idref="194"/>
             <to idref="204"/>
           </object>
           <object class="TransitionEdge">
             <from idref="204"/>
-            <to idref="217"/>
+            <to idref="205"/>
           </object>
           <object class="TransitionEdge">
-            <from idref="217"/>
-            <to idref="228"/>
+            <from idref="204"/>
+            <to idref="230"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="205"/>
+            <to idref="206"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="206"/>
+            <to idref="219"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="219"/>
+            <to idref="230"/>
           </object>
         </edges>
       </object>
-      <object class="Transition" serializationversion="3" id="229">
+      <object class="Transition" serializationversion="3" id="231">
         <property name="name" class="String">Skip next Filters, Loop next Email</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -4561,7 +4567,7 @@ Later we download all the attachment names and check them more throughly</proper
           <property name="reportingViaLog" class="Boolean">false</property>
           <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextIteration">
             <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
-              <property name="name" class="String" id="230">For Each Tag</property>
+              <property name="name" class="String" id="232">For Each Tag</property>
             </property>
           </property>
         </property>
@@ -4571,15 +4577,15 @@ Later we download all the attachment names and check them more throughly</proper
           <element class="String">name</element>
         </property>
       </object>
-      <object class="End" id="231"/>
-      <object class="Group" id="232">
+      <object class="End" id="233"/>
+      <object class="Group" id="234">
         <name class="String">Save Email to Database</name>
         <comment>
           <null/>
         </comment>
-        <blockBeginStep class="BlockBeginStep" id="233"/>
+        <blockBeginStep class="BlockBeginStep" id="235"/>
         <steps class="ArrayList">
-          <object class="Transition" serializationversion="3" id="234">
+          <object class="Transition" serializationversion="3" id="236">
             <property name="name" class="String">Assign Numero Ordine</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -4597,7 +4603,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="235">
+          <object class="Transition" serializationversion="3" id="237">
             <property name="name" class="String">Assign Classification</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -4615,7 +4621,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="236">
+          <object class="Transition" serializationversion="3" id="238">
             <property name="name" class="String">Assign Is Processed</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -4633,7 +4639,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="237">
+          <object class="Transition" serializationversion="3" id="239">
             <property name="name" class="String">Assign Is Read</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -4653,7 +4659,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="238">
+          <object class="Transition" serializationversion="3" id="240">
             <property name="name" class="String">Assign Variable</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="Expression" serializationversion="1">
@@ -4673,7 +4679,7 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Transition" serializationversion="3" id="239">
+          <object class="Transition" serializationversion="3" id="241">
             <property name="name" idref="154"/>
             <property name="stepAction" class="StoreInDatabase" serializationversion="0">
               <property name="db" class="kapow.robot.plugin.common.support.expression.stringexpr.DBNameValueStringExpression">
@@ -4692,16 +4698,8 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
         </steps>
-        <blockEndStep class="BlockEndStep" id="240"/>
+        <blockEndStep class="BlockEndStep" id="242"/>
         <edges class="ArrayList">
-          <object class="TransitionEdge">
-            <from idref="233"/>
-            <to idref="234"/>
-          </object>
-          <object class="TransitionEdge">
-            <from idref="234"/>
-            <to idref="235"/>
-          </object>
           <object class="TransitionEdge">
             <from idref="235"/>
             <to idref="236"/>
@@ -4722,16 +4720,24 @@ Later we download all the attachment names and check them more throughly</proper
             <from idref="239"/>
             <to idref="240"/>
           </object>
+          <object class="TransitionEdge">
+            <from idref="240"/>
+            <to idref="241"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="241"/>
+            <to idref="242"/>
+          </object>
         </edges>
       </object>
-      <object class="Group" id="241">
+      <object class="Group" id="243">
         <name class="String">Mark Email in Outlook as "ignore"</name>
         <comment>
           <null/>
         </comment>
-        <blockBeginStep class="BlockBeginStep" id="242"/>
+        <blockBeginStep class="BlockBeginStep" id="244"/>
         <steps class="ArrayList">
-          <object class="Transition" serializationversion="3" id="243">
+          <object class="Transition" serializationversion="3" id="245">
             <property name="name" idref="35"/>
             <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
               <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -4750,7 +4756,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="244">
+          <object class="Transition" serializationversion="3" id="246">
             <property name="name" idref="24"/>
             <property name="stepAction" class="SetTagStepAction" serializationversion="0">
               <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -4773,7 +4779,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="245">
+          <object class="Transition" serializationversion="3" id="247">
             <property name="name" class="String">Set Attribute Id</property>
             <property name="stepAction" class="SetAttribute">
               <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -4799,7 +4805,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="246">
+          <object class="Transition" serializationversion="3" id="248">
             <property name="name" class="String">Set Attribute ChangeKey</property>
             <property name="stepAction" class="SetAttribute">
               <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -4825,8 +4831,8 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="247">
-            <property name="name" class="String" id="248">Set Text</property>
+          <object class="Transition" serializationversion="3" id="249">
+            <property name="name" class="String" id="250">Set Text</property>
             <property name="stepAction" class="SetText">
               <property name="text" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
                 <property name="value" class="String">Robot Ignoring</property>
@@ -4846,7 +4852,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="249">
+          <object class="Transition" serializationversion="3" id="251">
             <property name="name" class="String">EWS:Categorize as "Robot Ignoring"</property>
             <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
               <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -4917,7 +4923,7 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Transition" serializationversion="3" id="250">
+          <object class="Transition" serializationversion="3" id="252">
             <property name="name" idref="28"/>
             <property name="stepAction" class="ViewAsXML"/>
             <property name="elementFinders" class="ElementFinders"/>
@@ -4929,16 +4935,8 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
         </steps>
-        <blockEndStep class="BlockEndStep" id="251"/>
+        <blockEndStep class="BlockEndStep" id="253"/>
         <edges class="ArrayList">
-          <object class="TransitionEdge">
-            <from idref="242"/>
-            <to idref="243"/>
-          </object>
-          <object class="TransitionEdge">
-            <from idref="243"/>
-            <to idref="244"/>
-          </object>
           <object class="TransitionEdge">
             <from idref="244"/>
             <to idref="245"/>
@@ -4953,19 +4951,27 @@ Later we download all the attachment names and check them more throughly</proper
           </object>
           <object class="TransitionEdge">
             <from idref="247"/>
+            <to idref="248"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="248"/>
             <to idref="249"/>
           </object>
           <object class="TransitionEdge">
             <from idref="249"/>
-            <to idref="250"/>
+            <to idref="251"/>
           </object>
           <object class="TransitionEdge">
-            <from idref="250"/>
-            <to idref="251"/>
+            <from idref="251"/>
+            <to idref="252"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="252"/>
+            <to idref="253"/>
           </object>
         </edges>
       </object>
-      <object class="Transition" serializationversion="3" id="252">
+      <object class="Transition" serializationversion="3" id="254">
         <property name="name" class="String">Skip next Filters, Loop next Email</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -4985,7 +4991,7 @@ Later we download all the attachment names and check them more throughly</proper
           <property name="reportingViaLog" class="Boolean">false</property>
           <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextIteration">
             <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
-              <property name="name" idref="230"/>
+              <property name="name" idref="232"/>
             </property>
           </property>
         </property>
@@ -4995,9 +5001,9 @@ Later we download all the attachment names and check them more throughly</proper
           <element class="String">name</element>
         </property>
       </object>
-      <object class="End" id="253"/>
-      <object class="BranchPoint" id="254"/>
-      <object class="Transition" serializationversion="3" id="255">
+      <object class="End" id="255"/>
+      <object class="BranchPoint" id="256"/>
+      <object class="Transition" serializationversion="3" id="257">
         <property name="name" class="String">Loop through active Filters for this inbox</property>
         <property name="stepAction" class="QueryDatabase2" serializationversion="1">
           <property name="databaseName" class="kapow.robot.plugin.common.support.expression.stringexpr.DBNameValueStringExpression">
@@ -5030,7 +5036,7 @@ and inbox='&lt;&lt;+filter.InBox+&gt;&gt;'
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="256">
+      <object class="Transition" serializationversion="3" id="258">
         <property name="name" class="String">Get FIlter</property>
         <property name="stepAction" class="FindInDatabase" serializationversion="0">
           <property name="db" class="kapow.robot.plugin.common.support.expression.stringexpr.DBNameValueStringExpression">
@@ -5057,14 +5063,14 @@ and inbox='&lt;&lt;+filter.InBox+&gt;&gt;'
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Group" id="257">
+      <object class="Group" id="259">
         <name class="String">Quick Filter Check</name>
         <comment>
           <null/>
         </comment>
-        <blockBeginStep class="BlockBeginStep" id="258"/>
+        <blockBeginStep class="BlockBeginStep" id="260"/>
         <steps class="ArrayList">
-          <object class="Transition" serializationversion="3" id="259">
+          <object class="Transition" serializationversion="3" id="261">
             <property name="name" class="String">passes subject Filter?</property>
             <property name="stepAction" class="TestValue" serializationversion="0">
               <property name="condition" class="Expression" serializationversion="1">
@@ -5085,7 +5091,7 @@ and inbox='&lt;&lt;+filter.InBox+&gt;&gt;'
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Transition" serializationversion="3" id="260">
+          <object class="Transition" serializationversion="3" id="262">
             <property name="name" class="String">quick Attachment Filter?</property>
             <property name="stepAction" class="TestValue" serializationversion="0">
               <property name="condition" class="Expression" serializationversion="1">
@@ -5108,30 +5114,30 @@ Later we download all the attachment names and check them more throughly</proper
             </property>
           </object>
         </steps>
-        <blockEndStep class="BlockEndStep" id="261"/>
+        <blockEndStep class="BlockEndStep" id="263"/>
         <edges class="ArrayList">
-          <object class="TransitionEdge">
-            <from idref="258"/>
-            <to idref="259"/>
-          </object>
-          <object class="TransitionEdge">
-            <from idref="259"/>
-            <to idref="260"/>
-          </object>
           <object class="TransitionEdge">
             <from idref="260"/>
             <to idref="261"/>
           </object>
+          <object class="TransitionEdge">
+            <from idref="261"/>
+            <to idref="262"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="262"/>
+            <to idref="263"/>
+          </object>
         </edges>
       </object>
-      <object class="Group" id="262">
+      <object class="Group" id="264">
         <name class="String">Detailed Filter Check</name>
         <comment>
           <null/>
         </comment>
-        <blockBeginStep class="BlockBeginStep" id="263"/>
+        <blockBeginStep class="BlockBeginStep" id="265"/>
         <steps class="ArrayList">
-          <object class="Transition" serializationversion="3" id="264">
+          <object class="Transition" serializationversion="3" id="266">
             <property name="name" class="String">passes Sender Filter?</property>
             <property name="stepAction" class="TestValue" serializationversion="0">
               <property name="condition" class="Expression" serializationversion="1">
@@ -5152,7 +5158,7 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Transition" serializationversion="3" id="265">
+          <object class="Transition" serializationversion="3" id="267">
             <property name="name" class="String">passes Body Filter?</property>
             <property name="stepAction" class="TestValue" serializationversion="0">
               <property name="condition" class="Expression" serializationversion="1">
@@ -5173,8 +5179,8 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Try" id="266"/>
-          <object class="Transition" serializationversion="3" id="267">
+          <object class="Try" id="268"/>
+          <object class="Transition" serializationversion="3" id="269">
             <property name="name" class="String">no attachment filter?</property>
             <property name="stepAction" class="TestValue" serializationversion="0">
               <property name="condition" class="Expression" serializationversion="1">
@@ -5195,8 +5201,8 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Try" id="268"/>
-          <object class="Transition" serializationversion="3" id="269">
+          <object class="Try" id="270"/>
+          <object class="Transition" serializationversion="3" id="271">
             <property name="name" idref="123"/>
             <property name="stepAction" class="TestValue" serializationversion="0">
               <property name="condition" class="Expression" serializationversion="1">
@@ -5215,7 +5221,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="270">
+          <object class="Transition" serializationversion="3" id="272">
             <property name="name" class="String">Assign Variable</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
@@ -5248,7 +5254,7 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Transition" serializationversion="3" id="271">
+          <object class="Transition" serializationversion="3" id="273">
             <property name="name" idref="123"/>
             <property name="stepAction" class="TestValue" serializationversion="0">
               <property name="condition" class="Expression" serializationversion="1">
@@ -5267,7 +5273,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="272">
+          <object class="Transition" serializationversion="3" id="274">
             <property name="name" class="String">Assign Variable</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
@@ -5300,11 +5306,11 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Transition" serializationversion="3" id="273">
+          <object class="Transition" serializationversion="3" id="275">
             <property name="name" class="String">passes Attachment Filter?</property>
             <property name="stepAction" class="SetNamedTag" serializationversion="0">
               <property name="tagName" class="DesiredElementName">
-                <property name="name" class="String" id="274">Attachmen</property>
+                <property name="name" class="String" id="276">Attachmen</property>
               </property>
             </property>
             <property name="elementFinders" class="ElementFinders">
@@ -5329,8 +5335,8 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Try" id="275"/>
-          <object class="Transition" serializationversion="3" id="276">
+          <object class="Try" id="277"/>
+          <object class="Transition" serializationversion="3" id="278">
             <property name="name" class="String">Get attachment?</property>
             <property name="stepAction" class="TestValue" serializationversion="0">
               <property name="condition" class="Expression" serializationversion="1">
@@ -5351,15 +5357,15 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Group" id="277">
+          <object class="Group" id="279">
             <name class="String">EWS:Get Attachment</name>
             <comment>
               <null/>
             </comment>
-            <blockBeginStep class="BlockBeginStep" id="278"/>
+            <blockBeginStep class="BlockBeginStep" id="280"/>
             <steps class="ArrayList">
-              <object class="Try" id="279"/>
-              <object class="Transition" serializationversion="3" id="280">
+              <object class="Try" id="281"/>
+              <object class="Transition" serializationversion="3" id="282">
                 <property name="name" idref="123"/>
                 <property name="stepAction" class="TestValue" serializationversion="0">
                   <property name="condition" class="Expression" serializationversion="1">
@@ -5378,7 +5384,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="281">
+              <object class="Transition" serializationversion="3" id="283">
                 <property name="name" class="String">Extract Attachment Name</property>
                 <property name="stepAction" class="ExtractTagAttribute2" serializationversion="3">
                   <property name="tagAttr" class="String">Id</property>
@@ -5390,7 +5396,7 @@ Later we download all the attachment names and check them more throughly</proper
                   <object class="DefaultNamedElementAwareDOMElementFinder" serializationversion="4">
                     <property name="tagRelation" class="InTagRelation" serializationversion="1">
                       <property name="tagName" class="ElementName">
-                        <property name="name" idref="274"/>
+                        <property name="name" idref="276"/>
                       </property>
                     </property>
                     <property name="nodePath" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -5405,7 +5411,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="282">
+              <object class="Transition" serializationversion="3" id="284">
                 <property name="name" idref="35"/>
                 <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
                   <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -5424,7 +5430,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="283">
+              <object class="Transition" serializationversion="3" id="285">
                 <property name="name" idref="24"/>
                 <property name="stepAction" class="SetTagStepAction" serializationversion="0">
                   <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -5447,7 +5453,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="284">
+              <object class="Transition" serializationversion="3" id="286">
                 <property name="name" class="String">Set Attribute Id</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -5473,7 +5479,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="285">
+              <object class="Transition" serializationversion="3" id="287">
                 <property name="name" class="String">EWS:Get Attachment</property>
                 <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
                   <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -5544,7 +5550,7 @@ Later we download all the attachment names and check them more throughly</proper
                   <element class="String">name</element>
                 </property>
               </object>
-              <object class="Transition" serializationversion="3" id="286">
+              <object class="Transition" serializationversion="3" id="288">
                 <property name="name" idref="28"/>
                 <property name="stepAction" class="ViewAsXML"/>
                 <property name="elementFinders" class="ElementFinders"/>
@@ -5555,7 +5561,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="287">
+              <object class="Transition" serializationversion="3" id="289">
                 <property name="name" class="String">Extract Attachment Name</property>
                 <property name="stepAction" class="Extract" serializationversion="1">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -5576,7 +5582,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="288">
+              <object class="Transition" serializationversion="3" id="290">
                 <property name="name" class="String">Extract Attachment</property>
                 <property name="stepAction" class="Extract" serializationversion="1">
                   <property name="dataConverters" class="DataConverters">
@@ -5600,32 +5606,32 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="289">
-                <property name="name" class="String">Extract Attachment</property>
-                <property name="stepAction" class="Extract" serializationversion="1">
-                  <property name="dataConverters" class="DataConverters">
-                    <element class="Base64Decode"/>
-                  </property>
-                  <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
-                    <property name="name" class="String">Email.Attachment</property>
-                  </property>
-                </property>
-                <property name="elementFinders" class="ElementFinders">
-                  <object class="DefaultNamedElementAwareDOMElementFinder" serializationversion="4">
-                    <property name="nodePath" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">.*.t:content</property>
-                    </property>
-                  </object>
-                </property>
-                <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
-                <property name="comment">
-                  <null/>
-                </property>
-                <property name="enabled" idref="7"/>
-                <property name="changedProperties" class="java.util.HashSet"/>
-              </object>
-              <object class="BranchPoint" id="290"/>
               <object class="Transition" serializationversion="3" id="291">
+                <property name="name" class="String">Extract Attachment</property>
+                <property name="stepAction" class="Extract" serializationversion="1">
+                  <property name="dataConverters" class="DataConverters">
+                    <element class="Base64Decode"/>
+                  </property>
+                  <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                    <property name="name" class="String">Email.Attachment</property>
+                  </property>
+                </property>
+                <property name="elementFinders" class="ElementFinders">
+                  <object class="DefaultNamedElementAwareDOMElementFinder" serializationversion="4">
+                    <property name="nodePath" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                      <property name="value" class="String">.*.t:content</property>
+                    </property>
+                  </object>
+                </property>
+                <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+                <property name="comment">
+                  <null/>
+                </property>
+                <property name="enabled" idref="7"/>
+                <property name="changedProperties" class="java.util.HashSet"/>
+              </object>
+              <object class="BranchPoint" id="292"/>
+              <object class="Transition" serializationversion="3" id="293">
                 <property name="name" idref="76"/>
                 <property name="stepAction" class="ForEachTag" serializationversion="0">
                   <property name="tag" class="String">t:fileattachment</property>
@@ -5634,7 +5640,7 @@ Later we download all the attachment names and check them more throughly</proper
                   <object class="DefaultNamedElementAwareDOMElementFinder" serializationversion="4">
                     <property name="tagRelation" class="EnclosingTagRelation" serializationversion="1">
                       <property name="tagName" class="ElementName">
-                        <property name="name" idref="274"/>
+                        <property name="name" idref="276"/>
                       </property>
                     </property>
                     <property name="nodePath" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -5650,7 +5656,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="292">
+              <object class="Transition" serializationversion="3" id="294">
                 <property name="name" class="String">Test Tag</property>
                 <property name="stepAction" class="TestTag" serializationversion="1">
                   <property name="pattern" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -5684,7 +5690,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="293">
+              <object class="Transition" serializationversion="3" id="295">
                 <property name="name" class="String">Extract Attachment Name</property>
                 <property name="stepAction" class="ExtractTagAttribute2" serializationversion="3">
                   <property name="tagAttr" class="String">Id</property>
@@ -5711,7 +5717,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="294">
+              <object class="Transition" serializationversion="3" id="296">
                 <property name="name" idref="35"/>
                 <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
                   <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -5730,7 +5736,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="295">
+              <object class="Transition" serializationversion="3" id="297">
                 <property name="name" idref="24"/>
                 <property name="stepAction" class="SetTagStepAction" serializationversion="0">
                   <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -5753,7 +5759,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="296">
+              <object class="Transition" serializationversion="3" id="298">
                 <property name="name" class="String">Set Attribute Id</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -5779,7 +5785,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="297">
+              <object class="Transition" serializationversion="3" id="299">
                 <property name="name" class="String">EWS:Get Attachment</property>
                 <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
                   <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -5850,7 +5856,7 @@ Later we download all the attachment names and check them more throughly</proper
                   <element class="String">name</element>
                 </property>
               </object>
-              <object class="Transition" serializationversion="3" id="298">
+              <object class="Transition" serializationversion="3" id="300">
                 <property name="name" idref="28"/>
                 <property name="stepAction" class="ViewAsXML"/>
                 <property name="elementFinders" class="ElementFinders"/>
@@ -5861,7 +5867,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="299">
+              <object class="Transition" serializationversion="3" id="301">
                 <property name="name" class="String">Extract Attachment Name</property>
                 <property name="stepAction" class="Extract" serializationversion="1">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -5882,7 +5888,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="300">
+              <object class="Transition" serializationversion="3" id="302">
                 <property name="name" class="String">Extract Attachment</property>
                 <property name="stepAction" class="Extract" serializationversion="1">
                   <property name="dataConverters" class="DataConverters">
@@ -5906,7 +5912,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="301">
+              <object class="Transition" serializationversion="3" id="303">
                 <property name="name" class="String">Assign Variable</property>
                 <property name="stepAction" class="AssignVariable" serializationversion="4">
                   <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
@@ -5939,14 +5945,14 @@ Later we download all the attachment names and check them more throughly</proper
                   <element class="String">name</element>
                 </property>
               </object>
-              <object class="Group" id="302">
+              <object class="Group" id="304">
                 <name class="String">Save Email to Database</name>
                 <comment>
                   <null/>
                 </comment>
-                <blockBeginStep class="BlockBeginStep" id="303"/>
+                <blockBeginStep class="BlockBeginStep" id="305"/>
                 <steps class="ArrayList">
-                  <object class="Transition" serializationversion="3" id="304">
+                  <object class="Transition" serializationversion="3" id="306">
                     <property name="name" class="String">Assign Classification</property>
                     <property name="stepAction" class="AssignVariable" serializationversion="4">
                       <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -5966,7 +5972,7 @@ Later we download all the attachment names and check them more throughly</proper
                     <property name="enabled" idref="7"/>
                     <property name="changedProperties" class="java.util.HashSet"/>
                   </object>
-                  <object class="Transition" serializationversion="3" id="305">
+                  <object class="Transition" serializationversion="3" id="307">
                     <property name="name" class="String">Assign Is Processed</property>
                     <property name="stepAction" class="AssignVariable" serializationversion="4">
                       <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -5984,7 +5990,7 @@ Later we download all the attachment names and check them more throughly</proper
                     <property name="enabled" idref="7"/>
                     <property name="changedProperties" class="java.util.HashSet"/>
                   </object>
-                  <object class="Transition" serializationversion="3" id="306">
+                  <object class="Transition" serializationversion="3" id="308">
                     <property name="name" class="String">Assign Is Read</property>
                     <property name="stepAction" class="AssignVariable" serializationversion="4">
                       <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -6004,7 +6010,7 @@ Later we download all the attachment names and check them more throughly</proper
                     <property name="enabled" idref="7"/>
                     <property name="changedProperties" class="java.util.HashSet"/>
                   </object>
-                  <object class="Transition" serializationversion="3" id="307">
+                  <object class="Transition" serializationversion="3" id="309">
                     <property name="name" class="String">Assign Variable</property>
                     <property name="stepAction" class="AssignVariable" serializationversion="4">
                       <property name="stringExpr" class="Expression" serializationversion="1">
@@ -6024,7 +6030,7 @@ Later we download all the attachment names and check them more throughly</proper
                       <element class="String">name</element>
                     </property>
                   </object>
-                  <object class="Transition" serializationversion="3" id="308">
+                  <object class="Transition" serializationversion="3" id="310">
                     <property name="name" idref="154"/>
                     <property name="stepAction" class="StoreInDatabase" serializationversion="0">
                       <property name="db" class="kapow.robot.plugin.common.support.expression.stringexpr.DBNameValueStringExpression">
@@ -6043,16 +6049,8 @@ Later we download all the attachment names and check them more throughly</proper
                     <property name="changedProperties" class="java.util.HashSet"/>
                   </object>
                 </steps>
-                <blockEndStep class="BlockEndStep" id="309"/>
+                <blockEndStep class="BlockEndStep" id="311"/>
                 <edges class="ArrayList">
-                  <object class="TransitionEdge">
-                    <from idref="303"/>
-                    <to idref="304"/>
-                  </object>
-                  <object class="TransitionEdge">
-                    <from idref="304"/>
-                    <to idref="305"/>
-                  </object>
                   <object class="TransitionEdge">
                     <from idref="305"/>
                     <to idref="306"/>
@@ -6069,9 +6067,17 @@ Later we download all the attachment names and check them more throughly</proper
                     <from idref="308"/>
                     <to idref="309"/>
                   </object>
+                  <object class="TransitionEdge">
+                    <from idref="309"/>
+                    <to idref="310"/>
+                  </object>
+                  <object class="TransitionEdge">
+                    <from idref="310"/>
+                    <to idref="311"/>
+                  </object>
                 </edges>
               </object>
-              <object class="Transition" serializationversion="3" id="310">
+              <object class="Transition" serializationversion="3" id="312">
                 <property name="name" idref="35"/>
                 <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
                   <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -6090,7 +6096,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="311">
+              <object class="Transition" serializationversion="3" id="313">
                 <property name="name" idref="76"/>
                 <property name="stepAction" class="ForEachTag" serializationversion="0">
                   <property name="tag" class="String">t:fileattachment</property>
@@ -6109,14 +6115,14 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Group" id="312">
+              <object class="Group" id="314">
                 <name class="String">EWS:Get Attachment</name>
                 <comment>
                   <null/>
                 </comment>
-                <blockBeginStep class="BlockBeginStep" id="313"/>
+                <blockBeginStep class="BlockBeginStep" id="315"/>
                 <steps class="ArrayList">
-                  <object class="Transition" serializationversion="3" id="314">
+                  <object class="Transition" serializationversion="3" id="316">
                     <property name="name" class="String">Extract Attachment ID</property>
                     <property name="stepAction" class="ExtractTagAttribute2" serializationversion="3">
                       <property name="tagAttr" class="String">Id</property>
@@ -6145,7 +6151,7 @@ Later we download all the attachment names and check them more throughly</proper
                       <element class="String">name</element>
                     </property>
                   </object>
-                  <object class="Transition" serializationversion="3" id="315">
+                  <object class="Transition" serializationversion="3" id="317">
                     <property name="name" idref="35"/>
                     <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
                       <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -6164,7 +6170,7 @@ Later we download all the attachment names and check them more throughly</proper
                     <property name="enabled" idref="7"/>
                     <property name="changedProperties" class="java.util.HashSet"/>
                   </object>
-                  <object class="Transition" serializationversion="3" id="316">
+                  <object class="Transition" serializationversion="3" id="318">
                     <property name="name" idref="24"/>
                     <property name="stepAction" class="SetTagStepAction" serializationversion="0">
                       <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -6187,7 +6193,7 @@ Later we download all the attachment names and check them more throughly</proper
                     <property name="enabled" idref="7"/>
                     <property name="changedProperties" class="java.util.HashSet"/>
                   </object>
-                  <object class="Transition" serializationversion="3" id="317">
+                  <object class="Transition" serializationversion="3" id="319">
                     <property name="name" class="String">Set Attribute Id</property>
                     <property name="stepAction" class="SetAttribute">
                       <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -6213,7 +6219,7 @@ Later we download all the attachment names and check them more throughly</proper
                     <property name="enabled" idref="7"/>
                     <property name="changedProperties" class="java.util.HashSet"/>
                   </object>
-                  <object class="Transition" serializationversion="3" id="318">
+                  <object class="Transition" serializationversion="3" id="320">
                     <property name="name" class="String">EWS:Get Attachment</property>
                     <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
                       <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -6284,7 +6290,7 @@ Later we download all the attachment names and check them more throughly</proper
                       <element class="String">name</element>
                     </property>
                   </object>
-                  <object class="Transition" serializationversion="3" id="319">
+                  <object class="Transition" serializationversion="3" id="321">
                     <property name="name" idref="28"/>
                     <property name="stepAction" class="ViewAsXML"/>
                     <property name="elementFinders" class="ElementFinders"/>
@@ -6295,7 +6301,7 @@ Later we download all the attachment names and check them more throughly</proper
                     <property name="enabled" idref="7"/>
                     <property name="changedProperties" class="java.util.HashSet"/>
                   </object>
-                  <object class="Transition" serializationversion="3" id="320">
+                  <object class="Transition" serializationversion="3" id="322">
                     <property name="name" class="String">Extract Attachment Name</property>
                     <property name="stepAction" class="Extract" serializationversion="1">
                       <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -6316,7 +6322,7 @@ Later we download all the attachment names and check them more throughly</proper
                     <property name="enabled" idref="7"/>
                     <property name="changedProperties" class="java.util.HashSet"/>
                   </object>
-                  <object class="Transition" serializationversion="3" id="321">
+                  <object class="Transition" serializationversion="3" id="323">
                     <property name="name" class="String">Extract Attachment</property>
                     <property name="stepAction" class="Extract" serializationversion="1">
                       <property name="dataConverters" class="DataConverters">
@@ -6341,16 +6347,8 @@ Later we download all the attachment names and check them more throughly</proper
                     <property name="changedProperties" class="java.util.HashSet"/>
                   </object>
                 </steps>
-                <blockEndStep class="BlockEndStep" id="322"/>
+                <blockEndStep class="BlockEndStep" id="324"/>
                 <edges class="ArrayList">
-                  <object class="TransitionEdge">
-                    <from idref="313"/>
-                    <to idref="314"/>
-                  </object>
-                  <object class="TransitionEdge">
-                    <from idref="314"/>
-                    <to idref="315"/>
-                  </object>
                   <object class="TransitionEdge">
                     <from idref="315"/>
                     <to idref="316"/>
@@ -6379,10 +6377,18 @@ Later we download all the attachment names and check them more throughly</proper
                     <from idref="321"/>
                     <to idref="322"/>
                   </object>
+                  <object class="TransitionEdge">
+                    <from idref="322"/>
+                    <to idref="323"/>
+                  </object>
+                  <object class="TransitionEdge">
+                    <from idref="323"/>
+                    <to idref="324"/>
+                  </object>
                 </edges>
               </object>
-              <object class="Try" id="323"/>
-              <object class="Transition" serializationversion="3" id="324">
+              <object class="Try" id="325"/>
+              <object class="Transition" serializationversion="3" id="326">
                 <property name="name" idref="123"/>
                 <property name="stepAction" class="TestValue" serializationversion="0">
                   <property name="condition" class="Expression" serializationversion="1">
@@ -6401,8 +6407,8 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="End" id="325"/>
-              <object class="Transition" serializationversion="3" id="326">
+              <object class="End" id="327"/>
+              <object class="Transition" serializationversion="3" id="328">
                 <property name="name" class="String">Assign ID MAIL</property>
                 <property name="stepAction" class="CalculateKey" serializationversion="1">
                   <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
@@ -6422,7 +6428,7 @@ Later we download all the attachment names and check them more throughly</proper
                   <element class="String">name</element>
                 </property>
               </object>
-              <object class="Transition" serializationversion="3" id="327">
+              <object class="Transition" serializationversion="3" id="329">
                 <property name="name" class="String">Salvataggio sul db attachment</property>
                 <property name="stepAction" class="StoreInDatabase" serializationversion="0">
                   <property name="db" class="kapow.robot.plugin.common.support.expression.stringexpr.DBNameValueStringExpression">
@@ -6444,16 +6450,16 @@ Later we download all the attachment names and check them more throughly</proper
                   <element class="String">name</element>
                 </property>
               </object>
-              <object class="End" id="328"/>
-              <object class="Group" id="329">
+              <object class="End" id="330"/>
+              <object class="Group" id="331">
                 <name class="String">Mark Email in Outlook as "processed"</name>
                 <comment>
                   <null/>
                 </comment>
-                <blockBeginStep class="BlockBeginStep" id="330"/>
+                <blockBeginStep class="BlockBeginStep" id="332"/>
                 <steps class="ArrayList">
-                  <object class="Try" id="331"/>
-                  <object class="Transition" serializationversion="3" id="332">
+                  <object class="Try" id="333"/>
+                  <object class="Transition" serializationversion="3" id="334">
                     <property name="name" class="String">mark as read?</property>
                     <property name="stepAction" class="TestValue" serializationversion="0">
                       <property name="condition" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -6476,7 +6482,7 @@ Later we download all the attachment names and check them more throughly</proper
                       <element class="String">name</element>
                     </property>
                   </object>
-                  <object class="Transition" serializationversion="3" id="333">
+                  <object class="Transition" serializationversion="3" id="335">
                     <property name="name" class="String">Assign Is Read</property>
                     <property name="stepAction" class="AssignVariable" serializationversion="4">
                       <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -6494,14 +6500,14 @@ Later we download all the attachment names and check them more throughly</proper
                     <property name="enabled" idref="7"/>
                     <property name="changedProperties" class="java.util.HashSet"/>
                   </object>
-                  <object class="Group" id="334">
+                  <object class="Group" id="336">
                     <name class="String">EWS:Mark Email as Read</name>
                     <comment>
                       <null/>
                     </comment>
-                    <blockBeginStep class="BlockBeginStep" id="335"/>
+                    <blockBeginStep class="BlockBeginStep" id="337"/>
                     <steps class="ArrayList">
-                      <object class="Transition" serializationversion="3" id="336">
+                      <object class="Transition" serializationversion="3" id="338">
                         <property name="name" idref="35"/>
                         <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
                           <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -6520,7 +6526,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="337">
+                      <object class="Transition" serializationversion="3" id="339">
                         <property name="name" idref="24"/>
                         <property name="stepAction" class="SetTagStepAction" serializationversion="0">
                           <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -6543,7 +6549,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="338">
+                      <object class="Transition" serializationversion="3" id="340">
                         <property name="name" class="String">Set Attribute Id</property>
                         <property name="stepAction" class="SetAttribute">
                           <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -6569,7 +6575,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="339">
+                      <object class="Transition" serializationversion="3" id="341">
                         <property name="name" class="String">Set Attribute ChangeKey</property>
                         <property name="stepAction" class="SetAttribute">
                           <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -6595,7 +6601,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="340">
+                      <object class="Transition" serializationversion="3" id="342">
                         <property name="name" class="String">EWS:Mark as Read</property>
                         <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
                           <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -6666,7 +6672,7 @@ Later we download all the attachment names and check them more throughly</proper
                           <element class="String">name</element>
                         </property>
                       </object>
-                      <object class="Transition" serializationversion="3" id="341">
+                      <object class="Transition" serializationversion="3" id="343">
                         <property name="name" idref="28"/>
                         <property name="stepAction" class="ViewAsXML"/>
                         <property name="elementFinders" class="ElementFinders"/>
@@ -6678,16 +6684,8 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
                     </steps>
-                    <blockEndStep class="BlockEndStep" id="342"/>
+                    <blockEndStep class="BlockEndStep" id="344"/>
                     <edges class="ArrayList">
-                      <object class="TransitionEdge">
-                        <from idref="335"/>
-                        <to idref="336"/>
-                      </object>
-                      <object class="TransitionEdge">
-                        <from idref="336"/>
-                        <to idref="337"/>
-                      </object>
                       <object class="TransitionEdge">
                         <from idref="337"/>
                         <to idref="338"/>
@@ -6708,16 +6706,24 @@ Later we download all the attachment names and check them more throughly</proper
                         <from idref="341"/>
                         <to idref="342"/>
                       </object>
+                      <object class="TransitionEdge">
+                        <from idref="342"/>
+                        <to idref="343"/>
+                      </object>
+                      <object class="TransitionEdge">
+                        <from idref="343"/>
+                        <to idref="344"/>
+                      </object>
                     </edges>
                   </object>
-                  <object class="Group" id="343">
+                  <object class="Group" id="345">
                     <name class="String">EWS:Categorize Email as "Robot Prcoessed"</name>
                     <comment>
                       <null/>
                     </comment>
-                    <blockBeginStep class="BlockBeginStep" id="344"/>
+                    <blockBeginStep class="BlockBeginStep" id="346"/>
                     <steps class="ArrayList">
-                      <object class="Transition" serializationversion="3" id="345">
+                      <object class="Transition" serializationversion="3" id="347">
                         <property name="name" idref="35"/>
                         <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
                           <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -6736,7 +6742,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="346">
+                      <object class="Transition" serializationversion="3" id="348">
                         <property name="name" idref="24"/>
                         <property name="stepAction" class="SetTagStepAction" serializationversion="0">
                           <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -6759,7 +6765,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="347">
+                      <object class="Transition" serializationversion="3" id="349">
                         <property name="name" class="String">Set Attribute Id</property>
                         <property name="stepAction" class="SetAttribute">
                           <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -6785,7 +6791,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="348">
+                      <object class="Transition" serializationversion="3" id="350">
                         <property name="name" class="String">Set Attribute ChangeKey</property>
                         <property name="stepAction" class="SetAttribute">
                           <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -6811,7 +6817,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="349">
+                      <object class="Transition" serializationversion="3" id="351">
                         <property name="name" class="String">Set Category</property>
                         <property name="stepAction" class="SetText">
                           <property name="text" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
@@ -6834,7 +6840,7 @@ Later we download all the attachment names and check them more throughly</proper
                           <element class="String">name</element>
                         </property>
                       </object>
-                      <object class="Transition" serializationversion="3" id="350">
+                      <object class="Transition" serializationversion="3" id="352">
                         <property name="name" class="String">EWS:Categorize as "Robot Procesed"</property>
                         <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
                           <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -6905,7 +6911,7 @@ Later we download all the attachment names and check them more throughly</proper
                           <element class="String">name</element>
                         </property>
                       </object>
-                      <object class="Transition" serializationversion="3" id="351">
+                      <object class="Transition" serializationversion="3" id="353">
                         <property name="name" idref="28"/>
                         <property name="stepAction" class="ViewAsXML"/>
                         <property name="elementFinders" class="ElementFinders"/>
@@ -6917,16 +6923,8 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
                     </steps>
-                    <blockEndStep class="BlockEndStep" id="352"/>
+                    <blockEndStep class="BlockEndStep" id="354"/>
                     <edges class="ArrayList">
-                      <object class="TransitionEdge">
-                        <from idref="344"/>
-                        <to idref="345"/>
-                      </object>
-                      <object class="TransitionEdge">
-                        <from idref="345"/>
-                        <to idref="346"/>
-                      </object>
                       <object class="TransitionEdge">
                         <from idref="346"/>
                         <to idref="347"/>
@@ -6951,10 +6949,18 @@ Later we download all the attachment names and check them more throughly</proper
                         <from idref="351"/>
                         <to idref="352"/>
                       </object>
+                      <object class="TransitionEdge">
+                        <from idref="352"/>
+                        <to idref="353"/>
+                      </object>
+                      <object class="TransitionEdge">
+                        <from idref="353"/>
+                        <to idref="354"/>
+                      </object>
                     </edges>
                   </object>
-                  <object class="Try" id="353"/>
-                  <object class="Transition" serializationversion="3" id="354">
+                  <object class="Try" id="355"/>
+                  <object class="Transition" serializationversion="3" id="356">
                     <property name="name" class="String">move to OutBox?</property>
                     <property name="stepAction" class="TestValue" serializationversion="0">
                       <property name="condition" class="Expression" serializationversion="1">
@@ -6975,14 +6981,14 @@ Later we download all the attachment names and check them more throughly</proper
                       <element class="String">name</element>
                     </property>
                   </object>
-                  <object class="Group" id="355">
+                  <object class="Group" id="357">
                     <name class="String">EWS:Find Outbox</name>
                     <comment>
                       <null/>
                     </comment>
-                    <blockBeginStep class="BlockBeginStep" id="356"/>
+                    <blockBeginStep class="BlockBeginStep" id="358"/>
                     <steps class="ArrayList">
-                      <object class="Transition" serializationversion="3" id="357">
+                      <object class="Transition" serializationversion="3" id="359">
                         <property name="name" class="String">Assign Outbox Folder Name</property>
                         <property name="stepAction" class="AssignVariable" serializationversion="4">
                           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -7002,7 +7008,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="358">
+                      <object class="Transition" serializationversion="3" id="360">
                         <property name="name" idref="35"/>
                         <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
                           <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -7021,7 +7027,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="359">
+                      <object class="Transition" serializationversion="3" id="361">
                         <property name="name" idref="24"/>
                         <property name="stepAction" class="SetTagStepAction" serializationversion="0">
                           <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -7044,7 +7050,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="360">
+                      <object class="Transition" serializationversion="3" id="362">
                         <property name="name" class="String">Set Attribute Value</property>
                         <property name="stepAction" class="SetAttribute">
                           <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -7070,7 +7076,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="361">
+                      <object class="Transition" serializationversion="3" id="363">
                         <property name="name" class="String">Set Attribute Id</property>
                         <property name="stepAction" class="SetAttribute">
                           <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -7096,7 +7102,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="362">
+                      <object class="Transition" serializationversion="3" id="364">
                         <property name="name" class="String">Set Attribute ChangeKey</property>
                         <property name="stepAction" class="SetAttribute">
                           <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -7122,7 +7128,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="363">
+                      <object class="Transition" serializationversion="3" id="365">
                         <property name="name" class="String">EWS:Read Inbox</property>
                         <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
                           <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -7193,7 +7199,7 @@ Later we download all the attachment names and check them more throughly</proper
                           <element class="String">name</element>
                         </property>
                       </object>
-                      <object class="Transition" serializationversion="3" id="364">
+                      <object class="Transition" serializationversion="3" id="366">
                         <property name="name" idref="28"/>
                         <property name="stepAction" class="ViewAsXML"/>
                         <property name="elementFinders" class="ElementFinders"/>
@@ -7204,7 +7210,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="365">
+                      <object class="Transition" serializationversion="3" id="367">
                         <property name="name" class="String">Extract Outbox Folder Id</property>
                         <property name="stepAction" class="ExtractTagAttribute2" serializationversion="3">
                           <property name="tagAttr" class="String">Id</property>
@@ -7226,7 +7232,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="366">
+                      <object class="Transition" serializationversion="3" id="368">
                         <property name="name" class="String">Extract Outbox Folder Change Key</property>
                         <property name="stepAction" class="ExtractTagAttribute2" serializationversion="3">
                           <property name="tagAttr" class="String">ChangeKey</property>
@@ -7249,16 +7255,8 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
                     </steps>
-                    <blockEndStep class="BlockEndStep" id="367"/>
+                    <blockEndStep class="BlockEndStep" id="369"/>
                     <edges class="ArrayList">
-                      <object class="TransitionEdge">
-                        <from idref="356"/>
-                        <to idref="357"/>
-                      </object>
-                      <object class="TransitionEdge">
-                        <from idref="357"/>
-                        <to idref="358"/>
-                      </object>
                       <object class="TransitionEdge">
                         <from idref="358"/>
                         <to idref="359"/>
@@ -7295,16 +7293,24 @@ Later we download all the attachment names and check them more throughly</proper
                         <from idref="366"/>
                         <to idref="367"/>
                       </object>
+                      <object class="TransitionEdge">
+                        <from idref="367"/>
+                        <to idref="368"/>
+                      </object>
+                      <object class="TransitionEdge">
+                        <from idref="368"/>
+                        <to idref="369"/>
+                      </object>
                     </edges>
                   </object>
-                  <object class="Group" id="368">
+                  <object class="Group" id="370">
                     <name class="String">EWS:Move to Folder</name>
                     <comment>
                       <null/>
                     </comment>
-                    <blockBeginStep class="BlockBeginStep" id="369"/>
+                    <blockBeginStep class="BlockBeginStep" id="371"/>
                     <steps class="ArrayList">
-                      <object class="Transition" serializationversion="3" id="370">
+                      <object class="Transition" serializationversion="3" id="372">
                         <property name="name" idref="35"/>
                         <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
                           <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -7323,7 +7329,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="371">
+                      <object class="Transition" serializationversion="3" id="373">
                         <property name="name" idref="24"/>
                         <property name="stepAction" class="SetTagStepAction" serializationversion="0">
                           <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -7346,7 +7352,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="372">
+                      <object class="Transition" serializationversion="3" id="374">
                         <property name="name" class="String">Set Attribute Id</property>
                         <property name="stepAction" class="SetAttribute">
                           <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -7372,7 +7378,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="373">
+                      <object class="Transition" serializationversion="3" id="375">
                         <property name="name" class="String">Set Attribute ChangeKey</property>
                         <property name="stepAction" class="SetAttribute">
                           <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -7398,7 +7404,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="374">
+                      <object class="Transition" serializationversion="3" id="376">
                         <property name="name" class="String">Set Attribute ChangeKey</property>
                         <property name="stepAction" class="SetAttribute">
                           <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -7424,7 +7430,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="375">
+                      <object class="Transition" serializationversion="3" id="377">
                         <property name="name" class="String">Set Attribute Id</property>
                         <property name="stepAction" class="SetAttribute">
                           <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -7450,7 +7456,7 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="enabled" idref="7"/>
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
-                      <object class="Transition" serializationversion="3" id="376">
+                      <object class="Transition" serializationversion="3" id="378">
                         <property name="name" class="String">EWS: Move to Folder</property>
                         <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
                           <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -7521,7 +7527,7 @@ Later we download all the attachment names and check them more throughly</proper
                           <element class="String">name</element>
                         </property>
                       </object>
-                      <object class="Transition" serializationversion="3" id="377">
+                      <object class="Transition" serializationversion="3" id="379">
                         <property name="name" idref="28"/>
                         <property name="stepAction" class="ViewAsXML"/>
                         <property name="elementFinders" class="ElementFinders"/>
@@ -7533,16 +7539,8 @@ Later we download all the attachment names and check them more throughly</proper
                         <property name="changedProperties" class="java.util.HashSet"/>
                       </object>
                     </steps>
-                    <blockEndStep class="BlockEndStep" id="378"/>
+                    <blockEndStep class="BlockEndStep" id="380"/>
                     <edges class="ArrayList">
-                      <object class="TransitionEdge">
-                        <from idref="369"/>
-                        <to idref="370"/>
-                      </object>
-                      <object class="TransitionEdge">
-                        <from idref="370"/>
-                        <to idref="371"/>
-                      </object>
                       <object class="TransitionEdge">
                         <from idref="371"/>
                         <to idref="372"/>
@@ -7571,23 +7569,19 @@ Later we download all the attachment names and check them more throughly</proper
                         <from idref="377"/>
                         <to idref="378"/>
                       </object>
+                      <object class="TransitionEdge">
+                        <from idref="378"/>
+                        <to idref="379"/>
+                      </object>
+                      <object class="TransitionEdge">
+                        <from idref="379"/>
+                        <to idref="380"/>
+                      </object>
                     </edges>
                   </object>
                 </steps>
-                <blockEndStep class="BlockEndStep" id="379"/>
+                <blockEndStep class="BlockEndStep" id="381"/>
                 <edges class="ArrayList">
-                  <object class="TransitionEdge">
-                    <from idref="330"/>
-                    <to idref="331"/>
-                  </object>
-                  <object class="TransitionEdge">
-                    <from idref="331"/>
-                    <to idref="332"/>
-                  </object>
-                  <object class="TransitionEdge">
-                    <from idref="331"/>
-                    <to idref="343"/>
-                  </object>
                   <object class="TransitionEdge">
                     <from idref="332"/>
                     <to idref="333"/>
@@ -7597,36 +7591,48 @@ Later we download all the attachment names and check them more throughly</proper
                     <to idref="334"/>
                   </object>
                   <object class="TransitionEdge">
+                    <from idref="333"/>
+                    <to idref="345"/>
+                  </object>
+                  <object class="TransitionEdge">
                     <from idref="334"/>
-                    <to idref="343"/>
+                    <to idref="335"/>
                   </object>
                   <object class="TransitionEdge">
-                    <from idref="343"/>
-                    <to idref="353"/>
+                    <from idref="335"/>
+                    <to idref="336"/>
                   </object>
                   <object class="TransitionEdge">
-                    <from idref="353"/>
-                    <to idref="354"/>
+                    <from idref="336"/>
+                    <to idref="345"/>
                   </object>
                   <object class="TransitionEdge">
-                    <from idref="353"/>
-                    <to idref="379"/>
-                  </object>
-                  <object class="TransitionEdge">
-                    <from idref="354"/>
+                    <from idref="345"/>
                     <to idref="355"/>
                   </object>
                   <object class="TransitionEdge">
                     <from idref="355"/>
-                    <to idref="368"/>
+                    <to idref="356"/>
                   </object>
                   <object class="TransitionEdge">
-                    <from idref="368"/>
-                    <to idref="379"/>
+                    <from idref="355"/>
+                    <to idref="381"/>
+                  </object>
+                  <object class="TransitionEdge">
+                    <from idref="356"/>
+                    <to idref="357"/>
+                  </object>
+                  <object class="TransitionEdge">
+                    <from idref="357"/>
+                    <to idref="370"/>
+                  </object>
+                  <object class="TransitionEdge">
+                    <from idref="370"/>
+                    <to idref="381"/>
                   </object>
                 </edges>
               </object>
-              <object class="Transition" serializationversion="3" id="380">
+              <object class="Transition" serializationversion="3" id="382">
                 <property name="name" class="String">Skip next Filters, Loop next Email</property>
                 <property name="stepAction" class="AssignVariable" serializationversion="4">
                   <property name="stringExpr" class="Expression" serializationversion="1">
@@ -7656,22 +7662,10 @@ Later we download all the attachment names and check them more throughly</proper
                   <element class="String">name</element>
                 </property>
               </object>
-              <object class="End" id="381"/>
+              <object class="End" id="383"/>
             </steps>
-            <blockEndStep class="BlockEndStep" id="382"/>
+            <blockEndStep class="BlockEndStep" id="384"/>
             <edges class="ArrayList">
-              <object class="TransitionEdge">
-                <from idref="278"/>
-                <to idref="279"/>
-              </object>
-              <object class="TransitionEdge">
-                <from idref="279"/>
-                <to idref="280"/>
-              </object>
-              <object class="TransitionEdge">
-                <from idref="279"/>
-                <to idref="290"/>
-              </object>
               <object class="TransitionEdge">
                 <from idref="280"/>
                 <to idref="281"/>
@@ -7679,6 +7673,10 @@ Later we download all the attachment names and check them more throughly</proper
               <object class="TransitionEdge">
                 <from idref="281"/>
                 <to idref="282"/>
+              </object>
+              <object class="TransitionEdge">
+                <from idref="281"/>
+                <to idref="292"/>
               </object>
               <object class="TransitionEdge">
                 <from idref="282"/>
@@ -7710,23 +7708,23 @@ Later we download all the attachment names and check them more throughly</proper
               </object>
               <object class="TransitionEdge">
                 <from idref="289"/>
-                <to idref="382"/>
+                <to idref="290"/>
               </object>
               <object class="TransitionEdge">
                 <from idref="290"/>
                 <to idref="291"/>
               </object>
               <object class="TransitionEdge">
-                <from idref="290"/>
-                <to idref="329"/>
-              </object>
-              <object class="TransitionEdge">
                 <from idref="291"/>
-                <to idref="292"/>
+                <to idref="384"/>
               </object>
               <object class="TransitionEdge">
                 <from idref="292"/>
                 <to idref="293"/>
+              </object>
+              <object class="TransitionEdge">
+                <from idref="292"/>
+                <to idref="331"/>
               </object>
               <object class="TransitionEdge">
                 <from idref="293"/>
@@ -7766,61 +7764,61 @@ Later we download all the attachment names and check them more throughly</proper
               </object>
               <object class="TransitionEdge">
                 <from idref="302"/>
-                <to idref="310"/>
+                <to idref="303"/>
               </object>
               <object class="TransitionEdge">
-                <from idref="310"/>
-                <to idref="311"/>
+                <from idref="303"/>
+                <to idref="304"/>
               </object>
               <object class="TransitionEdge">
-                <from idref="311"/>
+                <from idref="304"/>
                 <to idref="312"/>
               </object>
               <object class="TransitionEdge">
                 <from idref="312"/>
-                <to idref="323"/>
+                <to idref="313"/>
               </object>
               <object class="TransitionEdge">
-                <from idref="323"/>
-                <to idref="324"/>
+                <from idref="313"/>
+                <to idref="314"/>
               </object>
               <object class="TransitionEdge">
-                <from idref="323"/>
+                <from idref="314"/>
+                <to idref="325"/>
+              </object>
+              <object class="TransitionEdge">
+                <from idref="325"/>
                 <to idref="326"/>
               </object>
               <object class="TransitionEdge">
-                <from idref="324"/>
-                <to idref="325"/>
+                <from idref="325"/>
+                <to idref="328"/>
               </object>
               <object class="TransitionEdge">
                 <from idref="326"/>
                 <to idref="327"/>
               </object>
               <object class="TransitionEdge">
-                <from idref="327"/>
-                <to idref="328"/>
+                <from idref="328"/>
+                <to idref="329"/>
               </object>
               <object class="TransitionEdge">
                 <from idref="329"/>
-                <to idref="380"/>
+                <to idref="330"/>
               </object>
               <object class="TransitionEdge">
-                <from idref="380"/>
-                <to idref="381"/>
+                <from idref="331"/>
+                <to idref="382"/>
+              </object>
+              <object class="TransitionEdge">
+                <from idref="382"/>
+                <to idref="383"/>
               </object>
             </edges>
           </object>
         </steps>
-        <blockEndStep class="BlockEndStep" id="383"/>
+        <blockEndStep class="BlockEndStep" id="385"/>
         <edges class="ArrayList">
-          <object class="TransitionEdge">
-            <from idref="263"/>
-            <to idref="264"/>
-          </object>
-          <object class="TransitionEdge">
-            <from idref="264"/>
-            <to idref="265"/>
-          </object>
           <object class="TransitionEdge">
             <from idref="265"/>
             <to idref="266"/>
@@ -7828,10 +7826,6 @@ Later we download all the attachment names and check them more throughly</proper
           <object class="TransitionEdge">
             <from idref="266"/>
             <to idref="267"/>
-          </object>
-          <object class="TransitionEdge">
-            <from idref="266"/>
-            <to idref="273"/>
           </object>
           <object class="TransitionEdge">
             <from idref="267"/>
@@ -7843,7 +7837,7 @@ Later we download all the attachment names and check them more throughly</proper
           </object>
           <object class="TransitionEdge">
             <from idref="268"/>
-            <to idref="271"/>
+            <to idref="275"/>
           </object>
           <object class="TransitionEdge">
             <from idref="269"/>
@@ -7851,7 +7845,11 @@ Later we download all the attachment names and check them more throughly</proper
           </object>
           <object class="TransitionEdge">
             <from idref="270"/>
-            <to idref="383"/>
+            <to idref="271"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="270"/>
+            <to idref="273"/>
           </object>
           <object class="TransitionEdge">
             <from idref="271"/>
@@ -7859,38 +7857,46 @@ Later we download all the attachment names and check them more throughly</proper
           </object>
           <object class="TransitionEdge">
             <from idref="272"/>
-            <to idref="383"/>
+            <to idref="385"/>
           </object>
           <object class="TransitionEdge">
             <from idref="273"/>
-            <to idref="275"/>
+            <to idref="274"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="274"/>
+            <to idref="385"/>
           </object>
           <object class="TransitionEdge">
             <from idref="275"/>
-            <to idref="276"/>
-          </object>
-          <object class="TransitionEdge">
-            <from idref="275"/>
-            <to idref="268"/>
-          </object>
-          <object class="TransitionEdge">
-            <from idref="276"/>
             <to idref="277"/>
           </object>
           <object class="TransitionEdge">
             <from idref="277"/>
-            <to idref="268"/>
+            <to idref="278"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="277"/>
+            <to idref="270"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="278"/>
+            <to idref="279"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="279"/>
+            <to idref="270"/>
           </object>
         </edges>
       </object>
-      <object class="Group" id="384">
+      <object class="Group" id="386">
         <name class="String">Save Email to Database</name>
         <comment>
           <null/>
         </comment>
-        <blockBeginStep class="BlockBeginStep" id="385"/>
+        <blockBeginStep class="BlockBeginStep" id="387"/>
         <steps class="ArrayList">
-          <object class="Transition" serializationversion="3" id="386">
+          <object class="Transition" serializationversion="3" id="388">
             <property name="name" class="String">Assign Classification</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -7910,7 +7916,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="387">
+          <object class="Transition" serializationversion="3" id="389">
             <property name="name" class="String">Assign Is Processed</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -7928,7 +7934,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="388">
+          <object class="Transition" serializationversion="3" id="390">
             <property name="name" class="String">Assign Is Read</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -7948,7 +7954,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="389">
+          <object class="Transition" serializationversion="3" id="391">
             <property name="name" class="String">Assign Variable</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="Expression" serializationversion="1">
@@ -7968,7 +7974,7 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Transition" serializationversion="3" id="390">
+          <object class="Transition" serializationversion="3" id="392">
             <property name="name" idref="154"/>
             <property name="stepAction" class="StoreInDatabase" serializationversion="0">
               <property name="db" class="kapow.robot.plugin.common.support.expression.stringexpr.DBNameValueStringExpression">
@@ -7987,16 +7993,8 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
         </steps>
-        <blockEndStep class="BlockEndStep" id="391"/>
+        <blockEndStep class="BlockEndStep" id="393"/>
         <edges class="ArrayList">
-          <object class="TransitionEdge">
-            <from idref="385"/>
-            <to idref="386"/>
-          </object>
-          <object class="TransitionEdge">
-            <from idref="386"/>
-            <to idref="387"/>
-          </object>
           <object class="TransitionEdge">
             <from idref="387"/>
             <to idref="388"/>
@@ -8013,10 +8011,18 @@ Later we download all the attachment names and check them more throughly</proper
             <from idref="390"/>
             <to idref="391"/>
           </object>
+          <object class="TransitionEdge">
+            <from idref="391"/>
+            <to idref="392"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="392"/>
+            <to idref="393"/>
+          </object>
         </edges>
       </object>
-      <object class="BranchPoint" id="392"/>
-      <object class="Transition" serializationversion="3" id="393">
+      <object class="BranchPoint" id="394"/>
+      <object class="Transition" serializationversion="3" id="395">
         <property name="name" class="String">Get attachment?</property>
         <property name="stepAction" class="TestValue" serializationversion="0">
           <property name="condition" class="Expression" serializationversion="1">
@@ -8033,7 +8039,7 @@ Later we download all the attachment names and check them more throughly</proper
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="394">
+      <object class="Transition" serializationversion="3" id="396">
         <property name="name" idref="35"/>
         <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
           <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -8052,7 +8058,7 @@ Later we download all the attachment names and check them more throughly</proper
         <property name="enabled" idref="7"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="395">
+      <object class="Transition" serializationversion="3" id="397">
         <property name="name" idref="76"/>
         <property name="stepAction" class="ForEachTag" serializationversion="0">
           <property name="tag" class="String">t:fileattachment</property>
@@ -8071,14 +8077,14 @@ Later we download all the attachment names and check them more throughly</proper
         <property name="enabled" idref="7"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Group" id="396">
+      <object class="Group" id="398">
         <name class="String">EWS:Get Attachment</name>
         <comment>
           <null/>
         </comment>
-        <blockBeginStep class="BlockBeginStep" id="397"/>
+        <blockBeginStep class="BlockBeginStep" id="399"/>
         <steps class="ArrayList">
-          <object class="Transition" serializationversion="3" id="398">
+          <object class="Transition" serializationversion="3" id="400">
             <property name="name" class="String">Extract Attachment ID</property>
             <property name="stepAction" class="ExtractTagAttribute2" serializationversion="3">
               <property name="tagAttr" class="String">Id</property>
@@ -8107,7 +8113,7 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Transition" serializationversion="3" id="399">
+          <object class="Transition" serializationversion="3" id="401">
             <property name="name" idref="35"/>
             <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
               <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -8126,7 +8132,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="400">
+          <object class="Transition" serializationversion="3" id="402">
             <property name="name" idref="24"/>
             <property name="stepAction" class="SetTagStepAction" serializationversion="0">
               <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -8149,7 +8155,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="401">
+          <object class="Transition" serializationversion="3" id="403">
             <property name="name" class="String">Set Attribute Id</property>
             <property name="stepAction" class="SetAttribute">
               <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -8175,7 +8181,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="402">
+          <object class="Transition" serializationversion="3" id="404">
             <property name="name" class="String">EWS:Get Attachment</property>
             <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
               <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -8246,7 +8252,7 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Transition" serializationversion="3" id="403">
+          <object class="Transition" serializationversion="3" id="405">
             <property name="name" idref="28"/>
             <property name="stepAction" class="ViewAsXML"/>
             <property name="elementFinders" class="ElementFinders"/>
@@ -8257,7 +8263,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="404">
+          <object class="Transition" serializationversion="3" id="406">
             <property name="name" class="String">Extract Attachment Name</property>
             <property name="stepAction" class="Extract" serializationversion="1">
               <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -8278,7 +8284,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="405">
+          <object class="Transition" serializationversion="3" id="407">
             <property name="name" class="String">Extract Attachment</property>
             <property name="stepAction" class="Extract" serializationversion="1">
               <property name="dataConverters" class="DataConverters">
@@ -8303,16 +8309,8 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
         </steps>
-        <blockEndStep class="BlockEndStep" id="406"/>
+        <blockEndStep class="BlockEndStep" id="408"/>
         <edges class="ArrayList">
-          <object class="TransitionEdge">
-            <from idref="397"/>
-            <to idref="398"/>
-          </object>
-          <object class="TransitionEdge">
-            <from idref="398"/>
-            <to idref="399"/>
-          </object>
           <object class="TransitionEdge">
             <from idref="399"/>
             <to idref="400"/>
@@ -8341,10 +8339,18 @@ Later we download all the attachment names and check them more throughly</proper
             <from idref="405"/>
             <to idref="406"/>
           </object>
+          <object class="TransitionEdge">
+            <from idref="406"/>
+            <to idref="407"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="407"/>
+            <to idref="408"/>
+          </object>
         </edges>
       </object>
-      <object class="Try" id="407"/>
-      <object class="Transition" serializationversion="3" id="408">
+      <object class="Try" id="409"/>
+      <object class="Transition" serializationversion="3" id="410">
         <property name="name" idref="123"/>
         <property name="stepAction" class="TestValue" serializationversion="0">
           <property name="condition" class="Expression" serializationversion="1">
@@ -8363,8 +8369,8 @@ Later we download all the attachment names and check them more throughly</proper
         <property name="enabled" idref="7"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="409"/>
-      <object class="Transition" serializationversion="3" id="410">
+      <object class="End" id="411"/>
+      <object class="Transition" serializationversion="3" id="412">
         <property name="name" class="String">Assign ID MAIL</property>
         <property name="stepAction" class="CalculateKey" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
@@ -8384,7 +8390,7 @@ Later we download all the attachment names and check them more throughly</proper
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="411">
+      <object class="Transition" serializationversion="3" id="413">
         <property name="name" class="String">Salvataggio sul db attachment</property>
         <property name="stepAction" class="StoreInDatabase" serializationversion="0">
           <property name="db" class="kapow.robot.plugin.common.support.expression.stringexpr.DBNameValueStringExpression">
@@ -8406,16 +8412,16 @@ Later we download all the attachment names and check them more throughly</proper
           <element class="String">name</element>
         </property>
       </object>
-      <object class="End" id="412"/>
-      <object class="Group" id="413">
+      <object class="End" id="414"/>
+      <object class="Group" id="415">
         <name class="String">Mark Email in Outlook as "processed"</name>
         <comment>
           <null/>
         </comment>
-        <blockBeginStep class="BlockBeginStep" id="414"/>
+        <blockBeginStep class="BlockBeginStep" id="416"/>
         <steps class="ArrayList">
-          <object class="Try" id="415"/>
-          <object class="Transition" serializationversion="3" id="416">
+          <object class="Try" id="417"/>
+          <object class="Transition" serializationversion="3" id="418">
             <property name="name" class="String">mark as read?</property>
             <property name="stepAction" class="TestValue" serializationversion="0">
               <property name="condition" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -8438,7 +8444,7 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Transition" serializationversion="3" id="417">
+          <object class="Transition" serializationversion="3" id="419">
             <property name="name" class="String">Assign Is Read</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -8456,14 +8462,14 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Group" id="418">
+          <object class="Group" id="420">
             <name class="String">EWS:Mark Email as Read</name>
             <comment>
               <null/>
             </comment>
-            <blockBeginStep class="BlockBeginStep" id="419"/>
+            <blockBeginStep class="BlockBeginStep" id="421"/>
             <steps class="ArrayList">
-              <object class="Transition" serializationversion="3" id="420">
+              <object class="Transition" serializationversion="3" id="422">
                 <property name="name" idref="35"/>
                 <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
                   <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -8482,7 +8488,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="421">
+              <object class="Transition" serializationversion="3" id="423">
                 <property name="name" idref="24"/>
                 <property name="stepAction" class="SetTagStepAction" serializationversion="0">
                   <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -8505,7 +8511,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="422">
+              <object class="Transition" serializationversion="3" id="424">
                 <property name="name" class="String">Set Attribute Id</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -8531,7 +8537,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="423">
+              <object class="Transition" serializationversion="3" id="425">
                 <property name="name" class="String">Set Attribute ChangeKey</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -8557,7 +8563,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="424">
+              <object class="Transition" serializationversion="3" id="426">
                 <property name="name" class="String">EWS:Mark as Read</property>
                 <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
                   <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -8628,7 +8634,7 @@ Later we download all the attachment names and check them more throughly</proper
                   <element class="String">name</element>
                 </property>
               </object>
-              <object class="Transition" serializationversion="3" id="425">
+              <object class="Transition" serializationversion="3" id="427">
                 <property name="name" idref="28"/>
                 <property name="stepAction" class="ViewAsXML"/>
                 <property name="elementFinders" class="ElementFinders"/>
@@ -8640,16 +8646,8 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
             </steps>
-            <blockEndStep class="BlockEndStep" id="426"/>
+            <blockEndStep class="BlockEndStep" id="428"/>
             <edges class="ArrayList">
-              <object class="TransitionEdge">
-                <from idref="419"/>
-                <to idref="420"/>
-              </object>
-              <object class="TransitionEdge">
-                <from idref="420"/>
-                <to idref="421"/>
-              </object>
               <object class="TransitionEdge">
                 <from idref="421"/>
                 <to idref="422"/>
@@ -8670,16 +8668,24 @@ Later we download all the attachment names and check them more throughly</proper
                 <from idref="425"/>
                 <to idref="426"/>
               </object>
+              <object class="TransitionEdge">
+                <from idref="426"/>
+                <to idref="427"/>
+              </object>
+              <object class="TransitionEdge">
+                <from idref="427"/>
+                <to idref="428"/>
+              </object>
             </edges>
           </object>
-          <object class="Group" id="427">
+          <object class="Group" id="429">
             <name class="String">EWS:Categorize Email as "Robot Prcoessed"</name>
             <comment>
               <null/>
             </comment>
-            <blockBeginStep class="BlockBeginStep" id="428"/>
+            <blockBeginStep class="BlockBeginStep" id="430"/>
             <steps class="ArrayList">
-              <object class="Transition" serializationversion="3" id="429">
+              <object class="Transition" serializationversion="3" id="431">
                 <property name="name" idref="35"/>
                 <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
                   <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -8698,7 +8704,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="430">
+              <object class="Transition" serializationversion="3" id="432">
                 <property name="name" idref="24"/>
                 <property name="stepAction" class="SetTagStepAction" serializationversion="0">
                   <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -8721,7 +8727,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="431">
+              <object class="Transition" serializationversion="3" id="433">
                 <property name="name" class="String">Set Attribute Id</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -8747,7 +8753,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="432">
+              <object class="Transition" serializationversion="3" id="434">
                 <property name="name" class="String">Set Attribute ChangeKey</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -8773,7 +8779,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="433">
+              <object class="Transition" serializationversion="3" id="435">
                 <property name="name" class="String">Set Category</property>
                 <property name="stepAction" class="SetText">
                   <property name="text" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
@@ -8796,7 +8802,7 @@ Later we download all the attachment names and check them more throughly</proper
                   <element class="String">name</element>
                 </property>
               </object>
-              <object class="Transition" serializationversion="3" id="434">
+              <object class="Transition" serializationversion="3" id="436">
                 <property name="name" class="String">EWS:Categorize as "Robot Procesed"</property>
                 <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
                   <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -8867,7 +8873,7 @@ Later we download all the attachment names and check them more throughly</proper
                   <element class="String">name</element>
                 </property>
               </object>
-              <object class="Transition" serializationversion="3" id="435">
+              <object class="Transition" serializationversion="3" id="437">
                 <property name="name" idref="28"/>
                 <property name="stepAction" class="ViewAsXML"/>
                 <property name="elementFinders" class="ElementFinders"/>
@@ -8879,16 +8885,8 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
             </steps>
-            <blockEndStep class="BlockEndStep" id="436"/>
+            <blockEndStep class="BlockEndStep" id="438"/>
             <edges class="ArrayList">
-              <object class="TransitionEdge">
-                <from idref="428"/>
-                <to idref="429"/>
-              </object>
-              <object class="TransitionEdge">
-                <from idref="429"/>
-                <to idref="430"/>
-              </object>
               <object class="TransitionEdge">
                 <from idref="430"/>
                 <to idref="431"/>
@@ -8913,10 +8911,18 @@ Later we download all the attachment names and check them more throughly</proper
                 <from idref="435"/>
                 <to idref="436"/>
               </object>
+              <object class="TransitionEdge">
+                <from idref="436"/>
+                <to idref="437"/>
+              </object>
+              <object class="TransitionEdge">
+                <from idref="437"/>
+                <to idref="438"/>
+              </object>
             </edges>
           </object>
-          <object class="Try" id="437"/>
-          <object class="Transition" serializationversion="3" id="438">
+          <object class="Try" id="439"/>
+          <object class="Transition" serializationversion="3" id="440">
             <property name="name" class="String">move to OutBox?</property>
             <property name="stepAction" class="TestValue" serializationversion="0">
               <property name="condition" class="Expression" serializationversion="1">
@@ -8937,14 +8943,14 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Group" id="439">
+          <object class="Group" id="441">
             <name class="String">EWS:Find Outbox</name>
             <comment>
               <null/>
             </comment>
-            <blockBeginStep class="BlockBeginStep" id="440"/>
+            <blockBeginStep class="BlockBeginStep" id="442"/>
             <steps class="ArrayList">
-              <object class="Transition" serializationversion="3" id="441">
+              <object class="Transition" serializationversion="3" id="443">
                 <property name="name" class="String">Assign Outbox Folder Name</property>
                 <property name="stepAction" class="AssignVariable" serializationversion="4">
                   <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -8964,7 +8970,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="442">
+              <object class="Transition" serializationversion="3" id="444">
                 <property name="name" idref="35"/>
                 <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
                   <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -8983,7 +8989,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="443">
+              <object class="Transition" serializationversion="3" id="445">
                 <property name="name" idref="24"/>
                 <property name="stepAction" class="SetTagStepAction" serializationversion="0">
                   <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -9006,7 +9012,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="444">
+              <object class="Transition" serializationversion="3" id="446">
                 <property name="name" class="String">Set Attribute Value</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -9032,7 +9038,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="445">
+              <object class="Transition" serializationversion="3" id="447">
                 <property name="name" class="String">Set Attribute Id</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -9058,7 +9064,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="446">
+              <object class="Transition" serializationversion="3" id="448">
                 <property name="name" class="String">Set Attribute ChangeKey</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -9084,7 +9090,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="447">
+              <object class="Transition" serializationversion="3" id="449">
                 <property name="name" class="String">EWS:Read Inbox</property>
                 <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
                   <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -9155,7 +9161,7 @@ Later we download all the attachment names and check them more throughly</proper
                   <element class="String">name</element>
                 </property>
               </object>
-              <object class="Transition" serializationversion="3" id="448">
+              <object class="Transition" serializationversion="3" id="450">
                 <property name="name" idref="28"/>
                 <property name="stepAction" class="ViewAsXML"/>
                 <property name="elementFinders" class="ElementFinders"/>
@@ -9166,7 +9172,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="449">
+              <object class="Transition" serializationversion="3" id="451">
                 <property name="name" class="String">Extract Outbox Folder Id</property>
                 <property name="stepAction" class="ExtractTagAttribute2" serializationversion="3">
                   <property name="tagAttr" class="String">Id</property>
@@ -9188,7 +9194,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="450">
+              <object class="Transition" serializationversion="3" id="452">
                 <property name="name" class="String">Extract Outbox Folder Change Key</property>
                 <property name="stepAction" class="ExtractTagAttribute2" serializationversion="3">
                   <property name="tagAttr" class="String">ChangeKey</property>
@@ -9211,16 +9217,8 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
             </steps>
-            <blockEndStep class="BlockEndStep" id="451"/>
+            <blockEndStep class="BlockEndStep" id="453"/>
             <edges class="ArrayList">
-              <object class="TransitionEdge">
-                <from idref="440"/>
-                <to idref="441"/>
-              </object>
-              <object class="TransitionEdge">
-                <from idref="441"/>
-                <to idref="442"/>
-              </object>
               <object class="TransitionEdge">
                 <from idref="442"/>
                 <to idref="443"/>
@@ -9257,16 +9255,24 @@ Later we download all the attachment names and check them more throughly</proper
                 <from idref="450"/>
                 <to idref="451"/>
               </object>
+              <object class="TransitionEdge">
+                <from idref="451"/>
+                <to idref="452"/>
+              </object>
+              <object class="TransitionEdge">
+                <from idref="452"/>
+                <to idref="453"/>
+              </object>
             </edges>
           </object>
-          <object class="Group" id="452">
+          <object class="Group" id="454">
             <name class="String">EWS:Move to Folder</name>
             <comment>
               <null/>
             </comment>
-            <blockBeginStep class="BlockBeginStep" id="453"/>
+            <blockBeginStep class="BlockBeginStep" id="455"/>
             <steps class="ArrayList">
-              <object class="Transition" serializationversion="3" id="454">
+              <object class="Transition" serializationversion="3" id="456">
                 <property name="name" idref="35"/>
                 <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
                   <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -9285,7 +9291,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="455">
+              <object class="Transition" serializationversion="3" id="457">
                 <property name="name" idref="24"/>
                 <property name="stepAction" class="SetTagStepAction" serializationversion="0">
                   <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -9308,7 +9314,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="456">
+              <object class="Transition" serializationversion="3" id="458">
                 <property name="name" class="String">Set Attribute Id</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -9334,7 +9340,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="457">
+              <object class="Transition" serializationversion="3" id="459">
                 <property name="name" class="String">Set Attribute ChangeKey</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -9360,7 +9366,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="458">
+              <object class="Transition" serializationversion="3" id="460">
                 <property name="name" class="String">Set Attribute ChangeKey</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -9386,7 +9392,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="459">
+              <object class="Transition" serializationversion="3" id="461">
                 <property name="name" class="String">Set Attribute Id</property>
                 <property name="stepAction" class="SetAttribute">
                   <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -9412,7 +9418,7 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="enabled" idref="7"/>
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
-              <object class="Transition" serializationversion="3" id="460">
+              <object class="Transition" serializationversion="3" id="462">
                 <property name="name" class="String">EWS: Move to Folder</property>
                 <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
                   <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -9483,7 +9489,7 @@ Later we download all the attachment names and check them more throughly</proper
                   <element class="String">name</element>
                 </property>
               </object>
-              <object class="Transition" serializationversion="3" id="461">
+              <object class="Transition" serializationversion="3" id="463">
                 <property name="name" idref="28"/>
                 <property name="stepAction" class="ViewAsXML"/>
                 <property name="elementFinders" class="ElementFinders"/>
@@ -9495,16 +9501,8 @@ Later we download all the attachment names and check them more throughly</proper
                 <property name="changedProperties" class="java.util.HashSet"/>
               </object>
             </steps>
-            <blockEndStep class="BlockEndStep" id="462"/>
+            <blockEndStep class="BlockEndStep" id="464"/>
             <edges class="ArrayList">
-              <object class="TransitionEdge">
-                <from idref="453"/>
-                <to idref="454"/>
-              </object>
-              <object class="TransitionEdge">
-                <from idref="454"/>
-                <to idref="455"/>
-              </object>
               <object class="TransitionEdge">
                 <from idref="455"/>
                 <to idref="456"/>
@@ -9533,23 +9531,19 @@ Later we download all the attachment names and check them more throughly</proper
                 <from idref="461"/>
                 <to idref="462"/>
               </object>
+              <object class="TransitionEdge">
+                <from idref="462"/>
+                <to idref="463"/>
+              </object>
+              <object class="TransitionEdge">
+                <from idref="463"/>
+                <to idref="464"/>
+              </object>
             </edges>
           </object>
         </steps>
-        <blockEndStep class="BlockEndStep" id="463"/>
+        <blockEndStep class="BlockEndStep" id="465"/>
         <edges class="ArrayList">
-          <object class="TransitionEdge">
-            <from idref="414"/>
-            <to idref="415"/>
-          </object>
-          <object class="TransitionEdge">
-            <from idref="415"/>
-            <to idref="416"/>
-          </object>
-          <object class="TransitionEdge">
-            <from idref="415"/>
-            <to idref="427"/>
-          </object>
           <object class="TransitionEdge">
             <from idref="416"/>
             <to idref="417"/>
@@ -9559,36 +9553,48 @@ Later we download all the attachment names and check them more throughly</proper
             <to idref="418"/>
           </object>
           <object class="TransitionEdge">
+            <from idref="417"/>
+            <to idref="429"/>
+          </object>
+          <object class="TransitionEdge">
             <from idref="418"/>
-            <to idref="427"/>
+            <to idref="419"/>
           </object>
           <object class="TransitionEdge">
-            <from idref="427"/>
-            <to idref="437"/>
+            <from idref="419"/>
+            <to idref="420"/>
           </object>
           <object class="TransitionEdge">
-            <from idref="437"/>
-            <to idref="438"/>
+            <from idref="420"/>
+            <to idref="429"/>
           </object>
           <object class="TransitionEdge">
-            <from idref="437"/>
-            <to idref="463"/>
-          </object>
-          <object class="TransitionEdge">
-            <from idref="438"/>
+            <from idref="429"/>
             <to idref="439"/>
           </object>
           <object class="TransitionEdge">
             <from idref="439"/>
-            <to idref="452"/>
+            <to idref="440"/>
           </object>
           <object class="TransitionEdge">
-            <from idref="452"/>
-            <to idref="463"/>
+            <from idref="439"/>
+            <to idref="465"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="440"/>
+            <to idref="441"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="441"/>
+            <to idref="454"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="454"/>
+            <to idref="465"/>
           </object>
         </edges>
       </object>
-      <object class="Transition" serializationversion="3" id="464">
+      <object class="Transition" serializationversion="3" id="466">
         <property name="name" class="String">Skip next Filters, Loop next Email</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -9618,15 +9624,15 @@ Later we download all the attachment names and check them more throughly</proper
           <element class="String">name</element>
         </property>
       </object>
-      <object class="End" id="465"/>
-      <object class="Group" id="466">
+      <object class="End" id="467"/>
+      <object class="Group" id="468">
         <name class="String">Save Email to Database</name>
         <comment>
           <null/>
         </comment>
-        <blockBeginStep class="BlockBeginStep" id="467"/>
+        <blockBeginStep class="BlockBeginStep" id="469"/>
         <steps class="ArrayList">
-          <object class="Transition" serializationversion="3" id="468">
+          <object class="Transition" serializationversion="3" id="470">
             <property name="name" class="String">Assign Numero Ordine</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -9644,7 +9650,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="469">
+          <object class="Transition" serializationversion="3" id="471">
             <property name="name" class="String">Assign Classification</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -9662,7 +9668,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="470">
+          <object class="Transition" serializationversion="3" id="472">
             <property name="name" class="String">Assign Is Processed</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -9680,7 +9686,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="471">
+          <object class="Transition" serializationversion="3" id="473">
             <property name="name" class="String">Assign Is Read</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -9700,7 +9706,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="472">
+          <object class="Transition" serializationversion="3" id="474">
             <property name="name" class="String">Assign Variable</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="Expression" serializationversion="1">
@@ -9720,7 +9726,7 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Transition" serializationversion="3" id="473">
+          <object class="Transition" serializationversion="3" id="475">
             <property name="name" idref="154"/>
             <property name="stepAction" class="StoreInDatabase" serializationversion="0">
               <property name="db" class="kapow.robot.plugin.common.support.expression.stringexpr.DBNameValueStringExpression">
@@ -9739,16 +9745,8 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
         </steps>
-        <blockEndStep class="BlockEndStep" id="474"/>
+        <blockEndStep class="BlockEndStep" id="476"/>
         <edges class="ArrayList">
-          <object class="TransitionEdge">
-            <from idref="467"/>
-            <to idref="468"/>
-          </object>
-          <object class="TransitionEdge">
-            <from idref="468"/>
-            <to idref="469"/>
-          </object>
           <object class="TransitionEdge">
             <from idref="469"/>
             <to idref="470"/>
@@ -9769,16 +9767,24 @@ Later we download all the attachment names and check them more throughly</proper
             <from idref="473"/>
             <to idref="474"/>
           </object>
+          <object class="TransitionEdge">
+            <from idref="474"/>
+            <to idref="475"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="475"/>
+            <to idref="476"/>
+          </object>
         </edges>
       </object>
-      <object class="Group" id="475">
+      <object class="Group" id="477">
         <name class="String">Mark Email in Outlook as "ignore"</name>
         <comment>
           <null/>
         </comment>
-        <blockBeginStep class="BlockBeginStep" id="476"/>
+        <blockBeginStep class="BlockBeginStep" id="478"/>
         <steps class="ArrayList">
-          <object class="Transition" serializationversion="3" id="477">
+          <object class="Transition" serializationversion="3" id="479">
             <property name="name" idref="35"/>
             <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
               <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -9797,7 +9803,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="478">
+          <object class="Transition" serializationversion="3" id="480">
             <property name="name" idref="24"/>
             <property name="stepAction" class="SetTagStepAction" serializationversion="0">
               <property name="newContent" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -9820,7 +9826,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="479">
+          <object class="Transition" serializationversion="3" id="481">
             <property name="name" class="String">Set Attribute Id</property>
             <property name="stepAction" class="SetAttribute">
               <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -9846,7 +9852,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="480">
+          <object class="Transition" serializationversion="3" id="482">
             <property name="name" class="String">Set Attribute ChangeKey</property>
             <property name="stepAction" class="SetAttribute">
               <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -9872,8 +9878,8 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="481">
-            <property name="name" idref="248"/>
+          <object class="Transition" serializationversion="3" id="483">
+            <property name="name" idref="250"/>
             <property name="stepAction" class="SetText">
               <property name="text" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
                 <property name="value" class="String">Robot Ignoring</property>
@@ -9893,7 +9899,7 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="enabled" idref="7"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="482">
+          <object class="Transition" serializationversion="3" id="484">
             <property name="name" class="String">EWS:Categorize as "Robot Ignoring"</property>
             <property name="stepAction" class="CallSOAPWebService" serializationversion="1">
               <property name="webserviceInvoker" class="kapow.robot.plugin.common.stateprocessor.callwebservice3.ManualSOAPRequestProvider">
@@ -9964,7 +9970,7 @@ Later we download all the attachment names and check them more throughly</proper
               <element class="String">name</element>
             </property>
           </object>
-          <object class="Transition" serializationversion="3" id="483">
+          <object class="Transition" serializationversion="3" id="485">
             <property name="name" idref="28"/>
             <property name="stepAction" class="ViewAsXML"/>
             <property name="elementFinders" class="ElementFinders"/>
@@ -9976,16 +9982,8 @@ Later we download all the attachment names and check them more throughly</proper
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
         </steps>
-        <blockEndStep class="BlockEndStep" id="484"/>
+        <blockEndStep class="BlockEndStep" id="486"/>
         <edges class="ArrayList">
-          <object class="TransitionEdge">
-            <from idref="476"/>
-            <to idref="477"/>
-          </object>
-          <object class="TransitionEdge">
-            <from idref="477"/>
-            <to idref="478"/>
-          </object>
           <object class="TransitionEdge">
             <from idref="478"/>
             <to idref="479"/>
@@ -10010,9 +10008,17 @@ Later we download all the attachment names and check them more throughly</proper
             <from idref="483"/>
             <to idref="484"/>
           </object>
+          <object class="TransitionEdge">
+            <from idref="484"/>
+            <to idref="485"/>
+          </object>
+          <object class="TransitionEdge">
+            <from idref="485"/>
+            <to idref="486"/>
+          </object>
         </edges>
       </object>
-      <object class="Transition" serializationversion="3" id="485">
+      <object class="Transition" serializationversion="3" id="487">
         <property name="name" class="String">Skip next Filters, Loop next Email</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -10042,8 +10048,8 @@ Later we download all the attachment names and check them more throughly</proper
           <element class="String">name</element>
         </property>
       </object>
-      <object class="End" id="486"/>
-      <object class="Transition" serializationversion="3" id="487">
+      <object class="End" id="488"/>
+      <object class="Transition" serializationversion="3" id="489">
         <property name="name" class="String">no emails to process</property>
         <property name="stepAction" class="DoNothing"/>
         <property name="elementFinders" class="ElementFinders"/>
@@ -10056,7 +10062,7 @@ Later we download all the attachment names and check them more throughly</proper
           <element idref="12"/>
         </property>
       </object>
-      <object class="End" id="488"/>
+      <object class="End" id="490"/>
     </steps>
     <blockEndStep class="BlockEndStep"/>
     <edges class="ArrayList">
@@ -10082,7 +10088,7 @@ Later we download all the attachment names and check them more throughly</proper
       </object>
       <object class="TransitionEdge">
         <from idref="44"/>
-        <to idref="487"/>
+        <to idref="489"/>
       </object>
       <object class="TransitionEdge">
         <from idref="45"/>
@@ -10106,7 +10112,7 @@ Later we download all the attachment names and check them more throughly</proper
       </object>
       <object class="TransitionEdge">
         <from idref="74"/>
-        <to idref="254"/>
+        <to idref="256"/>
       </object>
       <object class="TransitionEdge">
         <from idref="75"/>
@@ -10126,7 +10132,7 @@ Later we download all the attachment names and check them more throughly</proper
       </object>
       <object class="TransitionEdge">
         <from idref="106"/>
-        <to idref="232"/>
+        <to idref="234"/>
       </object>
       <object class="TransitionEdge">
         <from idref="107"/>
@@ -10154,7 +10160,7 @@ Later we download all the attachment names and check them more throughly</proper
       </object>
       <object class="TransitionEdge">
         <from idref="156"/>
-        <to idref="178"/>
+        <to idref="180"/>
       </object>
       <object class="TransitionEdge">
         <from idref="157"/>
@@ -10189,67 +10195,63 @@ Later we download all the attachment names and check them more throughly</proper
         <to idref="176"/>
       </object>
       <object class="TransitionEdge">
+        <from idref="175"/>
+        <to idref="179"/>
+      </object>
+      <object class="TransitionEdge">
         <from idref="176"/>
         <to idref="177"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="178"/>
-        <to idref="229"/>
+        <from idref="177"/>
+        <to idref="178"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="229"/>
+        <from idref="180"/>
         <to idref="231"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="232"/>
-        <to idref="241"/>
+        <from idref="231"/>
+        <to idref="233"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="241"/>
-        <to idref="252"/>
+        <from idref="234"/>
+        <to idref="243"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="252"/>
-        <to idref="253"/>
+        <from idref="243"/>
+        <to idref="254"/>
       </object>
       <object class="TransitionEdge">
         <from idref="254"/>
         <to idref="255"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="254"/>
-        <to idref="466"/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="255"/>
-        <to idref="256"/>
-      </object>
-      <object class="TransitionEdge">
         <from idref="256"/>
         <to idref="257"/>
       </object>
       <object class="TransitionEdge">
+        <from idref="256"/>
+        <to idref="468"/>
+      </object>
+      <object class="TransitionEdge">
         <from idref="257"/>
-        <to idref="262"/>
+        <to idref="258"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="262"/>
-        <to idref="384"/>
+        <from idref="258"/>
+        <to idref="259"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="384"/>
-        <to idref="392"/>
+        <from idref="259"/>
+        <to idref="264"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="392"/>
-        <to idref="393"/>
+        <from idref="264"/>
+        <to idref="386"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="392"/>
-        <to idref="413"/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="393"/>
+        <from idref="386"/>
         <to idref="394"/>
       </object>
       <object class="TransitionEdge">
@@ -10257,56 +10259,68 @@ Later we download all the attachment names and check them more throughly</proper
         <to idref="395"/>
       </object>
       <object class="TransitionEdge">
+        <from idref="394"/>
+        <to idref="415"/>
+      </object>
+      <object class="TransitionEdge">
         <from idref="395"/>
         <to idref="396"/>
       </object>
       <object class="TransitionEdge">
         <from idref="396"/>
-        <to idref="407"/>
+        <to idref="397"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="407"/>
-        <to idref="408"/>
+        <from idref="397"/>
+        <to idref="398"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="407"/>
+        <from idref="398"/>
+        <to idref="409"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="409"/>
         <to idref="410"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="408"/>
-        <to idref="409"/>
+        <from idref="409"/>
+        <to idref="412"/>
       </object>
       <object class="TransitionEdge">
         <from idref="410"/>
         <to idref="411"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="411"/>
-        <to idref="412"/>
+        <from idref="412"/>
+        <to idref="413"/>
       </object>
       <object class="TransitionEdge">
         <from idref="413"/>
-        <to idref="464"/>
+        <to idref="414"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="464"/>
-        <to idref="465"/>
+        <from idref="415"/>
+        <to idref="466"/>
       </object>
       <object class="TransitionEdge">
         <from idref="466"/>
-        <to idref="475"/>
+        <to idref="467"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="475"/>
-        <to idref="485"/>
+        <from idref="468"/>
+        <to idref="477"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="485"/>
-        <to idref="486"/>
+        <from idref="477"/>
+        <to idref="487"/>
       </object>
       <object class="TransitionEdge">
         <from idref="487"/>
         <to idref="488"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="489"/>
+        <to idref="490"/>
       </object>
     </edges>
   </property>

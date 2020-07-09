@@ -20,6 +20,7 @@
       <sub-robot name="ChiusuraPiteco"/>
       <sub-robot name="AperturaPiteco"/>
       <sub-robot name="ChiusuraPiteco"/>
+      <sub-robot name="PagamentoManuale"/>
     </sub-robots>
     <device-mappings>
       <mapping name="Tesoreria"/>
@@ -994,8 +995,29 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="66">
-        <property name="name" class="String" id="67">Return Value</property>
+      <object class="Try" id="66"/>
+      <object class="Transition" serializationversion="3" id="67">
+        <property name="name" idref="19"/>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">Pagamento.Esito == ""</property>
+          </property>
+          <property name="mode" class="Integer">1</property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative"/>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="15"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="68">
+        <property name="name" class="String" id="69">Return Value</property>
         <property name="stepAction" class="ReturnVariable" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
             <property name="name" class="String">Pagamento</property>
@@ -1009,7 +1031,7 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="68">
+      <object class="Transition" serializationversion="3" id="70">
         <property name="name" idref="37"/>
         <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
           <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -1028,7 +1050,7 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="69">
+      <object class="Transition" serializationversion="3" id="71">
         <property name="name" class="String">set codice beneficiario piteco</property>
         <property name="stepAction" class="SetContentOfCell">
           <property name="contentExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -1061,10 +1083,10 @@
         </property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element class="String" id="70">name</element>
+          <element class="String" id="72">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="71">
+      <object class="Transition" serializationversion="3" id="73">
         <property name="name" class="String">Set Macro società piteco</property>
         <property name="stepAction" class="SetContentOfCell">
           <property name="contentExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -1102,10 +1124,10 @@
         </property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element idref="70"/>
+          <element idref="72"/>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="72">
+      <object class="Transition" serializationversion="3" id="74">
         <property name="name" class="String">Codice società pagamento</property>
         <property name="stepAction" class="SetContentOfCell">
           <property name="contentExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -1143,10 +1165,10 @@
         </property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element idref="70"/>
+          <element idref="72"/>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="73">
+      <object class="Transition" serializationversion="3" id="75">
         <property name="name" class="String">importo</property>
         <property name="stepAction" class="SetContentOfCell">
           <property name="contentExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -1184,10 +1206,10 @@
         </property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element idref="70"/>
+          <element idref="72"/>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="74">
+      <object class="Transition" serializationversion="3" id="76">
         <property name="name" class="String">società</property>
         <property name="stepAction" class="SetContentOfCell">
           <property name="contentExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -1225,10 +1247,10 @@
         </property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element idref="70"/>
+          <element idref="72"/>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="75">
+      <object class="Transition" serializationversion="3" id="77">
         <property name="name" class="String">set beneficiario</property>
         <property name="stepAction" class="SetContentOfCell">
           <property name="contentExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -1266,10 +1288,10 @@
         </property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element idref="70"/>
+          <element idref="72"/>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="76">
+      <object class="Transition" serializationversion="3" id="78">
         <property name="name" class="String">Set causale</property>
         <property name="stepAction" class="SetContentOfCell">
           <property name="contentExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -1307,10 +1329,10 @@
         </property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element idref="70"/>
+          <element idref="72"/>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="77">
+      <object class="Transition" serializationversion="3" id="79">
         <property name="name" class="String">Set iban</property>
         <property name="stepAction" class="SetContentOfCell">
           <property name="contentExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -1348,10 +1370,10 @@
         </property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element idref="70"/>
+          <element idref="72"/>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="78">
+      <object class="Transition" serializationversion="3" id="80">
         <property name="name" class="String">Set esito</property>
         <property name="stepAction" class="SetContentOfCell">
           <property name="contentExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -1389,10 +1411,10 @@
         </property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element idref="70"/>
+          <element idref="72"/>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="79">
+      <object class="Transition" serializationversion="3" id="81">
         <property name="name" class="String">Set Error</property>
         <property name="stepAction" class="SetContentOfCell">
           <property name="contentExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -1430,10 +1452,10 @@
         </property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element idref="70"/>
+          <element idref="72"/>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="80">
+      <object class="Transition" serializationversion="3" id="82">
         <property name="name" class="String">Set Messaggio Registrazione</property>
         <property name="stepAction" class="SetContentOfCell">
           <property name="contentExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -1471,10 +1493,10 @@
         </property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element idref="70"/>
+          <element idref="72"/>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="81">
+      <object class="Transition" serializationversion="3" id="83">
         <property name="name" class="String">Set Content of Cell</property>
         <property name="stepAction" class="SetContentOfCell">
           <property name="contentExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -1499,7 +1521,7 @@
         <property name="enabled" idref="14"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="82">
+      <object class="Transition" serializationversion="3" id="84">
         <property name="name" class="String">Assign Row</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -1517,7 +1539,7 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="83">
+      <object class="Transition" serializationversion="3" id="85">
         <property name="name" idref="37"/>
         <property name="stepAction" class="SetCurrentWindow" serializationversion="1">
           <property name="windowReferenceProvider" class="kapow.robot.plugin.common.stepaction.windowreferenceprovider.NamedWindowReferenceProvider">
@@ -1536,8 +1558,75 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="84"/>
-      <object class="Transition" serializationversion="3" id="85">
+      <object class="End" id="86"/>
+      <object class="Try" id="87"/>
+      <object class="Transition" serializationversion="3" id="88">
+        <property name="name" idref="31"/>
+        <property name="stepAction" class="CallRobot2Step">
+          <property name="robot2Name" class="String">PagamentoManuale</property>
+          <property name="inputValueExpression" class="kapow.robot.plugin.common.stepaction.rl2.InputValueBeanList">
+            <object class="kapow.robot.plugin.common.stepaction.rl2.InputValue">
+              <property name="inputValueExpression" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">Credenziali</property>
+                </property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stepaction.rl2.InputValue">
+              <property name="inputValueExpression" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String" id="89">Pagamento</property>
+                </property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stepaction.rl2.InputValue">
+              <property name="inputValueExpression" class="Expression" serializationversion="1">
+                <property name="text" class="String">"https://ced01pitecod01.replynet.prv/ClientWeb/"</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stepaction.rl2.InputValue">
+              <property name="inputValueExpression" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String" id="90">Configuration</property>
+                </property>
+              </property>
+            </object>
+          </property>
+          <property name="outputVariables" class="kapow.robot.plugin.common.stepaction.rl2.OutputVariableBeanList">
+            <object class="kapow.robot.plugin.common.stepaction.rl2.OutputVariable">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" idref="90"/>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stepaction.rl2.OutputVariable">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" idref="89"/>
+              </property>
+            </object>
+          </property>
+          <property name="remoteHubReferences" class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReferences">
+            <object class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReference" serializationversion="1">
+              <property name="reference" class="kapow.robot.plugin.common.stepaction.rl2.RemoteHubReference$StaticReference">
+                <property name="deviceName" class="String">Tesoreria</property>
+              </property>
+            </object>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="changedProperties" class="java.util.HashSet">
+            <element class="String">reportingViaLog</element>
+          </property>
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative"/>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="15"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="91">
         <property name="name" class="String">Assign Esito</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -1555,7 +1644,7 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="86">
+      <object class="Transition" serializationversion="3" id="92">
         <property name="name" class="String">Assign Error</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -1573,7 +1662,43 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="87">
+      <object class="Transition" serializationversion="3" id="93">
+        <property name="name" class="String">Assign Esito</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">Pagamento non eseguito</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">Pagamento.Esito</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="15"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="94">
+        <property name="name" class="String">Assign Error</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">"errore durante il pagamento"</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">Pagamento.Error</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="15"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="95">
         <property name="name" class="String">Assign Società Cod Piteco</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -1591,7 +1716,7 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="88">
+      <object class="Transition" serializationversion="3" id="96">
         <property name="name" class="String">Assign Esito</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -1609,7 +1734,7 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="89">
+      <object class="Transition" serializationversion="3" id="97">
         <property name="name" class="String">Assign Error</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -1627,7 +1752,7 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="90">
+      <object class="Transition" serializationversion="3" id="98">
         <property name="name" class="String">Assign Esito</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -1645,7 +1770,7 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="91">
+      <object class="Transition" serializationversion="3" id="99">
         <property name="name" class="String">Assign Error</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -1663,7 +1788,7 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="92">
+      <object class="Transition" serializationversion="3" id="100">
         <property name="name" class="String">Assign Esito</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -1681,7 +1806,7 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="93">
+      <object class="Transition" serializationversion="3" id="101">
         <property name="name" class="String">Assign Error</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -1699,8 +1824,8 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="94">
-        <property name="name" class="String" id="95">Write Log</property>
+      <object class="Transition" serializationversion="3" id="102">
+        <property name="name" class="String" id="103">Write Log</property>
         <property name="stepAction" class="WriteLog2">
           <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
             <property name="value" class="String">Errore durante l'estazione dal file Excel</property>
@@ -1714,8 +1839,8 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="96"/>
-      <object class="Transition" serializationversion="3" id="97">
+      <object class="End" id="104"/>
+      <object class="Transition" serializationversion="3" id="105">
         <property name="name" idref="31"/>
         <property name="stepAction" class="CallRobot2Step">
           <property name="robot2Name" class="String">ChiusuraPiteco</property>
@@ -1742,7 +1867,7 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="98">
+      <object class="Transition" serializationversion="3" id="106">
         <property name="name" idref="31"/>
         <property name="stepAction" class="CallRobot2Step">
           <property name="robot2Name" class="String">AperturaPiteco</property>
@@ -1790,8 +1915,8 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Try" id="99"/>
-      <object class="Transition" serializationversion="3" id="100">
+      <object class="Try" id="107"/>
+      <object class="Transition" serializationversion="3" id="108">
         <property name="name" idref="19"/>
         <property name="stepAction" class="TestValue" serializationversion="0">
           <property name="condition" class="Expression" serializationversion="1">
@@ -1810,7 +1935,7 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="101">
+      <object class="Transition" serializationversion="3" id="109">
         <property name="name" class="String">Assign Index</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -1828,8 +1953,8 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="102">
-        <property name="name" idref="95"/>
+      <object class="Transition" serializationversion="3" id="110">
+        <property name="name" idref="103"/>
         <property name="stepAction" class="WriteLog2">
           <property name="expression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -1845,8 +1970,8 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="103">
-        <property name="name" class="String" id="104">Send Email</property>
+      <object class="Transition" serializationversion="3" id="111">
+        <property name="name" class="String" id="112">Send Email</property>
         <property name="stepAction" class="SendEmail">
           <property name="fromAddress" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -1892,7 +2017,7 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="105">
+      <object class="Transition" serializationversion="3" id="113">
         <property name="name" class="String">Assign Esito</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -1910,8 +2035,8 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="106">
-        <property name="name" idref="67"/>
+      <object class="Transition" serializationversion="3" id="114">
+        <property name="name" idref="69"/>
         <property name="stepAction" class="ReturnVariable" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
             <property name="name" class="String">Pagamento</property>
@@ -1925,7 +2050,7 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="107">
+      <object class="Transition" serializationversion="3" id="115">
         <property name="name" class="String">Generate Error</property>
         <property name="stepAction" class="GenerateError">
           <property name="errorMessageExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -1944,9 +2069,9 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="108"/>
-      <object class="Transition" serializationversion="3" id="109">
-        <property name="name" idref="95"/>
+      <object class="End" id="116"/>
+      <object class="Transition" serializationversion="3" id="117">
+        <property name="name" idref="103"/>
         <property name="stepAction" class="WriteLog2">
           <property name="expression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -1962,8 +2087,8 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="110">
-        <property name="name" idref="104"/>
+      <object class="Transition" serializationversion="3" id="118">
+        <property name="name" idref="112"/>
         <property name="stepAction" class="SendEmail">
           <property name="fromAddress" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -2000,7 +2125,7 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="111">
+      <object class="Transition" serializationversion="3" id="119">
         <property name="name" class="String">Assign Esito</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -2018,8 +2143,8 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="112">
-        <property name="name" idref="67"/>
+      <object class="Transition" serializationversion="3" id="120">
+        <property name="name" idref="69"/>
         <property name="stepAction" class="ReturnVariable" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
             <property name="name" class="String">Pagamento</property>
@@ -2033,8 +2158,8 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="113"/>
-      <object class="Transition" serializationversion="3" id="114">
+      <object class="End" id="121"/>
+      <object class="Transition" serializationversion="3" id="122">
         <property name="name" idref="31"/>
         <property name="stepAction" class="CallRobot2Step">
           <property name="robot2Name" class="String">ChiusuraPiteco</property>
@@ -2061,8 +2186,8 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Try" id="115"/>
-      <object class="Transition" serializationversion="3" id="116">
+      <object class="Try" id="123"/>
+      <object class="Transition" serializationversion="3" id="124">
         <property name="name" idref="19"/>
         <property name="stepAction" class="TestValue" serializationversion="0">
           <property name="condition" class="Expression" serializationversion="1">
@@ -2081,8 +2206,8 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="117">
-        <property name="name" idref="95"/>
+      <object class="Transition" serializationversion="3" id="125">
+        <property name="name" idref="103"/>
         <property name="stepAction" class="WriteLog2">
           <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
             <property name="value" class="String">Errore durante la chiusura di piteco</property>
@@ -2096,8 +2221,8 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="118">
-        <property name="name" idref="104"/>
+      <object class="Transition" serializationversion="3" id="126">
+        <property name="name" idref="112"/>
         <property name="stepAction" class="SendEmail">
           <property name="fromAddress" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -2145,8 +2270,8 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="119">
-        <property name="name" idref="67"/>
+      <object class="Transition" serializationversion="3" id="127">
+        <property name="name" idref="69"/>
         <property name="stepAction" class="ReturnVariable" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
             <property name="name" class="String">Pagamento</property>
@@ -2160,9 +2285,9 @@
         <property name="enabled" idref="14"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="120"/>
-      <object class="Transition" serializationversion="3" id="121">
-        <property name="name" idref="95"/>
+      <object class="End" id="128"/>
+      <object class="Transition" serializationversion="3" id="129">
+        <property name="name" idref="103"/>
         <property name="stepAction" class="WriteLog2">
           <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
             <property name="value" class="String">Errore durante la chiusura di piteco</property>
@@ -2176,8 +2301,8 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="122">
-        <property name="name" idref="104"/>
+      <object class="Transition" serializationversion="3" id="130">
+        <property name="name" idref="112"/>
         <property name="stepAction" class="SendEmail">
           <property name="fromAddress" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -2223,7 +2348,7 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="123">
+      <object class="Transition" serializationversion="3" id="131">
         <property name="name" class="String">Assign Esito</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -2241,8 +2366,8 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="124">
-        <property name="name" idref="67"/>
+      <object class="Transition" serializationversion="3" id="132">
+        <property name="name" idref="69"/>
         <property name="stepAction" class="ReturnVariable" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
             <property name="name" class="String">Pagamento</property>
@@ -2256,9 +2381,9 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="125"/>
-      <object class="Transition" serializationversion="3" id="126">
-        <property name="name" idref="95"/>
+      <object class="End" id="133"/>
+      <object class="Transition" serializationversion="3" id="134">
+        <property name="name" idref="103"/>
         <property name="stepAction" class="WriteLog2">
           <property name="expression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -2274,8 +2399,8 @@
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="127">
-        <property name="name" idref="104"/>
+      <object class="Transition" serializationversion="3" id="135">
+        <property name="name" idref="112"/>
         <property name="stepAction" class="SendEmail">
           <property name="fromAddress" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -2313,7 +2438,7 @@ Le credenziali fornite per l'accesso a Piteco non sono corrette&lt;&lt;</propert
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="128">
+      <object class="Transition" serializationversion="3" id="136">
         <property name="name" class="String">Assign Esito</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -2331,8 +2456,8 @@ Le credenziali fornite per l'accesso a Piteco non sono corrette&lt;&lt;</propert
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="129">
-        <property name="name" idref="67"/>
+      <object class="Transition" serializationversion="3" id="137">
+        <property name="name" idref="69"/>
         <property name="stepAction" class="ReturnVariable" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
             <property name="name" class="String">Pagamento</property>
@@ -2346,9 +2471,9 @@ Le credenziali fornite per l'accesso a Piteco non sono corrette&lt;&lt;</propert
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="130"/>
-      <object class="Transition" serializationversion="3" id="131">
-        <property name="name" idref="95"/>
+      <object class="End" id="138"/>
+      <object class="Transition" serializationversion="3" id="139">
+        <property name="name" idref="103"/>
         <property name="stepAction" class="WriteLog2">
           <property name="expression" class="Expression" serializationversion="1">
             <property name="text" class="String">"Il foglio di stile '" + Request.SheetName + "' non è presente all'interno del file"</property>
@@ -2362,8 +2487,8 @@ Le credenziali fornite per l'accesso a Piteco non sono corrette&lt;&lt;</propert
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="132">
-        <property name="name" idref="104"/>
+      <object class="Transition" serializationversion="3" id="140">
+        <property name="name" idref="112"/>
         <property name="stepAction" class="SendEmail">
           <property name="fromAddress" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -2401,7 +2526,7 @@ Il foglio di stile &lt;&lt; + Request.SheetName + &gt;&gt; non è presente all'i
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="133">
+      <object class="Transition" serializationversion="3" id="141">
         <property name="name" class="String">Assign Esito</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -2419,8 +2544,8 @@ Il foglio di stile &lt;&lt; + Request.SheetName + &gt;&gt; non è presente all'i
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="134">
-        <property name="name" idref="67"/>
+      <object class="Transition" serializationversion="3" id="142">
+        <property name="name" idref="69"/>
         <property name="stepAction" class="ReturnVariable" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
             <property name="name" class="String">Pagamento</property>
@@ -2434,9 +2559,9 @@ Il foglio di stile &lt;&lt; + Request.SheetName + &gt;&gt; non è presente all'i
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="135"/>
-      <object class="Transition" serializationversion="3" id="136">
-        <property name="name" idref="95"/>
+      <object class="End" id="143"/>
+      <object class="Transition" serializationversion="3" id="144">
+        <property name="name" idref="103"/>
         <property name="stepAction" class="WriteLog2">
           <property name="expression" class="Expression" serializationversion="1">
             <property name="text" class="String">"Errore durante l'apertura del file con passwword"</property>
@@ -2450,8 +2575,8 @@ Il foglio di stile &lt;&lt; + Request.SheetName + &gt;&gt; non è presente all'i
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="137">
-        <property name="name" idref="104"/>
+      <object class="Transition" serializationversion="3" id="145">
+        <property name="name" idref="112"/>
         <property name="stepAction" class="SendEmail">
           <property name="fromAddress" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -2489,7 +2614,7 @@ La password inserita per l'apertura dell'excel non è corretta."</property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="138">
+      <object class="Transition" serializationversion="3" id="146">
         <property name="name" class="String">Assign Esito</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -2507,8 +2632,8 @@ La password inserita per l'apertura dell'excel non è corretta."</property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="139">
-        <property name="name" idref="67"/>
+      <object class="Transition" serializationversion="3" id="147">
+        <property name="name" idref="69"/>
         <property name="stepAction" class="ReturnVariable" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
             <property name="name" class="String">Pagamento</property>
@@ -2522,9 +2647,9 @@ La password inserita per l'apertura dell'excel non è corretta."</property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="140"/>
-      <object class="Try" id="141"/>
-      <object class="Transition" serializationversion="3" id="142">
+      <object class="End" id="148"/>
+      <object class="Try" id="149"/>
+      <object class="Transition" serializationversion="3" id="150">
         <property name="name" class="String">Convert Variables</property>
         <property name="stepAction" class="ConvertVariables">
           <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
@@ -2550,8 +2675,8 @@ La password inserita per l'apertura dell'excel non è corretta."</property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="143">
-        <property name="name" idref="95"/>
+      <object class="Transition" serializationversion="3" id="151">
+        <property name="name" idref="103"/>
         <property name="stepAction" class="WriteLog2">
           <property name="expression" class="Expression" serializationversion="1">
             <property name="text" class="String">"Errore durante l'apertura del file"</property>
@@ -2565,8 +2690,8 @@ La password inserita per l'apertura dell'excel non è corretta."</property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="144">
-        <property name="name" idref="104"/>
+      <object class="Transition" serializationversion="3" id="152">
+        <property name="name" idref="112"/>
         <property name="stepAction" class="SendEmail">
           <property name="fromAddress" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -2604,7 +2729,7 @@ File Excel non valido o protetto da password."</property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="145">
+      <object class="Transition" serializationversion="3" id="153">
         <property name="name" class="String">Assign Esito</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -2622,8 +2747,8 @@ File Excel non valido o protetto da password."</property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="146">
-        <property name="name" idref="67"/>
+      <object class="Transition" serializationversion="3" id="154">
+        <property name="name" idref="69"/>
         <property name="stepAction" class="ReturnVariable" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
             <property name="name" class="String">Pagamento</property>
@@ -2637,7 +2762,7 @@ File Excel non valido o protetto da password."</property>
         <property name="enabled" idref="15"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="147"/>
+      <object class="End" id="155"/>
     </steps>
     <blockEndStep class="BlockEndStep"/>
     <edges class="ArrayList">
@@ -2651,7 +2776,7 @@ File Excel non valido o protetto da password."</property>
       </object>
       <object class="TransitionEdge">
         <from idref="17"/>
-        <to idref="141"/>
+        <to idref="149"/>
       </object>
       <object class="TransitionEdge">
         <from idref="18"/>
@@ -2671,7 +2796,7 @@ File Excel non valido o protetto da password."</property>
       </object>
       <object class="TransitionEdge">
         <from idref="23"/>
-        <to idref="136"/>
+        <to idref="144"/>
       </object>
       <object class="TransitionEdge">
         <from idref="24"/>
@@ -2695,7 +2820,7 @@ File Excel non valido o protetto da password."</property>
       </object>
       <object class="TransitionEdge">
         <from idref="28"/>
-        <to idref="131"/>
+        <to idref="139"/>
       </object>
       <object class="TransitionEdge">
         <from idref="29"/>
@@ -2711,7 +2836,7 @@ File Excel non valido o protetto da password."</property>
       </object>
       <object class="TransitionEdge">
         <from idref="33"/>
-        <to idref="126"/>
+        <to idref="134"/>
       </object>
       <object class="TransitionEdge">
         <from idref="34"/>
@@ -2731,7 +2856,7 @@ File Excel non valido o protetto da password."</property>
       </object>
       <object class="TransitionEdge">
         <from idref="39"/>
-        <to idref="114"/>
+        <to idref="122"/>
       </object>
       <object class="TransitionEdge">
         <from idref="40"/>
@@ -2739,7 +2864,7 @@ File Excel non valido o protetto da password."</property>
       </object>
       <object class="TransitionEdge">
         <from idref="40"/>
-        <to idref="109"/>
+        <to idref="117"/>
       </object>
       <object class="TransitionEdge">
         <from idref="41"/>
@@ -2751,7 +2876,7 @@ File Excel non valido o protetto da password."</property>
       </object>
       <object class="TransitionEdge">
         <from idref="42"/>
-        <to idref="97"/>
+        <to idref="105"/>
       </object>
       <object class="TransitionEdge">
         <from idref="43"/>
@@ -2767,7 +2892,7 @@ File Excel non valido o protetto da password."</property>
       </object>
       <object class="TransitionEdge">
         <from idref="45"/>
-        <to idref="94"/>
+        <to idref="102"/>
       </object>
       <object class="TransitionEdge">
         <from idref="46"/>
@@ -2795,7 +2920,7 @@ File Excel non valido o protetto da password."</property>
       </object>
       <object class="TransitionEdge">
         <from idref="51"/>
-        <to idref="92"/>
+        <to idref="100"/>
       </object>
       <object class="TransitionEdge">
         <from idref="52"/>
@@ -2807,7 +2932,7 @@ File Excel non valido o protetto da password."</property>
       </object>
       <object class="TransitionEdge">
         <from idref="53"/>
-        <to idref="90"/>
+        <to idref="98"/>
       </object>
       <object class="TransitionEdge">
         <from idref="54"/>
@@ -2819,7 +2944,7 @@ File Excel non valido o protetto da password."</property>
       </object>
       <object class="TransitionEdge">
         <from idref="56"/>
-        <to idref="88"/>
+        <to idref="96"/>
       </object>
       <object class="TransitionEdge">
         <from idref="57"/>
@@ -2831,7 +2956,7 @@ File Excel non valido o protetto da password."</property>
       </object>
       <object class="TransitionEdge">
         <from idref="58"/>
-        <to idref="87"/>
+        <to idref="95"/>
       </object>
       <object class="TransitionEdge">
         <from idref="59"/>
@@ -2847,7 +2972,7 @@ File Excel non valido o protetto da password."</property>
       </object>
       <object class="TransitionEdge">
         <from idref="62"/>
-        <to idref="85"/>
+        <to idref="93"/>
       </object>
       <object class="TransitionEdge">
         <from idref="63"/>
@@ -2855,22 +2980,26 @@ File Excel non valido o protetto da password."</property>
       </object>
       <object class="TransitionEdge">
         <from idref="66"/>
+        <to idref="67"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="66"/>
+        <to idref="87"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="67"/>
         <to idref="68"/>
       </object>
       <object class="TransitionEdge">
         <from idref="68"/>
-        <to idref="69"/>
+        <to idref="70"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="69"/>
+        <from idref="70"/>
         <to idref="71"/>
       </object>
       <object class="TransitionEdge">
         <from idref="71"/>
-        <to idref="72"/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="72"/>
         <to idref="73"/>
       </object>
       <object class="TransitionEdge">
@@ -2918,48 +3047,52 @@ File Excel non valido o protetto da password."</property>
         <to idref="84"/>
       </object>
       <object class="TransitionEdge">
+        <from idref="84"/>
+        <to idref="85"/>
+      </object>
+      <object class="TransitionEdge">
         <from idref="85"/>
         <to idref="86"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="86"/>
-        <to idref="66"/>
+        <from idref="87"/>
+        <to idref="88"/>
       </object>
       <object class="TransitionEdge">
         <from idref="87"/>
-        <to idref="62"/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="88"/>
-        <to idref="89"/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="89"/>
-        <to idref="66"/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="90"/>
         <to idref="91"/>
       </object>
       <object class="TransitionEdge">
+        <from idref="88"/>
+        <to idref="68"/>
+      </object>
+      <object class="TransitionEdge">
         <from idref="91"/>
-        <to idref="66"/>
+        <to idref="92"/>
       </object>
       <object class="TransitionEdge">
         <from idref="92"/>
-        <to idref="93"/>
+        <to idref="68"/>
       </object>
       <object class="TransitionEdge">
         <from idref="93"/>
-        <to idref="66"/>
+        <to idref="94"/>
       </object>
       <object class="TransitionEdge">
         <from idref="94"/>
-        <to idref="96"/>
+        <to idref="66"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="95"/>
+        <to idref="62"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="96"/>
+        <to idref="97"/>
       </object>
       <object class="TransitionEdge">
         <from idref="97"/>
-        <to idref="98"/>
+        <to idref="66"/>
       </object>
       <object class="TransitionEdge">
         <from idref="98"/>
@@ -2967,11 +3100,7 @@ File Excel non valido o protetto da password."</property>
       </object>
       <object class="TransitionEdge">
         <from idref="99"/>
-        <to idref="100"/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="99"/>
-        <to idref="102"/>
+        <to idref="66"/>
       </object>
       <object class="TransitionEdge">
         <from idref="100"/>
@@ -2979,15 +3108,11 @@ File Excel non valido o protetto da password."</property>
       </object>
       <object class="TransitionEdge">
         <from idref="101"/>
-        <to idref="45"/>
+        <to idref="66"/>
       </object>
       <object class="TransitionEdge">
         <from idref="102"/>
-        <to idref="103"/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="103"/>
-        <to idref="105"/>
+        <to idref="104"/>
       </object>
       <object class="TransitionEdge">
         <from idref="105"/>
@@ -3002,8 +3127,16 @@ File Excel non valido o protetto da password."</property>
         <to idref="108"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="109"/>
+        <from idref="107"/>
         <to idref="110"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="108"/>
+        <to idref="109"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="109"/>
+        <to idref="45"/>
       </object>
       <object class="TransitionEdge">
         <from idref="110"/>
@@ -3011,11 +3144,11 @@ File Excel non valido o protetto da password."</property>
       </object>
       <object class="TransitionEdge">
         <from idref="111"/>
-        <to idref="112"/>
+        <to idref="113"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="112"/>
-        <to idref="113"/>
+        <from idref="113"/>
+        <to idref="114"/>
       </object>
       <object class="TransitionEdge">
         <from idref="114"/>
@@ -3024,14 +3157,6 @@ File Excel non valido o protetto da password."</property>
       <object class="TransitionEdge">
         <from idref="115"/>
         <to idref="116"/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="115"/>
-        <to idref="121"/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="116"/>
-        <to idref="117"/>
       </object>
       <object class="TransitionEdge">
         <from idref="117"/>
@@ -3046,8 +3171,8 @@ File Excel non valido o protetto da password."</property>
         <to idref="120"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="121"/>
-        <to idref="122"/>
+        <from idref="120"/>
+        <to idref="121"/>
       </object>
       <object class="TransitionEdge">
         <from idref="122"/>
@@ -3058,8 +3183,16 @@ File Excel non valido o protetto da password."</property>
         <to idref="124"/>
       </object>
       <object class="TransitionEdge">
+        <from idref="123"/>
+        <to idref="129"/>
+      </object>
+      <object class="TransitionEdge">
         <from idref="124"/>
         <to idref="125"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="125"/>
+        <to idref="126"/>
       </object>
       <object class="TransitionEdge">
         <from idref="126"/>
@@ -3070,12 +3203,12 @@ File Excel non valido o protetto da password."</property>
         <to idref="128"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="128"/>
-        <to idref="129"/>
-      </object>
-      <object class="TransitionEdge">
         <from idref="129"/>
         <to idref="130"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="130"/>
+        <to idref="131"/>
       </object>
       <object class="TransitionEdge">
         <from idref="131"/>
@@ -3086,12 +3219,12 @@ File Excel non valido o protetto da password."</property>
         <to idref="133"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="133"/>
-        <to idref="134"/>
-      </object>
-      <object class="TransitionEdge">
         <from idref="134"/>
         <to idref="135"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="135"/>
+        <to idref="136"/>
       </object>
       <object class="TransitionEdge">
         <from idref="136"/>
@@ -3102,28 +3235,20 @@ File Excel non valido o protetto da password."</property>
         <to idref="138"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="138"/>
-        <to idref="139"/>
-      </object>
-      <object class="TransitionEdge">
         <from idref="139"/>
         <to idref="140"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="140"/>
+        <to idref="141"/>
       </object>
       <object class="TransitionEdge">
         <from idref="141"/>
         <to idref="142"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="141"/>
-        <to idref="143"/>
-      </object>
-      <object class="TransitionEdge">
         <from idref="142"/>
-        <to idref="26"/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="143"/>
-        <to idref="144"/>
+        <to idref="143"/>
       </object>
       <object class="TransitionEdge">
         <from idref="144"/>
@@ -3136,6 +3261,38 @@ File Excel non valido o protetto da password."</property>
       <object class="TransitionEdge">
         <from idref="146"/>
         <to idref="147"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="147"/>
+        <to idref="148"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="149"/>
+        <to idref="150"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="149"/>
+        <to idref="151"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="150"/>
+        <to idref="26"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="151"/>
+        <to idref="152"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="152"/>
+        <to idref="153"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="153"/>
+        <to idref="154"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="154"/>
+        <to idref="155"/>
       </object>
     </edges>
   </property>

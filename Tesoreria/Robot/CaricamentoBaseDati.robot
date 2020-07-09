@@ -653,10 +653,10 @@
 `descrizione2`,
 `Iban`)
 VALUES
-("&lt;&lt;+trim(beneficiario.codice)+&gt;&gt;","
-&lt;&lt;+trim(beneficiario.codice2)+&gt;&gt;","
-","
-&lt;&lt;+trim(beneficiario.iban)+&gt;&gt;")&lt;&lt;
+("&lt;&lt;+trim(beneficiario.codice)+&gt;&gt;",
+"&lt;&lt;+trim(beneficiario.codice2)+&gt;&gt;",
+"",
+"&lt;&lt;+trim(beneficiario.iban)+&gt;&gt;")&lt;&lt;
 </property>
           </property>
           <property name="executeInDesignMode" class="Boolean">true</property>
@@ -680,7 +680,7 @@ VALUES
           </property>
           <property name="sql" class="Expression" serializationversion="1">
             <property name="text" class="String">&gt;&gt;UPDATE reply_rpa.piteco_beneficiari
-SET descrizione1 = "&lt;&lt;+beneficiario.codice2+&gt;&gt; ",
+SET descrizione1 = "&lt;&lt;+beneficiario.codice2+&gt;&gt;",
 Iban ="&lt;&lt;+beneficiario.iban+&gt;&gt;",
 dataUltimaModifica = now()
 WHERE codice ="&lt;&lt;+beneficiario.codice+&gt;&gt;"&lt;&lt;</property>
