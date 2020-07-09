@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <schedule id="1">
-  <id>805468283322700</id>
+  <id>2435064984604400</id>
   <name>Dobby - Portale Generali</name>
   <blockJob id="2">
     <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
       <project id="4"/>
-      <name>Dobby - Portale Generali1592583389671</name>
+      <name>Dobby - Portale Generali1594213046500</name>
       <namedBlock>false</namedBlock>
       <childReference id="5">
         <child class="concurrentBlock" id="6">
@@ -40,7 +40,7 @@
   &lt;__inputObjects&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Dobby - Portale Generali1592583389671#0#Dobby - Portale Generali:middleBlock#0#Ordini/Robot/Ordini_portale_Generali#Request&lt;/__variableName&gt;
+      &lt;__variableName&gt;Dobby - Portale Generali1594213046500#0#Dobby - Portale Generali:middleBlock#0#Ordini/Robot/Ordini_portale_Generali#Request&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -78,7 +78,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Dobby - Portale Generali1592583389671#0#Dobby - Portale Generali:middleBlock#0#Ordini/Robot/Ordini_portale_Generali#WriteFileConfReport&lt;/__variableName&gt;
+      &lt;__variableName&gt;Dobby - Portale Generali1594213046500#0#Dobby - Portale Generali:middleBlock#0#Ordini/Robot/Ordini_portale_Generali#WriteFileConfReport&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -88,7 +88,7 @@
       &lt;__attributes&gt;
         &lt;Attribute&gt;
           &lt;type&gt;SHORT_TEXT&lt;/type&gt;
-          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001/0.Riepiloghi REY e RPS&lt;/value&gt;
+          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001/0.Riepiloghi REY e RPS/2020/Ordini sospesi&lt;/value&gt;
           &lt;__name&gt;Root&lt;/__name&gt;
           &lt;required&gt;false&lt;/required&gt;
           &lt;visible&gt;true&lt;/visible&gt;
@@ -119,7 +119,7 @@
         &lt;/Attribute&gt;
         &lt;Attribute&gt;
           &lt;type&gt;SHORT_TEXT&lt;/type&gt;
-          &lt;value&gt;:\_anno\Ordini sospesi\__Report ordini&lt;/value&gt;
+          &lt;value&gt;:\__Report ordini&lt;/value&gt;
           &lt;__name&gt;relativePath&lt;/__name&gt;
           &lt;required&gt;false&lt;/required&gt;
           &lt;visible&gt;true&lt;/visible&gt;
@@ -128,7 +128,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Dobby - Portale Generali1592583389671#0#Dobby - Portale Generali:middleBlock#0#Ordini/Robot/Ordini_portale_Generali#WriteFileConfiguration&lt;/__variableName&gt;
+      &lt;__variableName&gt;Dobby - Portale Generali1594213046500#0#Dobby - Portale Generali:middleBlock#0#Ordini/Robot/Ordini_portale_Generali#WriteFileConfiguration&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -138,7 +138,7 @@
       &lt;__attributes&gt;
         &lt;Attribute&gt;
           &lt;type&gt;SHORT_TEXT&lt;/type&gt;
-          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001/0.Riepiloghi REY e RPS&lt;/value&gt;
+          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001/0.Riepiloghi REY e RPS/2020/Ordini sospesi&lt;/value&gt;
           &lt;__name&gt;Root&lt;/__name&gt;
           &lt;required&gt;false&lt;/required&gt;
           &lt;visible&gt;true&lt;/visible&gt;
@@ -169,7 +169,7 @@
         &lt;/Attribute&gt;
         &lt;Attribute&gt;
           &lt;type&gt;SHORT_TEXT&lt;/type&gt;
-          &lt;value&gt;:\_anno\Ordini sospesi\_mese\_filename&lt;/value&gt;
+          &lt;value&gt;:\_mese\_filename&lt;/value&gt;
           &lt;__name&gt;relativePath&lt;/__name&gt;
           &lt;required&gt;false&lt;/required&gt;
           &lt;visible&gt;true&lt;/visible&gt;
@@ -182,28 +182,27 @@
     <active>false</active>
     <displayNameMap>{"0Ordini/Robot/Ordini_portale_Generali":"Ordini/Robot/Ordini_portale_Generali"}</displayNameMap>
   </blockJob>
-  <totalRuns>12</totalRuns>
-  <active>true</active>
+  <totalRuns>0</totalRuns>
+  <active>false</active>
   <useEmailNotification>true</useEmailNotification>
   <emails>eosit@reply.it</emails>
-  <previousRun id="10">2020-06-29 16:00:38.0 UTC</previousRun>
-  <nextRun id="11">2020-06-30 16:00:00.0 UTC</nextRun>
+  <nextRun id="10">2020-07-08 16:00:00.0 UTC</nextRun>
   <maxRuntime>-1</maxRuntime>
   <maxObjectsExtracted>-1</maxObjectsExtracted>
   <createdBy>admin</createdBy>
   <modifiedBy>admin</modifiedBy>
-  <cluster id="12">
+  <cluster id="11">
     <name>NonProduction</name>
   </cluster>
-  <scheduler class="org.quartz.impl.StdScheduler" id="13">
+  <scheduler class="org.quartz.impl.StdScheduler" id="12">
     <scheduler/></scheduler>
-  <trigger class="org.quartz.impl.triggers.SimpleTriggerImpl" id="14">
-    <name>805468283322700</name>
-    <start id="15">2020-06-10 16:00:00.0 UTC</start>
+  <trigger class="org.quartz.impl.triggers.SimpleTriggerImpl" id="13">
+    <name>2435064984604400</name>
+    <start id="14">2020-06-10 16:00:00.0 UTC</start>
     <interval>86400000</interval>
     <repeatCount>-1</repeatCount>
   </trigger>
   <revisionNumber>local</revisionNumber>
-  <lastModified id="16">2020-06-19 16:16:30.0 UTC</lastModified>
+  <lastModified id="15">2020-07-08 12:57:27.0 UTC</lastModified>
   <serializationVersion>1</serializationVersion>
 </schedule>
