@@ -25,7 +25,24 @@
         "id": { "string": "Boolean" }
       }
     }],
-    "parameters": [],
+    "parameters": [{
+      "meta":{
+        "className":"VariableDef",
+        "version":0
+      },
+      "gizmo":{
+        "id": { "string": "ambiente" },
+        "typ": {
+          "meta":{
+            "className":"TypeUse",
+            "version":0
+          },
+          "gizmo":{
+            "id": { "string": "Text" }
+          }
+        }
+      }
+    }],
     "treeModes": [],
     "types": [],
     "variables": [],
@@ -1132,7 +1149,7 @@
                                             "version":0
                                           },
                                           "gizmo":{
-                                            "text": { "string": "PitecoLauncher.exe[title=\"Piteco Evolution TEST\"]" }
+                                            "text": { "string": "=\"PitecoLauncher.exe[title=\\\"\" +ambiente+ \"\\\"]\"" }
                                           }
                                         }
                                       }
