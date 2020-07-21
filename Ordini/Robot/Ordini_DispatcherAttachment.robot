@@ -778,7 +778,6 @@ and DateTimeExtraction &lt; (select DateTimeExtraction from ordini_email where o
               <property name="name" class="String">email.Attachment</property>
             </property>
           </property>
-          <property name="appendToFile" class="Boolean">true</property>
           <property name="createDirectories" class="Boolean">true</property>
           <property name="executeInRoboMaker" class="Boolean">true</property>
         </property>
