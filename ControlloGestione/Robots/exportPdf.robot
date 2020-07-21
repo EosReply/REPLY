@@ -2324,7 +2324,7 @@
                                 "version":0
                               },
                               "gizmo":{
-                                "text": { "string": "3" }
+                                "text": { "string": "2" }
                               }
                             }
                           }
@@ -6735,66 +6735,6 @@
                 },
                 {
                   "meta":{
-                    "className":"GuardedChoiceStep",
-                    "version":1
-                  },
-                  "gizmo":{
-                    "name": {
-                      "meta":{
-                        "className":"StepName",
-                        "version":0
-                      },
-                      "gizmo":{
-                        "customName": { "string": "Wait click sheet" }
-                      }
-                    },
-                    "comment": {
-                      "meta":{
-                        "className":"StepComment",
-                        "version":0
-                      },
-                      "gizmo":{
-                        "comment": { "string": "" }
-                      }
-                    },
-                    "branches": [{
-                      "meta":{
-                        "className":"GuardAndBlock",
-                        "version":3
-                      },
-                      "gizmo":{
-                        "guard": {
-                          "meta":{
-                            "className":"TimeOutGuard",
-                            "version":0
-                          },
-                          "gizmo":{
-                            "seconds": {
-                              "meta":{
-                                "className":"Expression",
-                                "version":0
-                              },
-                              "gizmo":{
-                                "text": { "string": "2" }
-                              }
-                            }
-                          }
-                        },
-                        "block": {
-                          "meta":{
-                            "className":"Block",
-                            "version":2
-                          },
-                          "gizmo":{
-                            "steps": []
-                          }
-                        }
-                      }
-                    }]
-                  }
-                },
-                {
-                  "meta":{
                     "className":"AssignStep",
                     "version":1
                   },
@@ -6976,66 +6916,6 @@
                         "text": { "string": "MessageResult" }
                       }
                     }
-                  }
-                },
-                {
-                  "meta":{
-                    "className":"GuardedChoiceStep",
-                    "version":1
-                  },
-                  "gizmo":{
-                    "name": {
-                      "meta":{
-                        "className":"StepName",
-                        "version":0
-                      },
-                      "gizmo":{
-                        "customName": { "string": "Wait press ctrl" }
-                      }
-                    },
-                    "comment": {
-                      "meta":{
-                        "className":"StepComment",
-                        "version":0
-                      },
-                      "gizmo":{
-                        "comment": { "string": "" }
-                      }
-                    },
-                    "branches": [{
-                      "meta":{
-                        "className":"GuardAndBlock",
-                        "version":3
-                      },
-                      "gizmo":{
-                        "guard": {
-                          "meta":{
-                            "className":"TimeOutGuard",
-                            "version":0
-                          },
-                          "gizmo":{
-                            "seconds": {
-                              "meta":{
-                                "className":"Expression",
-                                "version":0
-                              },
-                              "gizmo":{
-                                "text": { "string": "1" }
-                              }
-                            }
-                          }
-                        },
-                        "block": {
-                          "meta":{
-                            "className":"Block",
-                            "version":2
-                          },
-                          "gizmo":{
-                            "steps": []
-                          }
-                        }
-                      }
-                    }]
                   }
                 },
                 {
@@ -7225,66 +7105,6 @@
                 },
                 {
                   "meta":{
-                    "className":"GuardedChoiceStep",
-                    "version":1
-                  },
-                  "gizmo":{
-                    "name": {
-                      "meta":{
-                        "className":"StepName",
-                        "version":0
-                      },
-                      "gizmo":{
-                        "customName": { "string": "Wait press shift" }
-                      }
-                    },
-                    "comment": {
-                      "meta":{
-                        "className":"StepComment",
-                        "version":0
-                      },
-                      "gizmo":{
-                        "comment": { "string": "" }
-                      }
-                    },
-                    "branches": [{
-                      "meta":{
-                        "className":"GuardAndBlock",
-                        "version":3
-                      },
-                      "gizmo":{
-                        "guard": {
-                          "meta":{
-                            "className":"TimeOutGuard",
-                            "version":0
-                          },
-                          "gizmo":{
-                            "seconds": {
-                              "meta":{
-                                "className":"Expression",
-                                "version":0
-                              },
-                              "gizmo":{
-                                "text": { "string": "1" }
-                              }
-                            }
-                          }
-                        },
-                        "block": {
-                          "meta":{
-                            "className":"Block",
-                            "version":2
-                          },
-                          "gizmo":{
-                            "steps": []
-                          }
-                        }
-                      }
-                    }]
-                  }
-                },
-                {
-                  "meta":{
                     "className":"AssignStep",
                     "version":1
                   },
@@ -7470,66 +7290,6 @@
                                 "text": { "string": "1" }
                               }
                             }
-                          }
-                        },
-                        {
-                          "meta":{
-                            "className":"GuardedChoiceStep",
-                            "version":1
-                          },
-                          "gizmo":{
-                            "name": {
-                              "meta":{
-                                "className":"StepName",
-                                "version":0
-                              },
-                              "gizmo":{
-                                "customName": { "string": "Wait press pag" }
-                              }
-                            },
-                            "comment": {
-                              "meta":{
-                                "className":"StepComment",
-                                "version":0
-                              },
-                              "gizmo":{
-                                "comment": { "string": "" }
-                              }
-                            },
-                            "branches": [{
-                              "meta":{
-                                "className":"GuardAndBlock",
-                                "version":3
-                              },
-                              "gizmo":{
-                                "guard": {
-                                  "meta":{
-                                    "className":"TimeOutGuard",
-                                    "version":0
-                                  },
-                                  "gizmo":{
-                                    "seconds": {
-                                      "meta":{
-                                        "className":"Expression",
-                                        "version":0
-                                      },
-                                      "gizmo":{
-                                        "text": { "string": "1" }
-                                      }
-                                    }
-                                  }
-                                },
-                                "block": {
-                                  "meta":{
-                                    "className":"Block",
-                                    "version":2
-                                  },
-                                  "gizmo":{
-                                    "steps": []
-                                  }
-                                }
-                              }
-                            }]
                           }
                         }]
                       }
@@ -11727,7 +11487,7 @@
                                 "version":0
                               },
                               "gizmo":{
-                                "text": { "string": "40" }
+                                "text": { "string": "30" }
                               }
                             }
                           }
@@ -12716,7 +12476,7 @@
                                 "version":0
                               },
                               "gizmo":{
-                                "text": { "string": "8" }
+                                "text": { "string": "60" }
                               }
                             }
                           }

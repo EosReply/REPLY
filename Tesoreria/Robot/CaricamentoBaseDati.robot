@@ -201,6 +201,11 @@
           <property name="typeName" class="String">Credentials</property>
         </property>
         <property name="assignments" class="AttributeAssignments">
+          <property name="Ambiente" class="AttributeAssignment">
+            <property name="attributeValue" class="String">Piteco Evolution SAP [Release 4.02.66]</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="7"/>
+          </property>
           <property name="Password" class="AttributeAssignment">
             <property name="attributeValue" class="String">EncryptedPassword(1){zWidVa0NNyeBWQ==}</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
@@ -318,6 +323,15 @@
         <property name="name" idref="12"/>
         <property name="stepAction" class="CallRobot2Step">
           <property name="robot2Name" class="String">DownloadFornitori</property>
+          <property name="inputValueExpression" class="kapow.robot.plugin.common.stepaction.rl2.InputValueBeanList">
+            <object class="kapow.robot.plugin.common.stepaction.rl2.InputValue">
+              <property name="inputValueExpression" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">Credenziali.Ambiente</property>
+                </property>
+              </property>
+            </object>
+          </property>
           <property name="outputVariables" class="kapow.robot.plugin.common.stepaction.rl2.OutputVariableBeanList">
             <object class="kapow.robot.plugin.common.stepaction.rl2.OutputVariable">
               <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">

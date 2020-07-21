@@ -37,6 +37,18 @@
       <property name="required" class="Boolean">true</property>
     </object>
     <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">folderOutputExcelRoot</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">\\chagall\controllo gestione\consuntivi</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">folderOutputExcelSubfolder</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">IT\Report CdG\RPA\OLD</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
       <property name="name" class="String">folderOutputZZ</property>
       <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
       <property name="defaultValue" class="String">ZZ_STAMPE\IT</property>

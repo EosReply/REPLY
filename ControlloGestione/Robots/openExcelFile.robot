@@ -1629,7 +1629,7 @@
                                 "version":0
                               },
                               "gizmo":{
-                                "text": { "string": "2" }
+                                "text": { "string": "1" }
                               }
                             }
                           }

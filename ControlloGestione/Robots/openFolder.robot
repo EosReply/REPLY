@@ -1026,7 +1026,7 @@
                                 "version":0
                               },
                               "gizmo":{
-                                "text": { "string": "3" }
+                                "text": { "string": "1" }
                               }
                             }
                           }
