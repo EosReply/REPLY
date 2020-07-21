@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <schedule id="1">
-  <id>2435372155589200</id>
+  <id>3038608431171700</id>
   <name>Edvige Dobby 17.00 - Smistamento Mail</name>
   <blockJob id="2">
     <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
       <project id="4"/>
-      <name>Edvige Dobby 17.00 - Smistamento Mail1594213353679</name>
+      <name>Edvige Dobby 17.00 - Smistamento Mail1594816612259</name>
       <namedBlock>false</namedBlock>
       <childReference id="5">
         <child class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="6">
@@ -52,7 +52,7 @@
               </robot>
             </child>
             <scopeName>2</scopeName>
-            <enabled>true</enabled>
+            <enabled>false</enabled>
             <order>2</order>
           </childReference>
         </child>
@@ -68,7 +68,7 @@
   &lt;__inputObjects&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige Dobby 17.00 - Smistamento Mail1594213353679#0#Edvige Dobby 17.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#WriteFileConfReport&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige Dobby 17.00 - Smistamento Mail1594816612259#0#Edvige Dobby 17.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#WriteFileConfReport&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -78,7 +78,7 @@
       &lt;__attributes&gt;
         &lt;Attribute&gt;
           &lt;type&gt;SHORT_TEXT&lt;/type&gt;
-          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001/0.Riepiloghi REY e RPS/2020/Ordini sospesi&lt;/value&gt;
+          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001/0.Riepiloghi REY e RPS new 2019_2020/2020/Ordini sospesi&lt;/value&gt;
           &lt;__name&gt;Root&lt;/__name&gt;
           &lt;required&gt;false&lt;/required&gt;
           &lt;visible&gt;true&lt;/visible&gt;
@@ -118,7 +118,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige Dobby 17.00 - Smistamento Mail1594213353679#0#Edvige Dobby 17.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#WriteFileConfiguration&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige Dobby 17.00 - Smistamento Mail1594816612259#0#Edvige Dobby 17.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#WriteFileConfiguration&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -128,7 +128,7 @@
       &lt;__attributes&gt;
         &lt;Attribute&gt;
           &lt;type&gt;SHORT_TEXT&lt;/type&gt;
-          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001/0.Riepiloghi REY e RPS/2020/Ordini sospesi&lt;/value&gt;
+          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001/0.Riepiloghi REY e RPS new 2019_2020/2020/Ordini sospesi&lt;/value&gt;
           &lt;__name&gt;Root&lt;/__name&gt;
           &lt;required&gt;false&lt;/required&gt;
           &lt;visible&gt;true&lt;/visible&gt;
@@ -168,7 +168,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige Dobby 17.00 - Smistamento Mail1594213353679#0#Edvige Dobby 17.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#mailconfiguration&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige Dobby 17.00 - Smistamento Mail1594816612259#0#Edvige Dobby 17.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#mailconfiguration&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -240,7 +240,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige Dobby 17.00 - Smistamento Mail1594213353679#0#Edvige Dobby 17.00 - Smistamento Mail:middleBlock#2#Ordini/Robot/Ordini_portale_Generali#Request&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige Dobby 17.00 - Smistamento Mail1594816612259#0#Edvige Dobby 17.00 - Smistamento Mail:middleBlock#2#Ordini/Robot/Ordini_portale_Generali#Request&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -278,7 +278,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige Dobby 17.00 - Smistamento Mail1594213353679#0#Edvige Dobby 17.00 - Smistamento Mail:middleBlock#2#Ordini/Robot/Ordini_portale_Generali#WriteFileConfReport&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige Dobby 17.00 - Smistamento Mail1594816612259#0#Edvige Dobby 17.00 - Smistamento Mail:middleBlock#2#Ordini/Robot/Ordini_portale_Generali#WriteFileConfReport&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -288,7 +288,7 @@
       &lt;__attributes&gt;
         &lt;Attribute&gt;
           &lt;type&gt;SHORT_TEXT&lt;/type&gt;
-          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001/0.Riepiloghi REY e RPS/2020/Ordini sospesi&lt;/value&gt;
+          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001/0.Riepiloghi REY e RPS new 2019_2020/2020/Ordini sospesi&lt;/value&gt;
           &lt;__name&gt;Root&lt;/__name&gt;
           &lt;required&gt;false&lt;/required&gt;
           &lt;visible&gt;true&lt;/visible&gt;
@@ -328,7 +328,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige Dobby 17.00 - Smistamento Mail1594213353679#0#Edvige Dobby 17.00 - Smistamento Mail:middleBlock#2#Ordini/Robot/Ordini_portale_Generali#WriteFileConfiguration&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige Dobby 17.00 - Smistamento Mail1594816612259#0#Edvige Dobby 17.00 - Smistamento Mail:middleBlock#2#Ordini/Robot/Ordini_portale_Generali#WriteFileConfiguration&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -338,7 +338,7 @@
       &lt;__attributes&gt;
         &lt;Attribute&gt;
           &lt;type&gt;SHORT_TEXT&lt;/type&gt;
-          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001/0.Riepiloghi REY e RPS/2020/Ordini sospesi&lt;/value&gt;
+          &lt;value&gt;http://qbodocs13.reply.com/sites/iso9001/0.Riepiloghi REY e RPS new 2019_2020/2020/Ordini sospesi&lt;/value&gt;
           &lt;__name&gt;Root&lt;/__name&gt;
           &lt;required&gt;false&lt;/required&gt;
           &lt;visible&gt;true&lt;/visible&gt;
@@ -382,27 +382,28 @@
     <active>false</active>
     <displayNameMap>{"1Ordini/Robot/Ordini_DispatcherAttachment":"Ordini/Robot/Ordini_DispatcherAttachment","0Ordini/Robot/Ordini_processFolderMail":"Ordini/Robot/Ordini_processFolderMail","2Ordini/Robot/Ordini_portale_Generali":"Ordini/Robot/Ordini_portale_Generali"}</displayNameMap>
   </blockJob>
-  <totalRuns>0</totalRuns>
-  <active>false</active>
+  <totalRuns>5</totalRuns>
+  <active>true</active>
   <useEmailNotification>true</useEmailNotification>
   <emails>eosit@reply.it</emails>
-  <nextRun id="16">2020-07-08 15:00:00.0 UTC</nextRun>
+  <previousRun id="16">2020-07-19 15:00:14.0 UTC</previousRun>
+  <nextRun id="17">2020-07-20 15:00:00.0 UTC</nextRun>
   <maxRuntime>-1</maxRuntime>
   <maxObjectsExtracted>-1</maxObjectsExtracted>
   <createdBy>admin</createdBy>
   <modifiedBy>admin</modifiedBy>
-  <cluster id="17">
+  <cluster id="18">
     <name>NonProduction</name>
   </cluster>
-  <scheduler class="org.quartz.impl.StdScheduler" id="18">
+  <scheduler class="org.quartz.impl.StdScheduler" id="19">
     <scheduler/></scheduler>
-  <trigger class="org.quartz.impl.triggers.SimpleTriggerImpl" id="19">
-    <name>2435372155589200</name>
-    <start id="20">2020-06-10 15:00:00.0 UTC</start>
+  <trigger class="org.quartz.impl.triggers.SimpleTriggerImpl" id="20">
+    <name>3038608431171700</name>
+    <start id="21">2020-06-10 15:00:00.0 UTC</start>
     <interval>86400000</interval>
     <repeatCount>-1</repeatCount>
   </trigger>
   <revisionNumber>local</revisionNumber>
-  <lastModified id="21">2020-07-08 13:02:34.0 UTC</lastModified>
+  <lastModified id="22">2020-07-15 12:36:52.0 UTC</lastModified>
   <serializationVersion>1</serializationVersion>
 </schedule>
