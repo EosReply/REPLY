@@ -18,6 +18,11 @@
       <property name="required" class="Boolean">true</property>
     </object>
     <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">dateString</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="1"/>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
       <property name="name" class="String">state</property>
       <property name="type" idref="0"/>
       <property name="required" class="Boolean">true</property>
@@ -27,6 +32,14 @@
       <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
       <property name="defaultValue" class="String">Vodafone</property>
       <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">year</property>
+      <property name="type" idref="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">month</property>
+      <property name="type" idref="1"/>
     </object>
   </property>
 </object>
