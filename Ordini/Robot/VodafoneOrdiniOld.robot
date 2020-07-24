@@ -1218,6 +1218,10 @@
                 <property name="replacementText" class="String">Maggio</property>
               </element>
               <element class="ReplaceText">
+                <property name="textToReplace" class="String">06</property>
+                <property name="replacementText" class="String">Giugno</property>
+              </element>
+              <element class="ReplaceText">
                 <property name="textToReplace" class="String">07</property>
                 <property name="replacementText" class="String">Luglio</property>
               </element>
@@ -1917,6 +1921,10 @@
                 <property name="replacementText" class="String">Maggio</property>
               </element>
               <element class="ReplaceText">
+                <property name="textToReplace" class="String">06</property>
+                <property name="replacementText" class="String">Giugno</property>
+              </element>
+              <element class="ReplaceText">
                 <property name="textToReplace" class="String">07</property>
                 <property name="replacementText" class="String">Luglio</property>
               </element>
@@ -1970,7 +1978,11 @@
               </property>
             </property>
             <property name="nodePath" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-              <property name="value" class="String">.*.div.*.div.a</property>
+              <property name="value" class="String">div</property>
+            </property>
+            <property name="attributeName" class="String">class</property>
+            <property name="attributeValue" class="kapow.robot.plugin.common.support.predicate.unary.string.FixedStringPredicate">
+              <property name="text" class="String">searchResultsNav nextPage</property>
             </property>
           </object>
         </property>
@@ -2000,7 +2012,11 @@
               </property>
             </property>
             <property name="nodePath" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-              <property name="value" class="String">.*.div.*.div.a</property>
+              <property name="value" class="String">div</property>
+            </property>
+            <property name="attributeName" class="String">class</property>
+            <property name="attributeValue" class="kapow.robot.plugin.common.support.predicate.unary.string.FixedStringPredicate">
+              <property name="text" class="String">searchResultsNav nextPage</property>
             </property>
           </object>
         </property>
@@ -2777,7 +2793,7 @@
         <property name="name" class="String">Assign Path</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
-            <property name="text" class="String">"http://testqbodocs13.reply.eu/sites/ISO9001/0.Riepiloghi REY e RPS\\"+orderValue.year+"\\"+configurationVodafone.rootOutputSubfolder+"\\"+orderValue.month+"\\"+orderValue.number+"_VODAFONE_"+day(orderValue.date)+(length(month(orderValue.date))==1?"0"+month(orderValue.date):month(orderValue.date))+year(orderValue.date)+".pdf"</property>
+            <property name="text" class="String">configurationVodafone.sharePointFolder+"\\"+orderValue.year+"\\"+configurationVodafone.rootOutputSubfolder+"\\"+orderValue.month+"\\"+orderValue.number+"_VODAFONE_"+day(orderValue.date)+(length(month(orderValue.date))==1?"0"+month(orderValue.date):month(orderValue.date))+year(orderValue.date)+".pdf"</property>
           </property>
           <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
             <property name="name" class="String">orderReturn.path</property>
@@ -3207,7 +3223,7 @@
         <property name="name" class="String">Assign Path</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
-            <property name="text" class="String">"http://testqbodocs13.reply.eu/sites/ISO9001/0.Riepiloghi REY e RPS\\"+orderValue.year+"\\"+configurationVodafone.rootOutputSubfolder+"\\"+orderValue.month+"\\"+orderValue.number+"_VODAFONE_"+day(orderValue.date)+(length(month(orderValue.date))==1?"0"+month(orderValue.date):month(orderValue.date))+year(orderValue.date)+".pdf"</property>
+            <property name="text" class="String">configurationVodafone.sharePointFolder+"\\"+orderValue.year+"\\"+configurationVodafone.rootOutputSubfolder+"\\"+orderValue.month+"\\"+orderValue.number+"_VODAFONE_"+day(orderValue.date)+(length(month(orderValue.date))==1?"0"+month(orderValue.date):month(orderValue.date))+year(orderValue.date)+".pdf"</property>
           </property>
           <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
             <property name="name" class="String">orderReturn.path</property>
@@ -3424,6 +3440,42 @@
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
       <object class="Transition" serializationversion="3" id="175">
+        <property name="name" class="String">Assign Order Date</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">now()</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">orderReturn.orderDate</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="13"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="176">
+        <property name="name" class="String">Assign Path</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">" "</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">orderReturn.path</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="13"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="177">
         <property name="name" idref="84"/>
         <property name="stepAction" class="ReturnVariable" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
@@ -3439,7 +3491,7 @@
         <property name="enabled" idref="13"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="176"/>
+      <object class="End" id="178"/>
     </steps>
     <blockEndStep class="BlockEndStep"/>
     <edges class="ArrayList">
@@ -4066,6 +4118,14 @@
       <object class="TransitionEdge">
         <from idref="175"/>
         <to idref="176"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="176"/>
+        <to idref="177"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="177"/>
+        <to idref="178"/>
       </object>
     </edges>
   </property>
