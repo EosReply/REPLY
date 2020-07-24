@@ -337,7 +337,7 @@
         <property name="name" class="String">Map share point drive</property>
         <property name="stepAction" class="ExecuteCommandLine" serializationversion="0">
           <property name="commandLineExpression" class="Expression" serializationversion="1">
-            <property name="text" class="String">"net use W: \""+configurationVodafone.sharePointFolder+"\" /user:replynet\\eosreplyrpa Dy0Ek7Nk0"</property>
+            <property name="text" class="String">"net use P: \""+configurationVodafone.sharePointFolder+"\" /user:replynet\\eosreplyrpa Dy0Ek7Nk0"</property>
           </property>
           <property name="executeInRoboMaker" class="Boolean">true</property>
         </property>
@@ -3530,7 +3530,7 @@
         <property name="name" class="String">Unmount share point drive</property>
         <property name="stepAction" class="ExecuteCommandLine" serializationversion="0">
           <property name="commandLineExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-            <property name="value" class="String">net use W: /delete</property>
+            <property name="value" class="String">net use P: /delete</property>
           </property>
           <property name="executeInRoboMaker" class="Boolean">true</property>
         </property>
