@@ -148,6 +148,11 @@
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" class="java.lang.Class" id="5">kapow.robot.plugin.common.domain.PasswordAttributeType</property>
           </property>
+          <property name="Username" class="AttributeAssignment">
+            <property name="attributeValue" class="String">orders.vo@reply.eu</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class" id="6">kapow.robot.plugin.common.domain.StringAttributeType</property>
+          </property>
         </property>
       </property>
     </object>
@@ -161,14 +166,14 @@
         </property>
         <property name="assignments" class="AttributeAssignments">
           <property name="dayBefore" class="AttributeAssignment">
-            <property name="attributeValue" class="String">300</property>
+            <property name="attributeValue" class="String">0</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="4"/>
           </property>
           <property name="rootOutputFolder" class="AttributeAssignment">
             <property name="attributeValue" class="String">W:</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
-            <property name="lastKnownAttributeType" class="java.lang.Class" id="6">kapow.robot.plugin.common.domain.StringAttributeType</property>
+            <property name="lastKnownAttributeType" idref="6"/>
           </property>
           <property name="sharePointFolder" class="AttributeAssignment">
             <property name="attributeValue" class="String">http://testqbodocs13.reply.eu/sites/ISO9001/0.Riepiloghi REY e RPS</property>
@@ -2540,91 +2545,8 @@
       <object class="Transition" serializationversion="3" id="131">
         <property name="name" class="String">Assign Month</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
-          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
-            <property name="dataConverters" class="DataConverters">
-              <element class="GetVariable" serializationversion="2">
-                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
-                  <property name="name" class="String">orderValue.month</property>
-                </property>
-              </element>
-              <element class="IfThen">
-                <property name="statmentsList" class="BeanList">
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">12</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Dicembre</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">11</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Novembre</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">10</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Ottobre</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">9</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Settembre</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">8</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Agosto</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">7</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Luglio</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">6</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Giugno</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">5</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Maggio</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">4</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Aprile</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">3</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Marzo</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">2</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Febbraio</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">1</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Gennaio</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.ElseStatement"/>
-                </property>
-              </element>
-            </property>
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">orderValue.month==1?"Gennaio":orderValue.month==2?"Febbraio":orderValue.month==3?"Marzo":orderValue.month==4?"Aprile":orderValue.month==5?"Maggio":orderValue.month==6?"Giugno":orderValue.month==7?"Luglio":orderValue.month</property>
           </property>
           <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
             <property name="name" class="String">orderValue.month</property>
@@ -2655,7 +2577,7 @@
         <property name="comment">
           <null/>
         </property>
-        <property name="enabled" idref="12"/>
+        <property name="enabled" idref="13"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
       <object class="Transition" serializationversion="3" id="133">
@@ -3274,115 +3196,12 @@
         <property name="comment">
           <null/>
         </property>
-        <property name="enabled" idref="12"/>
-        <property name="changedProperties" class="java.util.HashSet">
-          <element class="String">name</element>
-        </property>
-      </object>
-      <object class="Transition" serializationversion="3" id="161">
-        <property name="name" class="String">Assign Month</property>
-        <property name="stepAction" class="AssignVariable" serializationversion="4">
-          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
-            <property name="dataConverters" class="DataConverters">
-              <element class="GetVariable" serializationversion="2">
-                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
-                  <property name="name" class="String">orderValue.month</property>
-                </property>
-              </element>
-              <element class="IfThen">
-                <property name="statmentsList" class="BeanList">
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">12</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Dicembre</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">11</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Novembre</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">10</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Ottobre</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">9</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Settembre</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">8</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Agosto</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">7</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Luglio</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">6</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Giugno</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">5</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Maggio</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">4</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Aprile</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">3</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Marzo</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">2</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Febbraio</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.IfContainsStatement">
-                    <property name="condition" class="String">1</property>
-                    <property name="then" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-                      <property name="value" class="String">Gennaio</property>
-                    </property>
-                  </object>
-                  <object class="kapow.robot.plugin.common.stringprocessor.ifthenconverter.ElseStatement"/>
-                </property>
-              </element>
-            </property>
-          </property>
-          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
-            <property name="name" class="String">orderValue.month</property>
-          </property>
-        </property>
-        <property name="elementFinders" class="ElementFinders"/>
-        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
-        <property name="comment">
-          <null/>
-        </property>
         <property name="enabled" idref="13"/>
         <property name="changedProperties" class="java.util.HashSet">
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="162">
+      <object class="Transition" serializationversion="3" id="161">
         <property name="name" class="String">Assign Month</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -3397,10 +3216,10 @@
         <property name="comment">
           <null/>
         </property>
-        <property name="enabled" idref="12"/>
+        <property name="enabled" idref="13"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="163">
+      <object class="Transition" serializationversion="3" id="162">
         <property name="name" class="String">Assign Path</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -3418,7 +3237,7 @@
         <property name="enabled" idref="13"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="164">
+      <object class="Transition" serializationversion="3" id="163">
         <property name="name" class="String">Ariba logout</property>
         <property name="stepAction" class="CallRobot2Step">
           <property name="robot2Name" class="String">AribaLogout</property>
@@ -3433,8 +3252,8 @@
           <element class="String">name</element>
         </property>
       </object>
-      <object class="End" id="165"/>
-      <object class="Transition" serializationversion="3" id="166">
+      <object class="End" id="164"/>
+      <object class="Transition" serializationversion="3" id="165">
         <property name="name" class="String">Log Error ariba login</property>
         <property name="stepAction" class="WriteLog2">
           <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
@@ -3451,7 +3270,7 @@
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="167">
+      <object class="Transition" serializationversion="3" id="166">
         <property name="name" class="String">Log Error get order list</property>
         <property name="stepAction" class="WriteLog2">
           <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
@@ -3468,7 +3287,7 @@
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="168">
+      <object class="Transition" serializationversion="3" id="167">
         <property name="name" class="String">Log Password Empty</property>
         <property name="stepAction" class="WriteLog2">
           <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
@@ -3485,7 +3304,7 @@
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="169">
+      <object class="Transition" serializationversion="3" id="168">
         <property name="name" class="String">Log Username Empty</property>
         <property name="stepAction" class="WriteLog2">
           <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
@@ -3502,7 +3321,7 @@
           <element idref="120"/>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="170">
+      <object class="Transition" serializationversion="3" id="169">
         <property name="name" class="String">Write Excel File</property>
         <property name="stepAction" class="WriteFile" serializationversion="0">
           <property name="fileNameExpression" class="Expression" serializationversion="1">
@@ -3526,7 +3345,7 @@
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="171">
+      <object class="Transition" serializationversion="3" id="170">
         <property name="name" class="String">Unmount share point drive</property>
         <property name="stepAction" class="ExecuteCommandLine" serializationversion="0">
           <property name="commandLineExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -3544,7 +3363,7 @@
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="172">
+      <object class="Transition" serializationversion="3" id="171">
         <property name="name" idref="55"/>
         <property name="stepAction" class="TestValue" serializationversion="0">
           <property name="condition" class="Expression" serializationversion="1">
@@ -3566,7 +3385,7 @@
         <property name="enabled" idref="13"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="173">
+      <object class="Transition" serializationversion="3" id="172">
         <property name="name" class="String">Assign Customer</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -3584,7 +3403,7 @@
         <property name="enabled" idref="13"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="174">
+      <object class="Transition" serializationversion="3" id="173">
         <property name="name" class="String">Assign Portal</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -3602,7 +3421,7 @@
         <property name="enabled" idref="13"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="175">
+      <object class="Transition" serializationversion="3" id="174">
         <property name="name" class="String">Assign Result</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -3620,7 +3439,7 @@
         <property name="enabled" idref="13"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="176">
+      <object class="Transition" serializationversion="3" id="175">
         <property name="name" class="String">Assign Order Date</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -3638,7 +3457,7 @@
         <property name="enabled" idref="13"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="177">
+      <object class="Transition" serializationversion="3" id="176">
         <property name="name" class="String">Assign Path</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -3656,7 +3475,7 @@
         <property name="enabled" idref="13"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="178">
+      <object class="Transition" serializationversion="3" id="177">
         <property name="name" class="String">Assign Order Number</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -3674,7 +3493,7 @@
         <property name="enabled" idref="13"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="179">
+      <object class="Transition" serializationversion="3" id="178">
         <property name="name" idref="84"/>
         <property name="stepAction" class="ReturnVariable" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
@@ -3690,7 +3509,7 @@
         <property name="enabled" idref="13"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="180"/>
+      <object class="End" id="179"/>
     </steps>
     <blockEndStep class="BlockEndStep"/>
     <edges class="ArrayList">
@@ -3712,7 +3531,7 @@
       </object>
       <object class="TransitionEdge">
         <from idref="15"/>
-        <to idref="170"/>
+        <to idref="169"/>
       </object>
       <object class="TransitionEdge">
         <from idref="16"/>
@@ -4020,7 +3839,7 @@
       </object>
       <object class="TransitionEdge">
         <from idref="100"/>
-        <to idref="169"/>
+        <to idref="168"/>
       </object>
       <object class="TransitionEdge">
         <from idref="101"/>
@@ -4032,7 +3851,7 @@
       </object>
       <object class="TransitionEdge">
         <from idref="103"/>
-        <to idref="168"/>
+        <to idref="167"/>
       </object>
       <object class="TransitionEdge">
         <from idref="104"/>
@@ -4052,7 +3871,7 @@
       </object>
       <object class="TransitionEdge">
         <from idref="109"/>
-        <to idref="167"/>
+        <to idref="166"/>
       </object>
       <object class="TransitionEdge">
         <from idref="110"/>
@@ -4068,7 +3887,7 @@
       </object>
       <object class="TransitionEdge">
         <from idref="113"/>
-        <to idref="166"/>
+        <to idref="165"/>
       </object>
       <object class="TransitionEdge">
         <from idref="114"/>
@@ -4080,7 +3899,7 @@
       </object>
       <object class="TransitionEdge">
         <from idref="115"/>
-        <to idref="164"/>
+        <to idref="163"/>
       </object>
       <object class="TransitionEdge">
         <from idref="116"/>
@@ -4268,15 +4087,15 @@
       </object>
       <object class="TransitionEdge">
         <from idref="162"/>
-        <to idref="163"/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="163"/>
         <to idref="144"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="164"/>
-        <to idref="165"/>
+        <from idref="163"/>
+        <to idref="164"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="165"/>
+        <to idref="163"/>
       </object>
       <object class="TransitionEdge">
         <from idref="166"/>
@@ -4284,7 +4103,7 @@
       </object>
       <object class="TransitionEdge">
         <from idref="167"/>
-        <to idref="165"/>
+        <to idref="97"/>
       </object>
       <object class="TransitionEdge">
         <from idref="168"/>
@@ -4292,7 +4111,7 @@
       </object>
       <object class="TransitionEdge">
         <from idref="169"/>
-        <to idref="97"/>
+        <to idref="170"/>
       </object>
       <object class="TransitionEdge">
         <from idref="170"/>
@@ -4329,10 +4148,6 @@
       <object class="TransitionEdge">
         <from idref="178"/>
         <to idref="179"/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="179"/>
-        <to idref="180"/>
       </object>
     </edges>
   </property>
