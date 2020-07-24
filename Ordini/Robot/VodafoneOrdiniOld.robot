@@ -3389,7 +3389,7 @@
         <property name="name" class="String">Assign Customer</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
-            <property name="text" class="String">" "</property>
+            <property name="text" class="String">"nessuno"</property>
           </property>
           <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
             <property name="name" class="String">orderReturn.customer</property>
@@ -3407,7 +3407,7 @@
         <property name="name" class="String">Assign Portal</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
-            <property name="text" class="String">" "</property>
+            <property name="text" class="String">"nessuno"</property>
           </property>
           <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
             <property name="name" class="String">orderReturn.portal</property>
@@ -3461,7 +3461,7 @@
         <property name="name" class="String">Assign Path</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
-            <property name="text" class="String">" "</property>
+            <property name="text" class="String">"nessuno"</property>
           </property>
           <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
             <property name="name" class="String">orderReturn.path</property>
@@ -3476,6 +3476,24 @@
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
       <object class="Transition" serializationversion="3" id="177">
+        <property name="name" class="String">Assign Order Number</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">0</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">orderReturn.orderNumber</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="13"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="178">
         <property name="name" idref="84"/>
         <property name="stepAction" class="ReturnVariable" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
@@ -3491,7 +3509,7 @@
         <property name="enabled" idref="13"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="178"/>
+      <object class="End" id="179"/>
     </steps>
     <blockEndStep class="BlockEndStep"/>
     <edges class="ArrayList">
@@ -4126,6 +4144,10 @@
       <object class="TransitionEdge">
         <from idref="177"/>
         <to idref="178"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="178"/>
+        <to idref="179"/>
       </object>
     </edges>
   </property>
