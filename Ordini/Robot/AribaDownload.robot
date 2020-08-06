@@ -263,7 +263,7 @@
                                     "version":0
                                   },
                                   "gizmo":{
-                                    "text": { "string": "cef" }
+                                    "text": { "string": "cef[title=\"Ariba Network Supplier\"]" }
                                   }
                                 }
                               }
@@ -644,7 +644,7 @@
                                             "version":0
                                           },
                                           "gizmo":{
-                                            "text": { "string": "cef" }
+                                            "text": { "string": "cef[title=\"Ariba Network Supplier\"]" }
                                           }
                                         }
                                       }
@@ -840,7 +840,7 @@
                                                                 "version":0
                                                               },
                                                               "gizmo":{
-                                                                "text": { "string": "cef" }
+                                                                "text": { "string": "cef[title=\"Ariba Network Supplier\"]" }
                                                               }
                                                             }
                                                           }
@@ -2139,7 +2139,7 @@
                                                                                                 "version":0
                                                                                               },
                                                                                               "gizmo":{
-                                                                                                "text": { "string": "cef" }
+                                                                                                "text": { "string": "cef[title=\"Ariba Network Supplier\"]" }
                                                                                               }
                                                                                             }
                                                                                           }
@@ -2480,7 +2480,7 @@
                                                                                                 "version":0
                                                                                               },
                                                                                               "gizmo":{
-                                                                                                "text": { "string": "cef" }
+                                                                                                "text": { "string": "cef[title=\"Ariba Network Supplier\"]" }
                                                                                               }
                                                                                             }
                                                                                           }
@@ -2821,7 +2821,7 @@
                                                                                                 "version":0
                                                                                               },
                                                                                               "gizmo":{
-                                                                                                "text": { "string": "cef" }
+                                                                                                "text": { "string": "cef[title=\"Ariba Network Supplier\"]" }
                                                                                               }
                                                                                             }
                                                                                           }
@@ -3162,7 +3162,7 @@
                                                                                                 "version":0
                                                                                               },
                                                                                               "gizmo":{
-                                                                                                "text": { "string": "cef" }
+                                                                                                "text": { "string": "cef[title=\"Ariba Network Supplier\"]" }
                                                                                               }
                                                                                             }
                                                                                           }
@@ -3661,7 +3661,7 @@
                                                                                                 "version":0
                                                                                               },
                                                                                               "gizmo":{
-                                                                                                "text": { "string": "cef" }
+                                                                                                "text": { "string": "cef[title=\"Ariba Network Supplier\"]" }
                                                                                               }
                                                                                             }
                                                                                           }
@@ -4062,7 +4062,7 @@
                                                                                                 "version":0
                                                                                               },
                                                                                               "gizmo":{
-                                                                                                "text": { "string": "cef" }
+                                                                                                "text": { "string": "cef[title=\"Ariba Network Supplier\"]" }
                                                                                               }
                                                                                             }
                                                                                           }
@@ -5604,7 +5604,7 @@
                                                         "version":0
                                                       },
                                                       "gizmo":{
-                                                        "text": { "string": "cef" }
+                                                        "text": { "string": "cef[title=\"Ariba Network Supplier\"]" }
                                                       }
                                                     }
                                                   }
@@ -6903,7 +6903,7 @@
                                                                                         "version":0
                                                                                       },
                                                                                       "gizmo":{
-                                                                                        "text": { "string": "cef" }
+                                                                                        "text": { "string": "cef[title=\"Ariba Network Supplier\"]" }
                                                                                       }
                                                                                     }
                                                                                   }
@@ -7106,7 +7106,7 @@
                                                                             "version":0
                                                                           },
                                                                           "gizmo":{
-                                                                            "text": { "string": "60" }
+                                                                            "text": { "string": "10" }
                                                                           }
                                                                         }
                                                                       }
