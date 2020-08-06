@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <schedule id="1">
-  <id>3625904882716300</id>
+  <id>4169318402830600</id>
   <name>Edvige Dobby 15.00 - Smistamento Mail</name>
   <blockJob id="2">
     <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
       <project id="4"/>
-      <name>Edvige Dobby 15.00 - Smistamento Mail1595403930434</name>
+      <name>Edvige Dobby 15.00 - Smistamento Mail1595947364053</name>
       <namedBlock>false</namedBlock>
       <childReference id="5">
         <child class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="6">
@@ -20,7 +20,7 @@
               <namedBlock>true</namedBlock>
               <robot id="9">
                 <name>Ordini/Robot/Ordini_processFolderMail</name>
-                <project>Reply - Hogwart</project>
+                <project>Reply - Hogwarts</project>
               </robot>
             </child>
             <scopeName>0</scopeName>
@@ -34,7 +34,7 @@
               <namedBlock>true</namedBlock>
               <robot id="12">
                 <name>Ordini/Robot/Ordini_DispatcherAttachment</name>
-                <project>Reply - Hogwart</project>
+                <project>Reply - Hogwarts</project>
               </robot>
             </child>
             <scopeName>1</scopeName>
@@ -48,7 +48,7 @@
               <namedBlock>true</namedBlock>
               <robot id="15">
                 <name>Ordini/Robot/Ordini_portale_Generali</name>
-                <project>Reply - Hogwart</project>
+                <project>Reply - Hogwarts</project>
               </robot>
             </child>
             <scopeName>2</scopeName>
@@ -68,7 +68,7 @@
   &lt;__inputObjects&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige Dobby 15.00 - Smistamento Mail1595403930434#0#Edvige Dobby 15.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#WriteFileConfReport&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige Dobby 15.00 - Smistamento Mail1595947364053#0#Edvige Dobby 15.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#WriteFileConfReport&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -118,7 +118,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige Dobby 15.00 - Smistamento Mail1595403930434#0#Edvige Dobby 15.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#WriteFileConfiguration&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige Dobby 15.00 - Smistamento Mail1595947364053#0#Edvige Dobby 15.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#WriteFileConfiguration&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -168,7 +168,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige Dobby 15.00 - Smistamento Mail1595403930434#0#Edvige Dobby 15.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#mailconfiguration&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige Dobby 15.00 - Smistamento Mail1595947364053#0#Edvige Dobby 15.00 - Smistamento Mail:middleBlock#1#Ordini/Robot/Ordini_DispatcherAttachment#mailconfiguration&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -240,7 +240,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige Dobby 15.00 - Smistamento Mail1595403930434#0#Edvige Dobby 15.00 - Smistamento Mail:middleBlock#2#Ordini/Robot/Ordini_portale_Generali#Request&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige Dobby 15.00 - Smistamento Mail1595947364053#0#Edvige Dobby 15.00 - Smistamento Mail:middleBlock#2#Ordini/Robot/Ordini_portale_Generali#Request&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -278,7 +278,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige Dobby 15.00 - Smistamento Mail1595403930434#0#Edvige Dobby 15.00 - Smistamento Mail:middleBlock#2#Ordini/Robot/Ordini_portale_Generali#WriteFileConfReport&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige Dobby 15.00 - Smistamento Mail1595947364053#0#Edvige Dobby 15.00 - Smistamento Mail:middleBlock#2#Ordini/Robot/Ordini_portale_Generali#WriteFileConfReport&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -328,7 +328,7 @@
     &lt;/InputObject&gt;
     &lt;InputObject&gt;
       &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
-      &lt;__variableName&gt;Edvige Dobby 15.00 - Smistamento Mail1595403930434#0#Edvige Dobby 15.00 - Smistamento Mail:middleBlock#2#Ordini/Robot/Ordini_portale_Generali#WriteFileConfiguration&lt;/__variableName&gt;
+      &lt;__variableName&gt;Edvige Dobby 15.00 - Smistamento Mail1595947364053#0#Edvige Dobby 15.00 - Smistamento Mail:middleBlock#2#Ordini/Robot/Ordini_portale_Generali#WriteFileConfiguration&lt;/__variableName&gt;
       &lt;__propertyNames&gt;
         &lt;string&gt;variableName&lt;/string&gt;
         &lt;string&gt;name&lt;/string&gt;
@@ -382,27 +382,28 @@
     <active>false</active>
     <displayNameMap>{"1Ordini/Robot/Ordini_DispatcherAttachment":"Ordini/Robot/Ordini_DispatcherAttachment","0Ordini/Robot/Ordini_processFolderMail":"Ordini/Robot/Ordini_processFolderMail","2Ordini/Robot/Ordini_portale_Generali":"Ordini/Robot/Ordini_portale_Generali"}</displayNameMap>
   </blockJob>
-  <totalRuns>0</totalRuns>
-  <active>true</active>
+  <totalRuns>8</totalRuns>
+  <active>false</active>
   <useEmailNotification>true</useEmailNotification>
-  <emails>eosit@reply.it</emails>
-  <nextRun id="16">2020-07-22 13:00:00.0 UTC</nextRun>
+  <emails>eos.rpa.support@reply.it</emails>
+  <previousRun id="16">2020-08-05 13:00:00.0 UTC</previousRun>
+  <nextRun id="17">2020-08-06 13:00:00.0 UTC</nextRun>
   <maxRuntime>3600</maxRuntime>
   <maxObjectsExtracted>-1</maxObjectsExtracted>
   <createdBy>admin</createdBy>
   <modifiedBy>admin</modifiedBy>
-  <cluster id="17">
+  <cluster id="18">
     <name>NonProduction</name>
   </cluster>
-  <scheduler class="org.quartz.impl.StdScheduler" id="18">
+  <scheduler class="org.quartz.impl.StdScheduler" id="19">
     <scheduler/></scheduler>
-  <trigger class="org.quartz.impl.triggers.SimpleTriggerImpl" id="19">
-    <name>3625904882716300</name>
-    <start id="20">2020-06-10 13:00:00.0 UTC</start>
+  <trigger class="org.quartz.impl.triggers.SimpleTriggerImpl" id="20">
+    <name>4169318402830600</name>
+    <start id="21">2020-06-10 13:00:00.0 UTC</start>
     <interval>86400000</interval>
     <repeatCount>-1</repeatCount>
   </trigger>
   <revisionNumber>local</revisionNumber>
-  <lastModified id="21">2020-07-22 07:45:30.0 UTC</lastModified>
+  <lastModified id="22">2020-08-05 16:01:37.0 UTC</lastModified>
   <serializationVersion>1</serializationVersion>
 </schedule>
