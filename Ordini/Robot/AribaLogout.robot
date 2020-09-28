@@ -451,51 +451,68 @@
                                 },
                                 "finder": {
                                   "meta":{
-                                    "className":"ComponentDescriptor",
-                                    "version":1
+                                    "className":"ComponentContentSubFilter",
+                                    "version":0
                                   },
                                   "gizmo":{
-                                    "applicationFinder": {
+                                    "componentFinder": {
                                       "meta":{
-                                        "className":"ApplicationDescriptor",
+                                        "className":"ComponentDescriptor",
                                         "version":1
                                       },
                                       "gizmo":{
-                                        "deviceFinder": {
+                                        "applicationFinder": {
                                           "meta":{
-                                            "className":"DeviceReference",
-                                            "version":0
+                                            "className":"ApplicationDescriptor",
+                                            "version":1
                                           },
                                           "gizmo":{
-                                            "reference": {
+                                            "deviceFinder": {
                                               "meta":{
-                                                "className":"NamedFinderReference",
+                                                "className":"DeviceReference",
                                                 "version":0
                                               },
                                               "gizmo":{
-                                                "id": { "string": "local" }
+                                                "reference": {
+                                                  "meta":{
+                                                    "className":"NamedFinderReference",
+                                                    "version":0
+                                                  },
+                                                  "gizmo":{
+                                                    "id": { "string": "local" }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            "applicationSelector": {
+                                              "meta":{
+                                                "className":"Expression",
+                                                "version":0
+                                              },
+                                              "gizmo":{
+                                                "text": { "string": "cef[title=\"Ariba Network Supplier\"]" }
                                               }
                                             }
                                           }
                                         },
-                                        "applicationSelector": {
+                                        "componentSelector": {
                                           "meta":{
                                             "className":"Expression",
                                             "version":0
                                           },
                                           "gizmo":{
-                                            "text": { "string": "cef[title=\"Ariba Network Supplier\"]" }
+                                            "text": { "string": "A[class=\"fd-menu__item\"]" }
                                           }
                                         }
                                       }
                                     },
-                                    "componentSelector": {
+                                    "contentMatcher": {
                                       "meta":{
                                         "className":"Expression",
                                         "version":0
                                       },
                                       "gizmo":{
-                                        "text": { "string": "A[id=\"lout\"]" }
+                                        "text": { "string": ".*Logout.*" }
                                       }
                                     }
                                   }

@@ -878,51 +878,68 @@
                         },
                         "finder": {
                           "meta":{
-                            "className":"ComponentDescriptor",
-                            "version":1
+                            "className":"ComponentContentSubFilter",
+                            "version":0
                           },
                           "gizmo":{
-                            "applicationFinder": {
+                            "componentFinder": {
                               "meta":{
-                                "className":"ApplicationDescriptor",
+                                "className":"ComponentDescriptor",
                                 "version":1
                               },
                               "gizmo":{
-                                "deviceFinder": {
+                                "applicationFinder": {
                                   "meta":{
-                                    "className":"DeviceReference",
-                                    "version":0
+                                    "className":"ApplicationDescriptor",
+                                    "version":1
                                   },
                                   "gizmo":{
-                                    "reference": {
+                                    "deviceFinder": {
                                       "meta":{
-                                        "className":"NamedFinderReference",
+                                        "className":"DeviceReference",
                                         "version":0
                                       },
                                       "gizmo":{
-                                        "id": { "string": "local" }
+                                        "reference": {
+                                          "meta":{
+                                            "className":"NamedFinderReference",
+                                            "version":0
+                                          },
+                                          "gizmo":{
+                                            "id": { "string": "local" }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "applicationSelector": {
+                                      "meta":{
+                                        "className":"Expression",
+                                        "version":0
+                                      },
+                                      "gizmo":{
+                                        "text": { "string": "cef[title=\"Ariba Network Supplier\"]" }
                                       }
                                     }
                                   }
                                 },
-                                "applicationSelector": {
+                                "componentSelector": {
                                   "meta":{
                                     "className":"Expression",
                                     "version":0
                                   },
                                   "gizmo":{
-                                    "text": { "string": "cef[title=\"Ariba Network Supplier\"]" }
+                                    "text": { "string": "A[class*=\"w-pmi-item\"]" }
                                   }
                                 }
                               }
                             },
-                            "componentSelector": {
+                            "contentMatcher": {
                               "meta":{
                                 "className":"Expression",
                                 "version":0
                               },
                               "gizmo":{
-                                "text": { "string": "A[id=\"__kmjbb\"]" }
+                                "text": { "string": ".*\\s*Last 200 Documents\\s*" }
                               }
                             }
                           }
@@ -1484,7 +1501,7 @@
                                         "version":0
                                       },
                                       "gizmo":{
-                                        "text": { "string": "TD &gt; TABLE &gt; TBODY &gt; TR &gt; TD[class=\"noWrap\"] &gt; A[id=\"_vncdmd\"]" }
+                                        "text": { "string": "TD &gt; TABLE &gt; TBODY &gt; TR &gt; TD[class=\"noWrap\"] &gt;A &gt; SPAN[data-icon=\"\"]" }
                                       }
                                     }
                                   }
@@ -1680,7 +1697,7 @@
                                                             "version":0
                                                           },
                                                           "gizmo":{
-                                                            "text": { "string": "TABLE[id=\"_wcesvd\"]" }
+                                                            "text": { "string": "TABLE[class=\"tableBody\"]" }
                                                           }
                                                         }
                                                       }
@@ -2979,7 +2996,7 @@
                                                                                             "version":0
                                                                                           },
                                                                                           "gizmo":{
-                                                                                            "text": { "string": "A[id=\"_yecuq\"] &gt; DIV" }
+                                                                                            "text": { "string": "A[class=\"inbo-INSPOA-popupMenuLink\"] &gt; DIV[class=\"sap-icon--download\"]" }
                                                                                           }
                                                                                         }
                                                                                       }
@@ -5443,7 +5460,7 @@
                                                                     "version":0
                                                                   },
                                                                   "gizmo":{
-                                                                    "text": { "string": "TD &gt; TABLE &gt; TBODY &gt; TR &gt; TD[class=\"noWrap\"] &gt; A[id=\"_vncdmd\"]" }
+                                                                    "text": { "string": "TD &gt; TABLE &gt; TBODY &gt; TR &gt; TD[class=\"noWrap\"] &gt;A &gt; SPAN[data-icon=\"\"]" }
                                                                   }
                                                                 }
                                                               }
@@ -5984,7 +6001,7 @@
                                                                     "version":0
                                                                   },
                                                                   "gizmo":{
-                                                                    "text": { "string": "TD &gt; TABLE &gt; TBODY &gt; TR &gt; TD[class=\"noWrap\"] &gt; A[id=\"_mpsygd\"]" }
+                                                                    "text": { "string": "TD &gt; TABLE &gt; TBODY &gt; TR &gt; TD[class=\"noWrap\"] &gt; A &gt; SPAN[data-icon=\"\"]" }
                                                                   }
                                                                 }
                                                               }

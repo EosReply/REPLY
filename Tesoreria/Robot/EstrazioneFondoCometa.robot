@@ -761,7 +761,7 @@
         <property name="name" idref="17"/>
         <property name="stepAction" class="TestValue" serializationversion="0">
           <property name="condition" class="Expression" serializationversion="1">
-            <property name="text" class="String">index &lt; 40</property>
+            <property name="text" class="String">index &lt; 4000</property>
           </property>
         </property>
         <property name="elementFinders" class="ElementFinders"/>
