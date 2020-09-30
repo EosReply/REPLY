@@ -739,7 +739,7 @@
         <property name="name" idref="20"/>
         <property name="stepAction" class="TestValue" serializationversion="0">
           <property name="condition" class="Expression" serializationversion="1">
-            <property name="text" class="String">Index &lt; 40</property>
+            <property name="text" class="String">Index &lt; 20</property>
           </property>
         </property>
         <property name="elementFinders" class="ElementFinders"/>
