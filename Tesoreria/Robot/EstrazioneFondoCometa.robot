@@ -761,7 +761,11 @@
         <property name="name" idref="17"/>
         <property name="stepAction" class="TestValue" serializationversion="0">
           <property name="condition" class="Expression" serializationversion="1">
+
             <property name="text" class="String">index &lt; 20</property>
+
+        
+
           </property>
         </property>
         <property name="elementFinders" class="ElementFinders"/>
