@@ -299,7 +299,7 @@
                                                 "version":0
                                               },
                                               "gizmo":{
-                                                "id": { "string": "poccoge" }
+                                                "id": { "string": "Coge" }
                                               }
                                             }
                                           }
@@ -788,7 +788,7 @@
                                                 "version":0
                                               },
                                               "gizmo":{
-                                                "id": { "string": "poccoge" }
+                                                "id": { "string": "Coge" }
                                               }
                                             }
                                           }
@@ -1250,7 +1250,7 @@
                                                 "version":0
                                               },
                                               "gizmo":{
-                                                "id": { "string": "poccoge" }
+                                                "id": { "string": "Coge" }
                                               }
                                             }
                                           }
