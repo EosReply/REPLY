@@ -418,6 +418,66 @@
                                   }
                                 }
                               }
+                            },
+                            {
+                              "meta":{
+                                "className":"GuardedChoiceStep",
+                                "version":1
+                              },
+                              "gizmo":{
+                                "name": {
+                                  "meta":{
+                                    "className":"StepName",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    "customName": { "string": "" }
+                                  }
+                                },
+                                "comment": {
+                                  "meta":{
+                                    "className":"StepComment",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    "comment": { "string": "" }
+                                  }
+                                },
+                                "branches": [{
+                                  "meta":{
+                                    "className":"GuardAndBlock",
+                                    "version":3
+                                  },
+                                  "gizmo":{
+                                    "guard": {
+                                      "meta":{
+                                        "className":"TimeOutGuard",
+                                        "version":0
+                                      },
+                                      "gizmo":{
+                                        "seconds": {
+                                          "meta":{
+                                            "className":"Expression",
+                                            "version":0
+                                          },
+                                          "gizmo":{
+                                            "text": { "string": "2" }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "block": {
+                                      "meta":{
+                                        "className":"Block",
+                                        "version":2
+                                      },
+                                      "gizmo":{
+                                        "steps": []
+                                      }
+                                    }
+                                  }
+                                }]
+                              }
                             }]
                           }
                         }

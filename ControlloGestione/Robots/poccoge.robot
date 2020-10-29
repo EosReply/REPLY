@@ -231,7 +231,7 @@
         </property>
         <property name="assignments" class="AttributeAssignments">
           <property name="folderInput" class="AttributeAssignment">
-            <property name="attributeValue" class="String">\\To4eostkt01\RPA\controllo gestione\consuntivi 2020\IT\Report CdG\RPA\CO_LOGIT20</property>
+            <property name="attributeValue" class="String">\\To4eostkt01\RPA\controllo gestione\consuntivi 2020\IT\Report CdG\RPA\CO_CNCQIT20</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="4"/>
           </property>
