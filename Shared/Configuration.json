@@ -1,0 +1,7 @@
+{
+  "hostSmtp" : "host",
+  "Port" : 25,
+  "User" : "demo",
+  "Password" : "demo",
+  "hostWsZip": "http://to0eosrpat01:8080"
+}
