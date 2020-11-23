@@ -4,6 +4,7 @@
     <saved-by-versions>
       <version>10.6.0.4</version>
       <version>11.0.0.0</version>
+      <version>11.0.0.1</version>
     </saved-by-versions>
     <file-type>robot</file-type>
     <referenced-types>
@@ -57,7 +58,6 @@
     </parameters>
     <return-variables>
       <variable name="PagamentoWithPDf"/>
-      <variable name="Pagamento"/>
     </return-variables>
     <store-in-database-variables/>
     <browser-engine>WEBKIT</browser-engine>
@@ -2526,7 +2526,7 @@
             <property name="value" class="String">Errore Generico nel processare piu di 40 elementi</property>
           </property>
           <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
-            <property name="name" class="String">Pagamento.Esito</property>
+            <property name="name" class="String">PagamentoWithPDf.Esito</property>
           </property>
         </property>
         <property name="elementFinders" class="ElementFinders"/>
@@ -2541,7 +2541,7 @@
         <property name="name" idref="83"/>
         <property name="stepAction" class="ReturnVariable" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
-            <property name="name" class="String">Pagamento</property>
+            <property name="name" class="String">PagamentoWithPDf</property>
           </property>
         </property>
         <property name="elementFinders" class="ElementFinders"/>
