@@ -2,7 +2,7 @@
 <object class="Robot2" serializationversion="2">
   <prologue>
     <saved-by-versions>
-      <version>11.0.0.0</version>
+      <version>11.0.0.1</version>
     </saved-by-versions>
     <file-type>robot2</file-type>
     <referenced-types/>
@@ -77,6 +77,24 @@
           },
           "gizmo":{
             "id": { "string": "Boolean" }
+          }
+        }
+      }
+    },
+    {
+      "meta":{
+        "className":"VariableDef",
+        "version":0
+      },
+      "gizmo":{
+        "id": { "string": "errorImage" },
+        "typ": {
+          "meta":{
+            "className":"TypeUse",
+            "version":0
+          },
+          "gizmo":{
+            "id": { "string": "Binary" }
           }
         }
       }
@@ -2266,6 +2284,195 @@
                   },
                   "gizmo":{
                     "steps": [{
+                      "meta":{
+                        "className":"ExtractImageStep",
+                        "version":1
+                      },
+                      "gizmo":{
+                        "name": {
+                          "meta":{
+                            "className":"StepName",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "customName": { "string": "" }
+                          }
+                        },
+                        "comment": {
+                          "meta":{
+                            "className":"StepComment",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "comment": { "string": "" }
+                          }
+                        },
+                        "finder": {
+                          "meta":{
+                            "className":"ComponentFinderWithName",
+                            "version":8
+                          },
+                          "gizmo":{
+                            "name": {
+                              "meta":{
+                                "className":"FinderName",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "id": { "string": "" }
+                              }
+                            },
+                            "finder": {
+                              "meta":{
+                                "className":"ComponentDescriptor",
+                                "version":1
+                              },
+                              "gizmo":{
+                                "applicationFinder": {
+                                  "meta":{
+                                    "className":"ApplicationDescriptor",
+                                    "version":1
+                                  },
+                                  "gizmo":{
+                                    "deviceFinder": {
+                                      "meta":{
+                                        "className":"DeviceReference",
+                                        "version":0
+                                      },
+                                      "gizmo":{
+                                        "reference": {
+                                          "meta":{
+                                            "className":"NamedFinderReference",
+                                            "version":0
+                                          },
+                                          "gizmo":{
+                                            "id": { "string": "local" }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "applicationSelector": {
+                                      "meta":{
+                                        "className":"Expression",
+                                        "version":0
+                                      },
+                                      "gizmo":{
+                                        "text": { "string": "cef" }
+                                      }
+                                    }
+                                  }
+                                },
+                                "componentSelector": {
+                                  "meta":{
+                                    "className":"Expression",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    "text": { "string": "window" }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "outputVariable": {
+                          "meta":{
+                            "className":"LeftHandSide",
+                            "version":1
+                          },
+                          "gizmo":{
+                            "text": { "string": "errorImage" }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "meta":{
+                        "className":"WriteFileStep",
+                        "version":2
+                      },
+                      "gizmo":{
+                        "name": {
+                          "meta":{
+                            "className":"StepName",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "customName": { "string": "" }
+                          }
+                        },
+                        "comment": {
+                          "meta":{
+                            "className":"StepComment",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "comment": { "string": "" }
+                          }
+                        },
+                        "finder": {
+                          "meta":{
+                            "className":"DeviceFinderWithName",
+                            "version":2
+                          },
+                          "gizmo":{
+                            "name": {
+                              "meta":{
+                                "className":"FinderName",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "id": { "string": "" }
+                              }
+                            },
+                            "finder": {
+                              "meta":{
+                                "className":"DeviceReference",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "reference": {
+                                  "meta":{
+                                    "className":"PreviousFinderReference",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "contents": {
+                          "meta":{
+                            "className":"Expression",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "text": { "string": "=errorImage" }
+                          }
+                        },
+                        "file": {
+                          "meta":{
+                            "className":"DirectFileReference",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "file": {
+                              "meta":{
+                                "className":"Expression",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "text": { "string": "=\"\\\\\\\\to0eosrpa01\\\\EOS\\\\Temporary\\\\vodafone\\\\screen\\\\VodafoneLogin\" + random(1,1000000) +  random(1,1000000) + \".jpg\"" }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
                       "meta":{
                         "className":"AssignStep",
                         "version":1

@@ -39,5 +39,9 @@
       <property name="name" class="String">Carta</property>
       <property name="type" idref="0"/>
     </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Sequence</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.IntegerAttributeType"/>
+    </object>
   </property>
 </object>

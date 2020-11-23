@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="kapow.robot.common.domain.Type" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>11.0.0.1</version>
+    </saved-by-versions>
+    <file-type>type</file-type>
+  </prologue>
+  <property name="attributes" class="kapow.robot.common.domain.Attributes">
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">UrlApp</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">https://my301477.s4hana.ondemand.com/ui#FinanceApplicationJob-scheduleTaxJobs?JobCatalogEntryName=SAP_FIN_EC_SALES_LIST%252CSAP_FIN_TAX_PREPARE_TAX_REP%252CSAP_FIN_WITHHOLDING_TAX_REPORT%252CSAP_FIN_TAX_RFUMSV00%252CSAP_FIN_DOC_LIST_DISPLAY%252CSAP_SFIN_BC_GL_PARKED_DOC%252CSAP_FIN_EXTAXJURI_UPDATE%252CSAP_FIN_TAX_TDT_MIGRATION%252CSAP_FIN_TAX_TDT_MIG_CHECK%252CSAP_FIN_TAX_RFUMSV50%252CSAP_FIN_TAX_TXA_MIGRATION%252CSAP_FIN_EXTAXJURI_INIT_UPDATE%252C&amp;/v4_JobRunList?sap-iapp-state=ASCG01N6K5HP39VFZWP2H9P2WOKHAU1HNC1T4HF8</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">User</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">m.padalino</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Password</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.PasswordAttributeType"/>
+      <property name="defaultValue" class="String">Torino@176</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Societa</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="0"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Esercizio</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.IntegerAttributeType"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DataInizialeDichiarazioneIVA</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DataFinaleDichiarazioneIVA</property>
+      <property name="type" idref="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ModelloJob</property>
+      <property name="type" idref="0"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DataEstrazione</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">Usata per nominare nome job </property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">LayoutToReplaceForALLIVAVENSP</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="2"/>
+      <property name="comment" class="String">Layout da sostituire  per modello ALL IVA VEN SP</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">NomeJobIDToSearchForEstrazione</property>
+      <property name="type" idref="2"/>
+      <property name="comment" class="String">usato per chimata a job di estrazione</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">NomeFileReportEstrazione</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="comment" class="String">usato per chimata a job estrazione. Nme da assegnare al file del report estratto </property>
+    </object>
+  </property>
+</object>

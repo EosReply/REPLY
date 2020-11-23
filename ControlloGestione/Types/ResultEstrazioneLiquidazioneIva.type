@@ -47,9 +47,5 @@
       <property name="name" class="String">Esercizio</property>
       <property name="type" idref="0"/>
     </object>
-    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
-      <property name="name" class="String">EsitoEsecuzione</property>
-      <property name="type" idref="0"/>
-    </object>
   </property>
 </object>
