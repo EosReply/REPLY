@@ -22,7 +22,7 @@
       <sub-robot name="LancioJobLiqIvaAttivo"/>
       <sub-robot name="LancioJobLiqIvaAttivo"/>
       <sub-robot name="LancioJobLiqIvaReplyAttivo"/>
-      <sub-robot name="LancioJobLiqIvaAttivo"/>
+      <sub-robot name="LancioJobLiqIvaReplyAttivo"/>
       <sub-robot name="EstrazioneJobStatusLiqIvaAttivo"/>
       <sub-robot name="EstrazioneJobStatusLiqIvaAttivo"/>
     </sub-robots>
@@ -137,7 +137,7 @@
             <property name="lastKnownAttributeType" class="java.lang.Class">kapow.robot.plugin.common.domain.PasswordAttributeType</property>
           </property>
           <property name="Path" class="AttributeAssignment">
-            <property name="attributeValue" class="String">\\to0eosrpat01\C$\EOS\Temporary\LiquidazioneIvaAttivo</property>
+            <property name="attributeValue" class="String">\\to0eosrpat01\Temporary\LiquidazioneIvaAttivo\</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="2"/>
           </property>
@@ -2577,7 +2577,7 @@
       <object class="Transition" serializationversion="3" id="145">
         <property name="name" class="String">Lancio del job</property>
         <property name="stepAction" class="CallRobot2Step">
-          <property name="robot2Name" class="String">LancioJobLiqIvaAttivo</property>
+          <property name="robot2Name" class="String">LancioJobLiqIvaReplyAttivo</property>
           <property name="inputValueExpression" class="kapow.robot.plugin.common.stepaction.rl2.InputValueBeanList">
             <object class="kapow.robot.plugin.common.stepaction.rl2.InputValue">
               <property name="inputValueExpression" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -4391,7 +4391,7 @@
             <property name="body" class="kapow.robot.plugin.common.stateprocessor.rest.RawBodyContent">
               <property name="data" class="Expression" serializationversion="1">
                 <property name="text" class="String">&gt;&gt;{
-    "Path": "&lt;&lt;+urlEncode(ConfigurazioneEstrazione.Path+"\\Result")+&gt;&gt;",
+    "Path": "&lt;&lt;+urlEncode(ConfigurazioneEstrazione.Path+"\\"+Utility.Year+"\\Result")+&gt;&gt;",
   "Filename": "&lt;&lt;+"ReportVendite_"+ConfigurazioneEstrazione.DataString +".xlsx"+&gt;&gt;",
    "User": "&lt;&lt;+configurationWriteFile.User+&gt;&gt;",
    "Domain": "Replynet",
