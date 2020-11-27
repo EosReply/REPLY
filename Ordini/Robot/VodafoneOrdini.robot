@@ -227,17 +227,22 @@
         </property>
         <property name="assignments" class="AttributeAssignments">
           <property name="CheckFile" class="AttributeAssignment">
-            <property name="attributeValue" class="String">http://localhost:51676/common/checkfileSharepoint</property>
+            <property name="attributeValue" class="String">http://to0eosrpat01/eoscommon/common/checkfileSharepoint</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="2"/>
+          </property>
+          <property name="CheckFileSharepoint" class="AttributeAssignment">
+            <property name="attributeValue" class="String">http://to0eosrpat01/eoscommon/common/checkfileSharepoint</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="2"/>
           </property>
           <property name="WriteFile" class="AttributeAssignment">
-            <property name="attributeValue" class="String">http://localhost:51676/common/WriteFile</property>
+            <property name="attributeValue" class="String">http://to0eosrpat01/eoscommon/common/WriteFile</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="2"/>
           </property>
           <property name="WriteFileSharepoint" class="AttributeAssignment">
-            <property name="attributeValue" class="String">http://localhost:51676/common/WriteFileSharePoint</property>
+            <property name="attributeValue" class="String">http://to0eosrpat01/eoscommon/common/WriteFileSharePoint</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="2"/>
           </property>
@@ -1134,7 +1139,7 @@
         <property name="stepAction" class="CallRESTWebService2" serializationversion="1">
           <property name="urlProvider" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
-              <property name="name" class="String">wsEndPoin.CheckFile</property>
+              <property name="name" class="String">wsEndPoin.CheckFileSharepoint</property>
             </property>
           </property>
           <property name="request" class="kapow.robot.plugin.common.stateprocessor.rest.PostRestRequest">
@@ -1480,7 +1485,7 @@
         <property name="name" class="String">Assign Path</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
-            <property name="text" class="String">configurationVodafone.sharePointFolder+"\\"+orderValue.year+"\\"+configurationVodafone.rootOutputSubfolder+"\\"+orderValue.month+"\\"+orderValue.number+"_VODAFONE_"+day(orderValue.date)+(length(month(orderValue.date))==1?"0"+month(orderValue.date):month(orderValue.date))+year(orderValue.date)+".pdf"</property>
+            <property name="text" class="String">configurationVodafone.sharePointFolder+"\\" + configurationVodafone.listName+"\\"+orderValue.year+"\\"+configurationVodafone.rootOutputSubfolder+"\\"+orderValue.month+"\\"+orderValue.number+"_VODAFONE_"+day(orderValue.date)+(length(month(orderValue.date))==1?"0"+month(orderValue.date):month(orderValue.date))+year(orderValue.date)+".pdf"</property>
           </property>
           <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
             <property name="name" class="String">orderReturn.path</property>
@@ -3373,7 +3378,7 @@
         <property name="stepAction" class="CallRESTWebService2" serializationversion="1">
           <property name="urlProvider" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
-              <property name="name" class="String">wsEndPoin.CheckFile</property>
+              <property name="name" class="String">wsEndPoin.CheckFileSharepoint</property>
             </property>
           </property>
           <property name="request" class="kapow.robot.plugin.common.stateprocessor.rest.PostRestRequest">
