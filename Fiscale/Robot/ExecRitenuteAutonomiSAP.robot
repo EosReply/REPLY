@@ -2048,7 +2048,7 @@
                                     "version":0
                                   },
                                   "gizmo":{
-                                    "text": { "string": "=InputPar.RagSoc" }
+                                    "text": { "string": "=trim(InputPar.RagSoc)" }
                                   }
                                 }
                               }
@@ -2644,7 +2644,7 @@
                                         "version":0
                                       },
                                       "gizmo":{
-                                        "text": { "string": "=InputPar.RagSoc != FirstRagSosFromList" }
+                                        "text": { "string": "=trim(InputPar.RagSoc) != trim(FirstRagSosFromList)" }
                                       }
                                     },
                                     "block": {
