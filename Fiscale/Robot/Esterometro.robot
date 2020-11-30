@@ -86,7 +86,7 @@
         </property>
         <property name="assignments" class="AttributeAssignments">
           <property name="Società" class="AttributeAssignment">
-            <property name="attributeValue" class="String">0407</property>
+            <property name="attributeValue" class="String">0022</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" class="java.lang.Class" id="2">kapow.robot.plugin.common.domain.StringAttributeType</property>
           </property>
