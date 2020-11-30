@@ -86,7 +86,7 @@
         </property>
         <property name="assignments" class="AttributeAssignments">
           <property name="Società" class="AttributeAssignment">
-            <property name="attributeValue" class="String">0185</property>
+            <property name="attributeValue" class="String">0407</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" class="java.lang.Class" id="2">kapow.robot.plugin.common.domain.StringAttributeType</property>
           </property>
@@ -1106,7 +1106,7 @@
               <property name="name" class="String">reply_rpa</property>
             </property>
           </property>
-          <property name="sql" class="String">"select LPAD(MAX(convert(Progressivo,integer)) +1,'5','0') as newprogressivo from 
+          <property name="sql" class="String">"select LPAD(MAX(convert(Progressivo, unsigned integer)) +1,'5','0') as newprogressivo from 
 reply_rpa.ca_esterometro_outputreport"</property>
           <property name="columnAttributeMappings" class="kapow.robot.plugin.common.support.database.ColumnAttributeMappings">
             <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
