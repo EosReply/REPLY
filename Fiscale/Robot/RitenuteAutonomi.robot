@@ -75,6 +75,11 @@
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="0"/>
           </property>
+          <property name="Società" class="AttributeAssignment">
+            <property name="attributeValue" class="String">0031,0507,0001</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class" id="1">kapow.robot.plugin.common.domain.StringAttributeType</property>
+          </property>
         </property>
       </property>
     </object>
@@ -83,19 +88,19 @@
       <property name="parameter" class="Boolean">true</property>
       <property name="global" class="Boolean">true</property>
       <property name="initialAssignment" class="InitialVariableAssignment">
-        <property name="type" class="TypeReference" serializationversion="0" id="1">
+        <property name="type" class="TypeReference" serializationversion="0" id="2">
           <property name="typeName" class="String">ConfigurationWriteFile</property>
         </property>
         <property name="assignments" class="AttributeAssignments">
           <property name="Root" class="AttributeAssignment">
             <property name="attributeValue" class="String">\\to4eostkt01\RPA\reply\RitenuteAutonomi</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
-            <property name="lastKnownAttributeType" class="java.lang.Class" id="2">kapow.robot.plugin.common.domain.StringAttributeType</property>
+            <property name="lastKnownAttributeType" idref="1"/>
           </property>
           <property name="domain" class="AttributeAssignment">
             <property name="attributeValue" class="String">replynet</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
-            <property name="lastKnownAttributeType" idref="2"/>
+            <property name="lastKnownAttributeType" idref="1"/>
           </property>
         </property>
       </property>
@@ -105,17 +110,17 @@
       <property name="parameter" class="Boolean">true</property>
       <property name="global" class="Boolean">true</property>
       <property name="initialAssignment" class="InitialVariableAssignment">
-        <property name="type" idref="1"/>
+        <property name="type" idref="2"/>
         <property name="assignments" class="AttributeAssignments">
           <property name="Root" class="AttributeAssignment">
             <property name="attributeValue" class="String">\\to4eostkt01\RPA\reply\RitenuteAutonomi\Mappature</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
-            <property name="lastKnownAttributeType" idref="2"/>
+            <property name="lastKnownAttributeType" idref="1"/>
           </property>
           <property name="domain" class="AttributeAssignment">
             <property name="attributeValue" class="String">replynet</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
-            <property name="lastKnownAttributeType" idref="2"/>
+            <property name="lastKnownAttributeType" idref="1"/>
           </property>
         </property>
       </property>
@@ -132,12 +137,12 @@
           <property name="ReadFile" class="AttributeAssignment">
             <property name="attributeValue" class="String">http://to0eosrpat01/eoscommon/common/ReadFile</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
-            <property name="lastKnownAttributeType" idref="2"/>
+            <property name="lastKnownAttributeType" idref="1"/>
           </property>
           <property name="WriteFile" class="AttributeAssignment">
             <property name="attributeValue" class="String">http://to0eosrpat01/eoscommon/common/WriteFile</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
-            <property name="lastKnownAttributeType" idref="2"/>
+            <property name="lastKnownAttributeType" idref="1"/>
           </property>
         </property>
       </property>
@@ -154,7 +159,7 @@
           <property name="delimeter" class="AttributeAssignment">
             <property name="attributeValue" class="String">,</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
-            <property name="lastKnownAttributeType" idref="2"/>
+            <property name="lastKnownAttributeType" idref="1"/>
           </property>
         </property>
       </property>
