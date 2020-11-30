@@ -15057,7 +15057,7 @@
                                             "version":0
                                           },
                                           "gizmo":{
-                                            "text": { "string": "cef" }
+                                            "text": { "string": "cef[title=\"Dati dichiarazione fattura (Italia)\"]" }
                                           }
                                         }
                                       }
@@ -15552,7 +15552,7 @@
                                             "version":0
                                           },
                                           "gizmo":{
-                                            "text": { "string": "cef" }
+                                            "text": { "string": "cef[title=\"Dati dichiarazione fattura (Italia)\"]" }
                                           }
                                         }
                                       }
