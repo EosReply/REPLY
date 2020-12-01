@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="kapow.robot.common.domain.Type" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>11.0.0.0</version>
+    </saved-by-versions>
+    <file-type>type</file-type>
+  </prologue>
+  <property name="attributes" class="kapow.robot.common.domain.Attributes">
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">startSheetName</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">TITLE</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">monoBuSheetNum</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.IntegerAttributeType"/>
+      <property name="defaultValue" class="String">19</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">exportNameSheet</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">GEN_DATA</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">companyCell</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">$B$6</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">buCell</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">$B$8</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">reportCoge</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">Report Co.Ge.</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">confronto</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">Confronto</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sharedServices</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">Shared services</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">total</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+      <property name="defaultValue" class="String">Total</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">multiBuActiveSheetNum</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.IntegerAttributeType"/>
+      <property name="defaultValue" class="String">18</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">multiBuSharedServicesSheetNum</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.IntegerAttributeType"/>
+      <property name="defaultValue" class="String">10</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">multiBuTotalSheetNum</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.IntegerAttributeType"/>
+      <property name="defaultValue" class="String">15</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+  </property>
+</object>

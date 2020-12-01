@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="kapow.robot.common.domain.Type" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>11.0.0.1</version>
+    </saved-by-versions>
+    <file-type>type</file-type>
+  </prologue>
+  <property name="attributes" class="kapow.robot.common.domain.Attributes">
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">BatchInputRichiesto</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.BooleanAttributeType"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ShortNameSocietà</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Layout3</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DataScadenzaAddebito</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Estensione</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="0"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Path</property>
+      <property name="type" idref="0"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Esercizio</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.IntegerAttributeType"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DataString</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">CodiceSocietà</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">NomeJob</property>
+      <property name="type" idref="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">URL</property>
+      <property name="type" idref="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">ModelloJob1</property>
+      <property name="type" idref="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Username</property>
+      <property name="type" idref="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Password</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.PasswordAttributeType"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">flagMemorizzazioneNumDocumento</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.BooleanAttributeType"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Layout1</property>
+      <property name="type" idref="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Layout2</property>
+      <property name="type" idref="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DataRegistrazioneDa</property>
+      <property name="type" idref="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DataRegistrazioneA</property>
+      <property name="type" idref="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">DescrizioneErrore</property>
+      <property name="type" idref="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">TipoDocumento</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType"/>
+    </object>
+  </property>
+</object>
