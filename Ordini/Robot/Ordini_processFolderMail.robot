@@ -201,18 +201,6 @@
         <property name="type" class="SimpleTypeReference">
           <property name="simpleTypeId" class="Integer">13</property>
         </property>
-        <property name="assignments" class="AttributeAssignments">
-          <property name="value" class="AttributeAssignment">
-            <property name="attributeValue" class="String">Id	Name	UserName	Server	Owner	Inbox	SenderFilter	SubjectFilter	BodyFilter	AttachmentFilter	ExportAttachment	ExportBody	MarkAsRead	OutBox	DateCreated	Description	active
-1	test	david.wright@kofax.com	mail.kofax.com	wiki@kofax.com	inbox	david.wright@kofax.com	^test$		balance\.txt	y	y	y	Processed	09/30/19 06:06 PM	test	y
-2	OpenOffice.unknownemail	david.wright@kofax.com	mail.kofax.com	wiki@kofax.com	inbox		Kofax RPA Ask the Expert Office Hours	The e-mail address you entered couldn't be found		n	y	y	Processed	09/30/19 06:06 PM	unknown email	y
-3	OpenOffice.resendlater	david.wright@kofax.com	mail.kofax.com	wiki@kofax.com	inbox		Kofax RPA Ask the Expert Office Hours	(resend the message|resending this message|hop count exceeded)		n	y	y	Processed	09/30/19 06:06 PM	resend later	y
-4	OpenOffice.personleft	david.wright@kofax.com	mail.kofax.com	wiki@kofax.com	inbox		Kofax RPA Ask the Expert Office Hours	recipient addresses rejected		n	y	y	Processed	09/30/19 06:06 PM	person left company	y
-</property>
-            <property name="currentlyAssigned" class="Boolean">true</property>
-            <property name="lastKnownAttributeType" class="java.lang.Class">kapow.robot.plugin.common.domain.TextAttributeType</property>
-          </property>
-        </property>
       </property>
     </object>
   </property>

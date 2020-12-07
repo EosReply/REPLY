@@ -90,6 +90,11 @@
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" class="java.lang.Class" id="2">kapow.robot.plugin.common.domain.StringAttributeType</property>
           </property>
+          <property name="Varianti" class="AttributeAssignment">
+            <property name="attributeValue" class="String">EsterometroVen</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="2"/>
+          </property>
         </property>
       </property>
     </object>
@@ -455,7 +460,7 @@
             <property name="name" class="String">Assign Data Registrazone DA</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="Expression" serializationversion="1">
-                <property name="text" class="String">"01.01." + year(date())</property>
+                <property name="text" class="String">"01.01." + caEsterometroInputuser.Esercizio</property>
               </property>
               <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
                 <property name="name" class="String">caEsterometroInputParForSAP.DataRegistrazoneDA</property>
@@ -473,7 +478,7 @@
             <property name="name" class="String">Assign Data Registrazione A</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="Expression" serializationversion="1">
-                <property name="text" class="String">"31.03." + year(date())  </property>
+                <property name="text" class="String">"31.03." + caEsterometroInputuser.Esercizio</property>
               </property>
               <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
                 <property name="name" class="String">caEsterometroInputParForSAP.DataRegistrazioneA</property>
@@ -519,7 +524,7 @@
             <property name="name" class="String">Assign Data Registrazone DA</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="Expression" serializationversion="1">
-                <property name="text" class="String">"01.04." + year(date()) </property>
+                <property name="text" class="String">"01.04." + caEsterometroInputuser.Esercizio</property>
               </property>
               <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
                 <property name="name" class="String">caEsterometroInputParForSAP.DataRegistrazoneDA</property>
@@ -537,7 +542,7 @@
             <property name="name" class="String">Assign Data Registrazione A</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="Expression" serializationversion="1">
-                <property name="text" class="String">"30.06."  + year(date()) </property>
+                <property name="text" class="String">"30.06."  + caEsterometroInputuser.Esercizio</property>
               </property>
               <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
                 <property name="name" class="String">caEsterometroInputParForSAP.DataRegistrazioneA</property>
@@ -583,7 +588,7 @@
             <property name="name" class="String">Assign Data Registrazone DA</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="Expression" serializationversion="1">
-                <property name="text" class="String">"01.07." + year(date()) </property>
+                <property name="text" class="String">"01.07." + caEsterometroInputuser.Esercizio</property>
               </property>
               <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
                 <property name="name" class="String">caEsterometroInputParForSAP.DataRegistrazoneDA</property>
@@ -601,7 +606,7 @@
             <property name="name" class="String">Assign Data Registrazione A</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="Expression" serializationversion="1">
-                <property name="text" class="String">"30.09."  + year(date()) </property>
+                <property name="text" class="String">"30.09."  + caEsterometroInputuser.Esercizio</property>
               </property>
               <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
                 <property name="name" class="String">caEsterometroInputParForSAP.DataRegistrazioneA</property>
@@ -619,7 +624,7 @@
             <property name="name" class="String">Assign Data Registrazone DA</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="Expression" serializationversion="1">
-                <property name="text" class="String">"01.10." + year(date()) </property>
+                <property name="text" class="String">"01.10." + caEsterometroInputuser.Esercizio</property>
               </property>
               <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
                 <property name="name" class="String">caEsterometroInputParForSAP.DataRegistrazoneDA</property>
@@ -637,7 +642,7 @@
             <property name="name" class="String">Assign Data Registrazione A</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="Expression" serializationversion="1">
-                <property name="text" class="String">"31.12."  + year(date()) </property>
+                <property name="text" class="String">"31.12."  + caEsterometroInputuser.Esercizio</property>
               </property>
               <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
                 <property name="name" class="String">caEsterometroInputParForSAP.DataRegistrazioneA</property>
@@ -1101,7 +1106,7 @@
               <property name="name" class="String">reply_rpa</property>
             </property>
           </property>
-          <property name="sql" class="String">"select LPAD(MAX(convert(Progressivo,integer)) +1,'5','0') as newprogressivo from 
+          <property name="sql" class="String">"select LPAD(MAX(convert(Progressivo, unsigned integer)) +1,'5','0') as newprogressivo from 
 reply_rpa.ca_esterometro_outputreport"</property>
           <property name="columnAttributeMappings" class="kapow.robot.plugin.common.support.database.ColumnAttributeMappings">
             <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
@@ -1560,7 +1565,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
               <property name="data" class="Expression" serializationversion="1">
                 <property name="text" class="String">&gt;&gt;{
     "Path": "&lt;&lt;+urlEncode(configurationWriteFile.Root + "\\" + year(date()) + "\\" + caEsterometroInputuser.Trimestre+"\\" + caEsterometroInputParForSAP.Variante)+&gt;&gt;",
-  "Filename": "&lt;&lt;+caEsterometroSAPOutput.Paese+caEsterometroInputParForSAP.CodiceFiscale+"_DF_"+caEsterometroInputParForSAP.Progressivo+&gt;&gt;.xlsx",
+  "Filename": "&lt;&lt;+caEsterometroOutputReport.RagSociale+"_DF_"+caEsterometroInputParForSAP.Progressivo+&gt;&gt;.xlsx",
    "User": "&lt;&lt;+configurationWriteFile.User+&gt;&gt;",
    "Domain": "&lt;&lt;+configurationWriteFile.domain+&gt;&gt;",
   "Password": "&lt;&lt;+configurationWriteFile.Password+&gt;&gt;",
@@ -1635,7 +1640,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="body" class="kapow.robot.plugin.common.stateprocessor.rest.RawBodyContent">
               <property name="data" class="Expression" serializationversion="1">
                 <property name="text" class="String">&gt;&gt;{
-    "Path": "&lt;&lt;+urlEncode(configurationWriteFile.Root + "\\" + year(date()) + "\\" + caEsterometroInputuser.Trimestre + "\\XML" ) +&gt;&gt;",
+    "Path": "&lt;&lt;+urlEncode(configurationWriteFile.Root + "\\" + year(date()) + "\\" + caEsterometroInputuser.Trimestre + "\\" + caEsterometroInputParForSAP.Variante ) +&gt;&gt;",
   "Filename": "&lt;&lt;+caEsterometroSAPOutput.Paese+caEsterometroInputParForSAP.CodiceFiscale+"_DF_"+caEsterometroInputParForSAP.Progressivo+&gt;&gt;.xml",
    "User": "&lt;&lt;+configurationWriteFile.User+&gt;&gt;",
    "Domain": "&lt;&lt;+configurationWriteFile.domain+&gt;&gt;",
@@ -1901,7 +1906,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
         <property name="name" class="String">Test Progressivo Input</property>
         <property name="stepAction" class="TestValue" serializationversion="0">
           <property name="condition" class="Expression" serializationversion="1">
-            <property name="text" class="String">caEsterometroInputuser.Progressivo == Progressivo</property>
+            <property name="text" class="String">toInteger(caEsterometroInputuser.Progressivo)  &gt;=   toInteger(Progressivo)</property>
           </property>
         </property>
         <property name="elementFinders" class="ElementFinders"/>
@@ -1940,14 +1945,29 @@ reply_rpa.ca_esterometro_outputreport"</property>
         <property name="enabled" idref="10"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Group" id="108">
+      <object class="Transition" serializationversion="3" id="108">
+        <property name="name" class="String">Set Input Progressivo null</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">caEsterometroInputuser.Progressivo</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment" class="String">al giro dopo non lo tengo più in considerazione</property>
+        <property name="enabled" idref="10"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Group" id="109">
         <name class="String">Set CaEsterometroOutputReport</name>
         <comment>
           <null/>
         </comment>
-        <blockBeginStep class="BlockBeginStep" id="109"/>
+        <blockBeginStep class="BlockBeginStep" id="110"/>
         <steps class="ArrayList">
-          <object class="Transition" serializationversion="3" id="110">
+          <object class="Transition" serializationversion="3" id="111">
             <property name="name" class="String">Assign Codice Societa</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -1967,7 +1987,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="111">
+          <object class="Transition" serializationversion="3" id="112">
             <property name="name" class="String">Assign Cod Fiscale</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -1987,7 +2007,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="112">
+          <object class="Transition" serializationversion="3" id="113">
             <property name="name" class="String">Assign Variante</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -2007,7 +2027,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="113">
+          <object class="Transition" serializationversion="3" id="114">
             <property name="name" class="String">Assign Progressivo</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -2027,7 +2047,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="114">
+          <object class="Transition" serializationversion="3" id="115">
             <property name="name" class="String">Assign Esito Estrazione Excel</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="Expression" serializationversion="1">
@@ -2045,7 +2065,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="115">
+          <object class="Transition" serializationversion="3" id="116">
             <property name="name" class="String">Assign Esito Estrazione XML</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="Expression" serializationversion="1">
@@ -2063,7 +2083,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="116">
+          <object class="Transition" serializationversion="3" id="117">
             <property name="name" class="String">Assign Data Reg Iniziale</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -2083,7 +2103,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="117">
+          <object class="Transition" serializationversion="3" id="118">
             <property name="name" class="String">Assign Data Reg Finale</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -2103,7 +2123,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="118">
+          <object class="Transition" serializationversion="3" id="119">
             <property name="name" class="String">Assign Trimestre</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -2123,7 +2143,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="119">
+          <object class="Transition" serializationversion="3" id="120">
             <property name="name" class="String">Assign Esercizio</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -2143,7 +2163,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="120">
+          <object class="Transition" serializationversion="3" id="121">
             <property name="name" class="String">Assign Nome File</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="Expression" serializationversion="1">
@@ -2162,12 +2182,8 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
         </steps>
-        <blockEndStep class="BlockEndStep" id="121"/>
+        <blockEndStep class="BlockEndStep" id="122"/>
         <edges class="ArrayList">
-          <object class="TransitionEdge">
-            <from idref="109"/>
-            <to idref="110"/>
-          </object>
           <object class="TransitionEdge">
             <from idref="110"/>
             <to idref="111"/>
@@ -2212,9 +2228,13 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <from idref="120"/>
             <to idref="121"/>
           </object>
+          <object class="TransitionEdge">
+            <from idref="121"/>
+            <to idref="122"/>
+          </object>
         </edges>
       </object>
-      <object class="Transition" serializationversion="3" id="122">
+      <object class="Transition" serializationversion="3" id="123">
         <property name="name" class="String">Return OutputReport</property>
         <property name="stepAction" class="ReturnVariable" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
@@ -2231,10 +2251,10 @@ reply_rpa.ca_esterometro_outputreport"</property>
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="123">
-        <property name="name" class="String" id="124">Stop</property>
+      <object class="Transition" serializationversion="3" id="124">
+        <property name="name" class="String" id="125">Stop</property>
         <property name="stepAction" class="Stop"/>
-        <property name="elementFinders" class="ElementFinders" id="125"/>
+        <property name="elementFinders" class="ElementFinders" id="126"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -2242,8 +2262,8 @@ reply_rpa.ca_esterometro_outputreport"</property>
         <property name="enabled" idref="10"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="126"/>
-      <object class="Transition" serializationversion="3" id="127">
+      <object class="End" id="127"/>
+      <object class="Transition" serializationversion="3" id="128">
         <property name="name" class="String">Assign Progressivo</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -2261,14 +2281,14 @@ reply_rpa.ca_esterometro_outputreport"</property>
         <property name="enabled" idref="10"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Group" id="128">
+      <object class="Group" id="129">
         <name class="String">Set CaEsterometroOutputReport</name>
         <comment>
           <null/>
         </comment>
-        <blockBeginStep class="BlockBeginStep" id="129"/>
+        <blockBeginStep class="BlockBeginStep" id="130"/>
         <steps class="ArrayList">
-          <object class="Transition" serializationversion="3" id="130">
+          <object class="Transition" serializationversion="3" id="131">
             <property name="name" class="String">Assign Codice Societa</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -2288,7 +2308,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="131">
+          <object class="Transition" serializationversion="3" id="132">
             <property name="name" class="String">Assign Cod Fiscale</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -2308,7 +2328,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="132">
+          <object class="Transition" serializationversion="3" id="133">
             <property name="name" class="String">Assign Variante</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -2328,7 +2348,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="133">
+          <object class="Transition" serializationversion="3" id="134">
             <property name="name" class="String">Assign Progressivo</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -2348,7 +2368,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="134">
+          <object class="Transition" serializationversion="3" id="135">
             <property name="name" class="String">Assign Esito Estrazione Excel</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -2366,7 +2386,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="135">
+          <object class="Transition" serializationversion="3" id="136">
             <property name="name" class="String">Assign Esito Estrazione XML</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -2384,7 +2404,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="136">
+          <object class="Transition" serializationversion="3" id="137">
             <property name="name" class="String">Assign Data Reg Iniziale</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -2404,7 +2424,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="137">
+          <object class="Transition" serializationversion="3" id="138">
             <property name="name" class="String">Assign Data Reg Finale</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -2424,7 +2444,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="138">
+          <object class="Transition" serializationversion="3" id="139">
             <property name="name" class="String">Assign Trimestre</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -2444,7 +2464,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="139">
+          <object class="Transition" serializationversion="3" id="140">
             <property name="name" class="String">Assign Esercizio</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -2464,7 +2484,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="enabled" idref="10"/>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
-          <object class="Transition" serializationversion="3" id="140">
+          <object class="Transition" serializationversion="3" id="141">
             <property name="name" class="String">Assign Nome File</property>
             <property name="stepAction" class="AssignVariable" serializationversion="4">
               <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -2483,12 +2503,8 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="changedProperties" class="java.util.HashSet"/>
           </object>
         </steps>
-        <blockEndStep class="BlockEndStep" id="141"/>
+        <blockEndStep class="BlockEndStep" id="142"/>
         <edges class="ArrayList">
-          <object class="TransitionEdge">
-            <from idref="129"/>
-            <to idref="130"/>
-          </object>
           <object class="TransitionEdge">
             <from idref="130"/>
             <to idref="131"/>
@@ -2533,9 +2549,13 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <from idref="140"/>
             <to idref="141"/>
           </object>
+          <object class="TransitionEdge">
+            <from idref="141"/>
+            <to idref="142"/>
+          </object>
         </edges>
       </object>
-      <object class="Transition" serializationversion="3" id="142">
+      <object class="Transition" serializationversion="3" id="143">
         <property name="name" class="String">Return OutputReport</property>
         <property name="stepAction" class="ReturnVariable" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
@@ -2552,10 +2572,10 @@ reply_rpa.ca_esterometro_outputreport"</property>
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="143">
-        <property name="name" idref="124"/>
+      <object class="Transition" serializationversion="3" id="144">
+        <property name="name" idref="125"/>
         <property name="stepAction" class="Stop"/>
-        <property name="elementFinders" idref="125"/>
+        <property name="elementFinders" idref="126"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -2563,8 +2583,8 @@ reply_rpa.ca_esterometro_outputreport"</property>
         <property name="enabled" idref="10"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="144"/>
-      <object class="Transition" serializationversion="3" id="145">
+      <object class="End" id="145"/>
+      <object class="Transition" serializationversion="3" id="146">
         <property name="name" class="String">Loop RowsExcel</property>
         <property name="stepAction" class="LoopInExcel">
           <property name="loopDirection" idref="54"/>
@@ -2588,7 +2608,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="146">
+      <object class="Transition" serializationversion="3" id="147">
         <property name="name" class="String">Extract and set CodFisc to InputForSAP</property>
         <property name="stepAction" class="ExtractCell">
           <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -2620,7 +2640,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
           <element idref="58"/>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="147">
+      <object class="Transition" serializationversion="3" id="148">
         <property name="name" class="String">Set Societa To InputParForSAP</property>
         <property name="stepAction" class="ExtractCell">
           <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -2652,7 +2672,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="148">
+      <object class="Transition" serializationversion="3" id="149">
         <property name="name" class="String">Extract and Set RagSoc ToOutput</property>
         <property name="stepAction" class="ExtractCell">
           <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -2684,7 +2704,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="149">
+      <object class="Transition" serializationversion="3" id="150">
         <property name="name" class="String">Assign Esito Esecuzione Errore WS Get File Società</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -2704,7 +2724,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="150">
+      <object class="Transition" serializationversion="3" id="151">
         <property name="name" class="String">Return OutputReportValue</property>
         <property name="stepAction" class="ReturnVariable" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
@@ -2721,8 +2741,8 @@ reply_rpa.ca_esterometro_outputreport"</property>
           <element class="String">name</element>
         </property>
       </object>
-      <object class="End" id="151"/>
-      <object class="Transition" serializationversion="3" id="152">
+      <object class="End" id="152"/>
+      <object class="Transition" serializationversion="3" id="153">
         <property name="name" idref="46"/>
         <property name="stepAction" class="ConvertVariables">
           <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
@@ -2744,10 +2764,10 @@ reply_rpa.ca_esterometro_outputreport"</property>
         <property name="enabled" idref="10"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Try" id="153">
-        <property name="name" class="String" id="154">TryCatch Error WS for Output</property>
+      <object class="Try" id="154">
+        <property name="name" class="String" id="155">TryCatch Error WS for Output</property>
       </object>
-      <object class="Transition" serializationversion="3" id="155">
+      <object class="Transition" serializationversion="3" id="156">
         <property name="name" class="String">Call REST Web Service for Output</property>
         <property name="stepAction" class="CallRESTWebService2" serializationversion="1">
           <property name="urlProvider" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -2808,7 +2828,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
           <property name="reportingViaLog" class="Boolean">false</property>
           <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
             <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
-              <property name="name" idref="154"/>
+              <property name="name" idref="155"/>
             </property>
           </property>
         </property>
@@ -2820,8 +2840,8 @@ reply_rpa.ca_esterometro_outputreport"</property>
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="156">
-        <property name="name" idref="124"/>
+      <object class="Transition" serializationversion="3" id="157">
+        <property name="name" idref="125"/>
         <property name="stepAction" class="Stop"/>
         <property name="elementFinders" idref="65"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
@@ -2831,7 +2851,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
         <property name="enabled" idref="10"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="157">
+      <object class="Transition" serializationversion="3" id="158">
         <property name="name" class="String">Return OutputReport</property>
         <property name="stepAction" class="ReturnVariable" serializationversion="1">
           <property name="variableName" class="kapow.robot.plugin.common.support.VariableName">
@@ -2848,7 +2868,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
           <element class="String">name</element>
         </property>
       </object>
-      <object class="End" id="158"/>
+      <object class="End" id="159"/>
     </steps>
     <blockEndStep class="BlockEndStep"/>
     <edges class="ArrayList">
@@ -2866,7 +2886,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
       </object>
       <object class="TransitionEdge">
         <from idref="14"/>
-        <to idref="152"/>
+        <to idref="153"/>
       </object>
       <object class="TransitionEdge">
         <from idref="15"/>
@@ -2890,7 +2910,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
       </object>
       <object class="TransitionEdge">
         <from idref="41"/>
-        <to idref="149"/>
+        <to idref="150"/>
       </object>
       <object class="TransitionEdge">
         <from idref="42"/>
@@ -2902,7 +2922,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
       </object>
       <object class="TransitionEdge">
         <from idref="50"/>
-        <to idref="145"/>
+        <to idref="146"/>
       </object>
       <object class="TransitionEdge">
         <from idref="51"/>
@@ -2938,7 +2958,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
       </object>
       <object class="TransitionEdge">
         <from idref="60"/>
-        <to idref="128"/>
+        <to idref="129"/>
       </object>
       <object class="TransitionEdge">
         <from idref="61"/>
@@ -2950,7 +2970,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
       </object>
       <object class="TransitionEdge">
         <from idref="62"/>
-        <to idref="127"/>
+        <to idref="128"/>
       </object>
       <object class="TransitionEdge">
         <from idref="64"/>
@@ -3062,7 +3082,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
       </object>
       <object class="TransitionEdge">
         <from idref="105"/>
-        <to idref="108"/>
+        <to idref="109"/>
       </object>
       <object class="TransitionEdge">
         <from idref="106"/>
@@ -3070,30 +3090,30 @@ reply_rpa.ca_esterometro_outputreport"</property>
       </object>
       <object class="TransitionEdge">
         <from idref="107"/>
-        <to idref="69"/>
+        <to idref="108"/>
       </object>
       <object class="TransitionEdge">
         <from idref="108"/>
-        <to idref="122"/>
+        <to idref="69"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="122"/>
+        <from idref="109"/>
         <to idref="123"/>
       </object>
       <object class="TransitionEdge">
         <from idref="123"/>
-        <to idref="126"/>
+        <to idref="124"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="127"/>
-        <to idref="66"/>
+        <from idref="124"/>
+        <to idref="127"/>
       </object>
       <object class="TransitionEdge">
         <from idref="128"/>
-        <to idref="142"/>
+        <to idref="66"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="142"/>
+        <from idref="129"/>
         <to idref="143"/>
       </object>
       <object class="TransitionEdge">
@@ -3101,8 +3121,8 @@ reply_rpa.ca_esterometro_outputreport"</property>
         <to idref="144"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="145"/>
-        <to idref="146"/>
+        <from idref="144"/>
+        <to idref="145"/>
       </object>
       <object class="TransitionEdge">
         <from idref="146"/>
@@ -3114,31 +3134,31 @@ reply_rpa.ca_esterometro_outputreport"</property>
       </object>
       <object class="TransitionEdge">
         <from idref="148"/>
-        <to idref="60"/>
+        <to idref="149"/>
       </object>
       <object class="TransitionEdge">
         <from idref="149"/>
-        <to idref="150"/>
+        <to idref="60"/>
       </object>
       <object class="TransitionEdge">
         <from idref="150"/>
         <to idref="151"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="152"/>
-        <to idref="153"/>
+        <from idref="151"/>
+        <to idref="152"/>
       </object>
       <object class="TransitionEdge">
         <from idref="153"/>
-        <to idref="155"/>
+        <to idref="154"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="153"/>
+        <from idref="154"/>
         <to idref="156"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="155"/>
-        <to idref="156"/>
+        <from idref="154"/>
+        <to idref="157"/>
       </object>
       <object class="TransitionEdge">
         <from idref="156"/>
@@ -3147,6 +3167,10 @@ reply_rpa.ca_esterometro_outputreport"</property>
       <object class="TransitionEdge">
         <from idref="157"/>
         <to idref="158"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="158"/>
+        <to idref="159"/>
       </object>
     </edges>
   </property>
