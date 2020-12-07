@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schedule id="1">
+  <id>6506520842660000</id>
+  <name>Report Smistamento Mail</name>
+  <blockJob id="2">
+    <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
+      <project id="4"/>
+      <name>Report Smistamento Mail1603811339688</name>
+      <namedBlock>false</namedBlock>
+      <childReference id="5">
+        <child class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="6">
+          <project reference="4"/>
+          <name>Report Smistamento Mail:middleBlock</name>
+          <namedBlock>false</namedBlock>
+          <childReference id="7">
+            <child class="robotBlock" id="8">
+              <project reference="4"/>
+              <name>Ordini/Robot/Ordini_DispatcherReportDaily</name>
+              <namedBlock>true</namedBlock>
+              <robot id="9">
+                <name>Ordini/Robot/Ordini_DispatcherReportDaily</name>
+                <project>Reply - Hogwarts</project>
+              </robot>
+            </child>
+            <scopeName>0</scopeName>
+            <enabled>true</enabled>
+            <order>0</order>
+          </childReference>
+        </child>
+        <scopeName>0</scopeName>
+        <enabled>true</enabled>
+        <order>0</order>
+      </childReference>
+    </block>
+    <blockInput>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;InputConfiguration&gt;
+  &lt;usesNewEncryption&gt;true&lt;/usesNewEncryption&gt;
+  &lt;__inputObjects&gt;
+    &lt;InputObject&gt;
+      &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
+      &lt;__variableName&gt;Report Smistamento Mail1603811339688#0#Report Smistamento Mail:middleBlock#0#Ordini/Robot/Ordini_DispatcherReportDaily#mailConfiguration&lt;/__variableName&gt;
+      &lt;__propertyNames&gt;
+        &lt;string&gt;variableName&lt;/string&gt;
+        &lt;string&gt;name&lt;/string&gt;
+        &lt;string&gt;attributes&lt;/string&gt;
+      &lt;/__propertyNames&gt;
+      &lt;__name&gt;MailConfiguration&lt;/__name&gt;
+      &lt;__attributes&gt;
+        &lt;Attribute&gt;
+          &lt;type&gt;SHORT_TEXT&lt;/type&gt;
+          &lt;value&gt;noreply@reply.it&lt;/value&gt;
+          &lt;__name&gt;From&lt;/__name&gt;
+          &lt;required&gt;true&lt;/required&gt;
+          &lt;visible&gt;true&lt;/visible&gt;
+        &lt;/Attribute&gt;
+        &lt;Attribute&gt;
+          &lt;type&gt;SHORT_TEXT&lt;/type&gt;
+          &lt;value&gt;com.qms@reply.it&lt;/value&gt;
+          &lt;__name&gt;To&lt;/__name&gt;
+          &lt;required&gt;true&lt;/required&gt;
+          &lt;visible&gt;true&lt;/visible&gt;
+        &lt;/Attribute&gt;
+        &lt;Attribute&gt;
+          &lt;type&gt;SHORT_TEXT&lt;/type&gt;
+          &lt;value&gt;eos.rpa.support@reply.it&lt;/value&gt;
+          &lt;__name&gt;CC&lt;/__name&gt;
+          &lt;required&gt;false&lt;/required&gt;
+          &lt;visible&gt;true&lt;/visible&gt;
+        &lt;/Attribute&gt;
+        &lt;Attribute&gt;
+          &lt;type&gt;SHORT_TEXT&lt;/type&gt;
+          &lt;value&gt;RPA Reply - Report Ordini Giornaliero&lt;/value&gt;
+          &lt;__name&gt;soggetto&lt;/__name&gt;
+          &lt;required&gt;true&lt;/required&gt;
+          &lt;visible&gt;true&lt;/visible&gt;
+        &lt;/Attribute&gt;
+        &lt;Attribute&gt;
+          &lt;type&gt;HTML&lt;/type&gt;
+          &lt;value&gt;body&lt;/value&gt;
+          &lt;__name&gt;body&lt;/__name&gt;
+          &lt;required&gt;true&lt;/required&gt;
+          &lt;visible&gt;true&lt;/visible&gt;
+        &lt;/Attribute&gt;
+        &lt;Attribute&gt;
+          &lt;type&gt;SHORT_TEXT&lt;/type&gt;
+          &lt;value&gt;smtprelay.replynet.prv&lt;/value&gt;
+          &lt;__name&gt;HostSmtp&lt;/__name&gt;
+          &lt;required&gt;true&lt;/required&gt;
+          &lt;visible&gt;true&lt;/visible&gt;
+        &lt;/Attribute&gt;
+        &lt;Attribute&gt;
+          &lt;type&gt;INTEGER&lt;/type&gt;
+          &lt;value&gt;25&lt;/value&gt;
+          &lt;__name&gt;port&lt;/__name&gt;
+          &lt;required&gt;true&lt;/required&gt;
+          &lt;visible&gt;true&lt;/visible&gt;
+        &lt;/Attribute&gt;
+        &lt;Attribute&gt;
+          &lt;type&gt;SHORT_TEXT&lt;/type&gt;
+          &lt;__name&gt;username&lt;/__name&gt;
+          &lt;required&gt;false&lt;/required&gt;
+          &lt;visible&gt;true&lt;/visible&gt;
+        &lt;/Attribute&gt;
+        &lt;Attribute&gt;
+          &lt;type&gt;PASSWORD&lt;/type&gt;
+          &lt;__name&gt;password&lt;/__name&gt;
+          &lt;required&gt;false&lt;/required&gt;
+          &lt;visible&gt;true&lt;/visible&gt;
+        &lt;/Attribute&gt;
+      &lt;/__attributes&gt;
+    &lt;/InputObject&gt;
+  &lt;/__inputObjects&gt;
+&lt;/InputConfiguration&gt;</blockInput>
+    <schedule reference="1"/>
+    <active>false</active>
+    <displayNameMap>{"0Ordini/Robot/Ordini_DispatcherReportDaily":"Ordini/Robot/Ordini_DispatcherReportDaily"}</displayNameMap>
+  </blockJob>
+  <totalRuns>41</totalRuns>
+  <active>true</active>
+  <useEmailNotification>true</useEmailNotification>
+  <emails>eos.rpa.support@reply.it</emails>
+  <previousRun id="10">2020-12-06 16:30:02.0 UTC</previousRun>
+  <nextRun id="11">2020-12-07 16:30:00.0 UTC</nextRun>
+  <maxRuntime>-1</maxRuntime>
+  <maxObjectsExtracted>-1</maxObjectsExtracted>
+  <createdBy>admin</createdBy>
+  <modifiedBy>admin</modifiedBy>
+  <cluster id="12">
+    <name>NonProduction</name>
+  </cluster>
+  <scheduler class="org.quartz.impl.StdScheduler" id="13">
+    <scheduler/></scheduler>
+  <trigger class="org.quartz.impl.triggers.SimpleTriggerImpl" id="14">
+    <name>6506520842660000</name>
+    <start id="15">2020-10-19 16:30:00.0 UTC</start>
+    <interval>86400000</interval>
+    <repeatCount>-1</repeatCount>
+  </trigger>
+  <revisionNumber>9dc70902c7ecfb3589f68eb8f244a9b56c640fb1</revisionNumber>
+  <lastModified id="16">2020-10-27 15:09:00.0 UTC</lastModified>
+  <serializationVersion>1</serializationVersion>
+</schedule>
