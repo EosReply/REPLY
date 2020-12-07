@@ -1565,7 +1565,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
               <property name="data" class="Expression" serializationversion="1">
                 <property name="text" class="String">&gt;&gt;{
     "Path": "&lt;&lt;+urlEncode(configurationWriteFile.Root + "\\" + year(date()) + "\\" + caEsterometroInputuser.Trimestre+"\\" + caEsterometroInputParForSAP.Variante)+&gt;&gt;",
-  "Filename": "&lt;&lt;+caEsterometroSAPOutput.Paese+caEsterometroInputParForSAP.CodiceFiscale+"_DF_"+caEsterometroInputParForSAP.Progressivo+&gt;&gt;.xlsx",
+  "Filename": "&lt;&lt;+caEsterometroOutputReport.RagSociale+"_DF_"+caEsterometroInputParForSAP.Progressivo+&gt;&gt;.xlsx",
    "User": "&lt;&lt;+configurationWriteFile.User+&gt;&gt;",
    "Domain": "&lt;&lt;+configurationWriteFile.domain+&gt;&gt;",
   "Password": "&lt;&lt;+configurationWriteFile.Password+&gt;&gt;",
@@ -1640,7 +1640,7 @@ reply_rpa.ca_esterometro_outputreport"</property>
             <property name="body" class="kapow.robot.plugin.common.stateprocessor.rest.RawBodyContent">
               <property name="data" class="Expression" serializationversion="1">
                 <property name="text" class="String">&gt;&gt;{
-    "Path": "&lt;&lt;+urlEncode(configurationWriteFile.Root + "\\" + year(date()) + "\\" + caEsterometroInputuser.Trimestre + "\\XML" ) +&gt;&gt;",
+    "Path": "&lt;&lt;+urlEncode(configurationWriteFile.Root + "\\" + year(date()) + "\\" + caEsterometroInputuser.Trimestre + "\\" + caEsterometroInputParForSAP.Variante ) +&gt;&gt;",
   "Filename": "&lt;&lt;+caEsterometroSAPOutput.Paese+caEsterometroInputParForSAP.CodiceFiscale+"_DF_"+caEsterometroInputParForSAP.Progressivo+&gt;&gt;.xml",
    "User": "&lt;&lt;+configurationWriteFile.User+&gt;&gt;",
    "Domain": "&lt;&lt;+configurationWriteFile.domain+&gt;&gt;",
