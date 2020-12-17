@@ -232,6 +232,11 @@
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="2"/>
           </property>
+          <property name="relativePath" class="AttributeAssignment">
+            <property name="attributeValue" class="String">Elenco Società.xlsx</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="2"/>
+          </property>
         </property>
       </property>
     </object>
@@ -825,7 +830,7 @@
                   <property name="data" class="Expression" serializationversion="1">
                     <property name="text" class="String">&gt;&gt;{
     "Path": "&lt;&lt;+urlEncode(ConfigurationReadFile.Root )+&gt;&gt;",
-   "Filename": "Elenco Societa.xlsx",
+   "Filename": "&lt;&lt;+ConfigurationReadFile.relativePath+&gt;&gt;",
    "User": "&lt;&lt;+ConfigurationReadFile.User+&gt;&gt;",
    "Domain": "&lt;&lt;+ConfigurationReadFile.domain+&gt;&gt;",
   "Password": "&lt;&lt;+ConfigurationReadFile.Password+&gt;&gt;"
