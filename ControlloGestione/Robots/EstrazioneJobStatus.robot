@@ -183,6 +183,24 @@
           }
         }
       }
+    },
+    {
+      "meta":{
+        "className":"VariableDef",
+        "version":0
+      },
+      "gizmo":{
+        "id": { "string": "status" },
+        "typ": {
+          "meta":{
+            "className":"TypeUse",
+            "version":0
+          },
+          "gizmo":{
+            "id": { "string": "Text" }
+          }
+        }
+      }
     }],
     "block": {
       "meta":{
@@ -221,6 +239,117 @@
               },
               "gizmo":{
                 "steps": [{
+                  "meta":{
+                    "className":"GuardedChoiceStep",
+                    "version":1
+                  },
+                  "gizmo":{
+                    "name": {
+                      "meta":{
+                        "className":"StepName",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "customName": { "string": "" }
+                      }
+                    },
+                    "comment": {
+                      "meta":{
+                        "className":"StepComment",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "comment": { "string": "" }
+                      }
+                    },
+                    "branches": [{
+                      "meta":{
+                        "className":"GuardAndBlock",
+                        "version":3
+                      },
+                      "gizmo":{
+                        "guard": {
+                          "meta":{
+                            "className":"TreeStopsChangingGuard",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "finder": {
+                              "meta":{
+                                "className":"ApplicationFinderWithName",
+                                "version":5
+                              },
+                              "gizmo":{
+                                "name": {
+                                  "meta":{
+                                    "className":"FinderName",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    "id": { "string": "" }
+                                  }
+                                },
+                                "finder": {
+                                  "meta":{
+                                    "className":"ApplicationDescriptor",
+                                    "version":1
+                                  },
+                                  "gizmo":{
+                                    "deviceFinder": {
+                                      "meta":{
+                                        "className":"DeviceReference",
+                                        "version":0
+                                      },
+                                      "gizmo":{
+                                        "reference": {
+                                          "meta":{
+                                            "className":"NamedFinderReference",
+                                            "version":0
+                                          },
+                                          "gizmo":{
+                                            "id": { "string": "local" }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "applicationSelector": {
+                                      "meta":{
+                                        "className":"Expression",
+                                        "version":0
+                                      },
+                                      "gizmo":{
+                                        "text": { "string": "cef" }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "milliseconds": {
+                              "meta":{
+                                "className":"Expression",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "text": { "string": "2000" }
+                              }
+                            }
+                          }
+                        },
+                        "block": {
+                          "meta":{
+                            "className":"Block",
+                            "version":2
+                          },
+                          "gizmo":{
+                            "steps": []
+                          }
+                        }
+                      }
+                    }]
+                  }
+                },
+                {
                   "meta":{
                     "className":"GuardedChoiceStep",
                     "version":1
@@ -5425,17 +5554,68 @@
                       "gizmo":{
                         "guard": {
                           "meta":{
-                            "className":"TimeOutGuard",
+                            "className":"TreeStopsChangingGuard",
                             "version":0
                           },
                           "gizmo":{
-                            "seconds": {
+                            "finder": {
+                              "meta":{
+                                "className":"ApplicationFinderWithName",
+                                "version":5
+                              },
+                              "gizmo":{
+                                "name": {
+                                  "meta":{
+                                    "className":"FinderName",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    "id": { "string": "" }
+                                  }
+                                },
+                                "finder": {
+                                  "meta":{
+                                    "className":"ApplicationDescriptor",
+                                    "version":1
+                                  },
+                                  "gizmo":{
+                                    "deviceFinder": {
+                                      "meta":{
+                                        "className":"DeviceReference",
+                                        "version":0
+                                      },
+                                      "gizmo":{
+                                        "reference": {
+                                          "meta":{
+                                            "className":"NamedFinderReference",
+                                            "version":0
+                                          },
+                                          "gizmo":{
+                                            "id": { "string": "local" }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "applicationSelector": {
+                                      "meta":{
+                                        "className":"Expression",
+                                        "version":0
+                                      },
+                                      "gizmo":{
+                                        "text": { "string": "cef" }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "milliseconds": {
                               "meta":{
                                 "className":"Expression",
                                 "version":0
                               },
                               "gizmo":{
-                                "text": { "string": "2" }
+                                "text": { "string": "2000" }
                               }
                             }
                           }
@@ -7942,6 +8122,107 @@
                                                                               "gizmo":{
                                                                                 "guard": {
                                                                                   "meta":{
+                                                                                    "className":"LocationNotFoundGuard",
+                                                                                    "version":2
+                                                                                  },
+                                                                                  "gizmo":{
+                                                                                    "finder": {
+                                                                                      "meta":{
+                                                                                        "className":"ComponentFinderWithoutName",
+                                                                                        "version":0
+                                                                                      },
+                                                                                      "gizmo":{
+                                                                                        "finder": {
+                                                                                          "meta":{
+                                                                                            "className":"ComponentSelectorSubFilter",
+                                                                                            "version":1
+                                                                                          },
+                                                                                          "gizmo":{
+                                                                                            "componentFinder": {
+                                                                                              "meta":{
+                                                                                                "className":"ComponentReference",
+                                                                                                "version":0
+                                                                                              },
+                                                                                              "gizmo":{
+                                                                                                "reference": {
+                                                                                                  "meta":{
+                                                                                                    "className":"NamedFinderReference",
+                                                                                                    "version":0
+                                                                                                  },
+                                                                                                  "gizmo":{
+                                                                                                    "id": { "string": "element" }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            },
+                                                                                            "selector": {
+                                                                                              "meta":{
+                                                                                                "className":"Expression",
+                                                                                                "version":0
+                                                                                              },
+                                                                                              "gizmo":{
+                                                                                                "text": { "string": "SPAN[class=\"sapUiIcon sapUiIconMirrorInRTL sapUiIconPointer size1 sapUiIconColorNeutral\"]" }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                },
+                                                                                "block": {
+                                                                                  "meta":{
+                                                                                    "className":"Block",
+                                                                                    "version":2
+                                                                                  },
+                                                                                  "gizmo":{
+                                                                                    "steps": [{
+                                                                                      "meta":{
+                                                                                        "className":"ThrowStep",
+                                                                                        "version":1
+                                                                                      },
+                                                                                      "gizmo":{
+                                                                                        "name": {
+                                                                                          "meta":{
+                                                                                            "className":"StepName",
+                                                                                            "version":0
+                                                                                          },
+                                                                                          "gizmo":{
+                                                                                            "customName": { "string": "" }
+                                                                                          }
+                                                                                        },
+                                                                                        "comment": {
+                                                                                          "meta":{
+                                                                                            "className":"StepComment",
+                                                                                            "version":0
+                                                                                          },
+                                                                                          "gizmo":{
+                                                                                            "comment": { "string": "" }
+                                                                                          }
+                                                                                        },
+                                                                                        "exception": {
+                                                                                          "meta":{
+                                                                                            "className":"ExceptionUse",
+                                                                                            "version":0
+                                                                                          },
+                                                                                          "gizmo":{
+                                                                                            "id": { "string": "RisultatiAssenti" }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }]
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            },
+                                                                            {
+                                                                              "meta":{
+                                                                                "className":"GuardAndBlock",
+                                                                                "version":3
+                                                                              },
+                                                                              "gizmo":{
+                                                                                "guard": {
+                                                                                  "meta":{
                                                                                     "className":"TimeOutGuard",
                                                                                     "version":0
                                                                                   },
@@ -7952,7 +8233,7 @@
                                                                                         "version":0
                                                                                       },
                                                                                       "gizmo":{
-                                                                                        "text": { "string": "60" }
+                                                                                        "text": { "string": "10" }
                                                                                       }
                                                                                     }
                                                                                   }
@@ -17342,8 +17623,8 @@
                                                                                     },
                                                                                     {
                                                                                       "meta":{
-                                                                                        "className":"GuardedChoiceStep",
-                                                                                        "version":1
+                                                                                        "className":"LoopStep",
+                                                                                        "version":4
                                                                                       },
                                                                                       "gizmo":{
                                                                                         "name": {
@@ -17364,510 +17645,271 @@
                                                                                             "comment": { "string": "" }
                                                                                           }
                                                                                         },
-                                                                                        "branches": [{
+                                                                                        "variable": [{
                                                                                           "meta":{
-                                                                                            "className":"GuardAndBlock",
-                                                                                            "version":3
+                                                                                            "className":"LoopIterationVariableDef",
+                                                                                            "version":0
                                                                                           },
                                                                                           "gizmo":{
-                                                                                            "guard": {
+                                                                                            "id": { "string": "index" }
+                                                                                          }
+                                                                                        }],
+                                                                                        "body": {
+                                                                                          "meta":{
+                                                                                            "className":"Block",
+                                                                                            "version":2
+                                                                                          },
+                                                                                          "gizmo":{
+                                                                                            "steps": [{
                                                                                               "meta":{
-                                                                                                "className":"TimeOutGuard",
-                                                                                                "version":0
+                                                                                                "className":"GuardedChoiceStep",
+                                                                                                "version":1
                                                                                               },
                                                                                               "gizmo":{
-                                                                                                "seconds": {
+                                                                                                "name": {
                                                                                                   "meta":{
-                                                                                                    "className":"Expression",
+                                                                                                    "className":"StepName",
                                                                                                     "version":0
                                                                                                   },
                                                                                                   "gizmo":{
-                                                                                                    "text": { "string": "45" }
-                                                                                                  }
-                                                                                                }
-                                                                                              }
-                                                                                            },
-                                                                                            "block": {
-                                                                                              "meta":{
-                                                                                                "className":"Block",
-                                                                                                "version":2
-                                                                                              },
-                                                                                              "gizmo":{
-                                                                                                "steps": []
-                                                                                              }
-                                                                                            }
-                                                                                          }
-                                                                                        }]
-                                                                                      }
-                                                                                    },
-                                                                                    {
-                                                                                      "meta":{
-                                                                                        "className":"GuardedChoiceStep",
-                                                                                        "version":1
-                                                                                      },
-                                                                                      "gizmo":{
-                                                                                        "name": {
-                                                                                          "meta":{
-                                                                                            "className":"StepName",
-                                                                                            "version":0
-                                                                                          },
-                                                                                          "gizmo":{
-                                                                                            "customName": { "string": "click attualm." }
-                                                                                          }
-                                                                                        },
-                                                                                        "comment": {
-                                                                                          "meta":{
-                                                                                            "className":"StepComment",
-                                                                                            "version":0
-                                                                                          },
-                                                                                          "gizmo":{
-                                                                                            "comment": { "string": "" }
-                                                                                          }
-                                                                                        },
-                                                                                        "branches": [{
-                                                                                          "meta":{
-                                                                                            "className":"GuardAndBlock",
-                                                                                            "version":3
-                                                                                          },
-                                                                                          "gizmo":{
-                                                                                            "guard": {
-                                                                                              "meta":{
-                                                                                                "className":"LocationFoundGuard",
-                                                                                                "version":0
-                                                                                              },
-                                                                                              "gizmo":{
-                                                                                                "finder": {
-                                                                                                  "meta":{
-                                                                                                    "className":"ComponentFinderWithName",
-                                                                                                    "version":8
-                                                                                                  },
-                                                                                                  "gizmo":{
-                                                                                                    "name": {
-                                                                                                      "meta":{
-                                                                                                        "className":"FinderName",
-                                                                                                        "version":0
-                                                                                                      },
-                                                                                                      "gizmo":{
-                                                                                                        "id": { "string": "" }
-                                                                                                      }
-                                                                                                    },
-                                                                                                    "finder": {
-                                                                                                      "meta":{
-                                                                                                        "className":"ComponentContentSubFilter",
-                                                                                                        "version":0
-                                                                                                      },
-                                                                                                      "gizmo":{
-                                                                                                        "componentFinder": {
-                                                                                                          "meta":{
-                                                                                                            "className":"ComponentDescriptor",
-                                                                                                            "version":1
-                                                                                                          },
-                                                                                                          "gizmo":{
-                                                                                                            "applicationFinder": {
-                                                                                                              "meta":{
-                                                                                                                "className":"ApplicationDescriptor",
-                                                                                                                "version":1
-                                                                                                              },
-                                                                                                              "gizmo":{
-                                                                                                                "deviceFinder": {
-                                                                                                                  "meta":{
-                                                                                                                    "className":"DeviceReference",
-                                                                                                                    "version":0
-                                                                                                                  },
-                                                                                                                  "gizmo":{
-                                                                                                                    "reference": {
-                                                                                                                      "meta":{
-                                                                                                                        "className":"NamedFinderReference",
-                                                                                                                        "version":0
-                                                                                                                      },
-                                                                                                                      "gizmo":{
-                                                                                                                        "id": { "string": "local" }
-                                                                                                                      }
-                                                                                                                    }
-                                                                                                                  }
-                                                                                                                },
-                                                                                                                "applicationSelector": {
-                                                                                                                  "meta":{
-                                                                                                                    "className":"Expression",
-                                                                                                                    "version":0
-                                                                                                                  },
-                                                                                                                  "gizmo":{
-                                                                                                                    "text": { "string": "cef" }
-                                                                                                                  }
-                                                                                                                }
-                                                                                                              }
-                                                                                                            },
-                                                                                                            "componentSelector": {
-                                                                                                              "meta":{
-                                                                                                                "className":"Expression",
-                                                                                                                "version":0
-                                                                                                              },
-                                                                                                              "gizmo":{
-                                                                                                                "text": { "string": "SPAN" }
-                                                                                                              }
-                                                                                                            }
-                                                                                                          }
-                                                                                                        },
-                                                                                                        "contentMatcher": {
-                                                                                                          "meta":{
-                                                                                                            "className":"Expression",
-                                                                                                            "version":0
-                                                                                                          },
-                                                                                                          "gizmo":{
-                                                                                                            "text": { "string": ".*\\s*Attualm\\.\\s*.*" }
-                                                                                                          }
-                                                                                                        }
-                                                                                                      }
-                                                                                                    }
-                                                                                                  }
-                                                                                                }
-                                                                                              }
-                                                                                            },
-                                                                                            "block": {
-                                                                                              "meta":{
-                                                                                                "className":"Block",
-                                                                                                "version":2
-                                                                                              },
-                                                                                              "gizmo":{
-                                                                                                "steps": [{
-                                                                                                  "meta":{
-                                                                                                    "className":"MoveMouseStep",
-                                                                                                    "version":1
-                                                                                                  },
-                                                                                                  "gizmo":{
-                                                                                                    "name": {
-                                                                                                      "meta":{
-                                                                                                        "className":"StepName",
-                                                                                                        "version":0
-                                                                                                      },
-                                                                                                      "gizmo":{
-                                                                                                        "customName": { "string": "" }
-                                                                                                      }
-                                                                                                    },
-                                                                                                    "comment": {
-                                                                                                      "meta":{
-                                                                                                        "className":"StepComment",
-                                                                                                        "version":0
-                                                                                                      },
-                                                                                                      "gizmo":{
-                                                                                                        "comment": { "string": "" }
-                                                                                                      }
-                                                                                                    },
-                                                                                                    "finder": {
-                                                                                                      "meta":{
-                                                                                                        "className":"ComponentFinderWithName",
-                                                                                                        "version":8
-                                                                                                      },
-                                                                                                      "gizmo":{
-                                                                                                        "name": {
-                                                                                                          "meta":{
-                                                                                                            "className":"FinderName",
-                                                                                                            "version":0
-                                                                                                          },
-                                                                                                          "gizmo":{
-                                                                                                            "id": { "string": "" }
-                                                                                                          }
-                                                                                                        },
-                                                                                                        "finder": {
-                                                                                                          "meta":{
-                                                                                                            "className":"ComponentReference",
-                                                                                                            "version":0
-                                                                                                          },
-                                                                                                          "gizmo":{
-                                                                                                            "reference": {
-                                                                                                              "meta":{
-                                                                                                                "className":"PreviousFinderReference",
-                                                                                                                "version":0
-                                                                                                              },
-                                                                                                              "gizmo":{
-                                                                                                                
-                                                                                                              }
-                                                                                                            }
-                                                                                                          }
-                                                                                                        }
-                                                                                                      }
-                                                                                                    },
-                                                                                                    "offset": {
-                                                                                                      "meta":{
-                                                                                                        "className":"NoOffset",
-                                                                                                        "version":0
-                                                                                                      },
-                                                                                                      "gizmo":{
-                                                                                                        
-                                                                                                      }
-                                                                                                    }
+                                                                                                    "customName": { "string": "" }
                                                                                                   }
                                                                                                 },
-                                                                                                {
+                                                                                                "comment": {
                                                                                                   "meta":{
-                                                                                                    "className":"ClickStep",
-                                                                                                    "version":2
+                                                                                                    "className":"StepComment",
+                                                                                                    "version":0
                                                                                                   },
                                                                                                   "gizmo":{
-                                                                                                    "name": {
+                                                                                                    "comment": { "string": "" }
+                                                                                                  }
+                                                                                                },
+                                                                                                "branches": [{
+                                                                                                  "meta":{
+                                                                                                    "className":"GuardAndBlock",
+                                                                                                    "version":3
+                                                                                                  },
+                                                                                                  "gizmo":{
+                                                                                                    "guard": {
                                                                                                       "meta":{
-                                                                                                        "className":"StepName",
+                                                                                                        "className":"TimeOutGuard",
                                                                                                         "version":0
                                                                                                       },
                                                                                                       "gizmo":{
-                                                                                                        "customName": { "string": "" }
-                                                                                                      }
-                                                                                                    },
-                                                                                                    "comment": {
-                                                                                                      "meta":{
-                                                                                                        "className":"StepComment",
-                                                                                                        "version":0
-                                                                                                      },
-                                                                                                      "gizmo":{
-                                                                                                        "comment": { "string": "" }
-                                                                                                      }
-                                                                                                    },
-                                                                                                    "finder": {
-                                                                                                      "meta":{
-                                                                                                        "className":"ApplicationFinderWithName",
-                                                                                                        "version":5
-                                                                                                      },
-                                                                                                      "gizmo":{
-                                                                                                        "name": {
-                                                                                                          "meta":{
-                                                                                                            "className":"FinderName",
-                                                                                                            "version":0
-                                                                                                          },
-                                                                                                          "gizmo":{
-                                                                                                            "id": { "string": "" }
-                                                                                                          }
-                                                                                                        },
-                                                                                                        "finder": {
-                                                                                                          "meta":{
-                                                                                                            "className":"ApplicationReference",
-                                                                                                            "version":0
-                                                                                                          },
-                                                                                                          "gizmo":{
-                                                                                                            "reference": {
-                                                                                                              "meta":{
-                                                                                                                "className":"PreviousFinderReference",
-                                                                                                                "version":0
-                                                                                                              },
-                                                                                                              "gizmo":{
-                                                                                                                
-                                                                                                              }
-                                                                                                            }
-                                                                                                          }
-                                                                                                        }
-                                                                                                      }
-                                                                                                    },
-                                                                                                    "mouseAction": {
-                                                                                                      "meta":{
-                                                                                                        "className":"ClickAction",
-                                                                                                        "version":0
-                                                                                                      },
-                                                                                                      "gizmo":{
-                                                                                                        "button": {
-                                                                                                          "meta":{
-                                                                                                            "className":"FixedButton",
-                                                                                                            "version":0
-                                                                                                          },
-                                                                                                          "gizmo":{
-                                                                                                            "button": { "int": "0" }
-                                                                                                          }
-                                                                                                        },
-                                                                                                        "count": {
+                                                                                                        "seconds": {
                                                                                                           "meta":{
                                                                                                             "className":"Expression",
                                                                                                             "version":0
                                                                                                           },
                                                                                                           "gizmo":{
-                                                                                                            "text": { "string": "1" }
+                                                                                                            "text": { "string": "5" }
                                                                                                           }
                                                                                                         }
+                                                                                                      }
+                                                                                                    },
+                                                                                                    "block": {
+                                                                                                      "meta":{
+                                                                                                        "className":"Block",
+                                                                                                        "version":2
+                                                                                                      },
+                                                                                                      "gizmo":{
+                                                                                                        "steps": []
                                                                                                       }
                                                                                                     }
                                                                                                   }
                                                                                                 }]
                                                                                               }
-                                                                                            }
-                                                                                          }
-                                                                                        },
-                                                                                        {
-                                                                                          "meta":{
-                                                                                            "className":"GuardAndBlock",
-                                                                                            "version":3
-                                                                                          },
-                                                                                          "gizmo":{
-                                                                                            "guard": {
+                                                                                            },
+                                                                                            {
                                                                                               "meta":{
-                                                                                                "className":"TimeOutGuard",
-                                                                                                "version":0
+                                                                                                "className":"GuardedChoiceStep",
+                                                                                                "version":1
                                                                                               },
                                                                                               "gizmo":{
-                                                                                                "seconds": {
+                                                                                                "name": {
                                                                                                   "meta":{
-                                                                                                    "className":"Expression",
+                                                                                                    "className":"StepName",
                                                                                                     "version":0
                                                                                                   },
                                                                                                   "gizmo":{
-                                                                                                    "text": { "string": "60" }
+                                                                                                    "customName": { "string": "click attualm." }
                                                                                                   }
-                                                                                                }
-                                                                                              }
-                                                                                            },
-                                                                                            "block": {
-                                                                                              "meta":{
-                                                                                                "className":"Block",
-                                                                                                "version":2
-                                                                                              },
-                                                                                              "gizmo":{
-                                                                                                "steps": [{
+                                                                                                },
+                                                                                                "comment": {
                                                                                                   "meta":{
-                                                                                                    "className":"ExtractImageStep",
-                                                                                                    "version":1
+                                                                                                    "className":"StepComment",
+                                                                                                    "version":0
                                                                                                   },
                                                                                                   "gizmo":{
-                                                                                                    "name": {
+                                                                                                    "comment": { "string": "" }
+                                                                                                  }
+                                                                                                },
+                                                                                                "branches": [{
+                                                                                                  "meta":{
+                                                                                                    "className":"GuardAndBlock",
+                                                                                                    "version":3
+                                                                                                  },
+                                                                                                  "gizmo":{
+                                                                                                    "guard": {
                                                                                                       "meta":{
-                                                                                                        "className":"StepName",
+                                                                                                        "className":"LocationFoundGuard",
                                                                                                         "version":0
                                                                                                       },
                                                                                                       "gizmo":{
-                                                                                                        "customName": { "string": "" }
-                                                                                                      }
-                                                                                                    },
-                                                                                                    "comment": {
-                                                                                                      "meta":{
-                                                                                                        "className":"StepComment",
-                                                                                                        "version":0
-                                                                                                      },
-                                                                                                      "gizmo":{
-                                                                                                        "comment": { "string": "" }
-                                                                                                      }
-                                                                                                    },
-                                                                                                    "finder": {
-                                                                                                      "meta":{
-                                                                                                        "className":"ComponentFinderWithName",
-                                                                                                        "version":8
-                                                                                                      },
-                                                                                                      "gizmo":{
-                                                                                                        "name": {
-                                                                                                          "meta":{
-                                                                                                            "className":"FinderName",
-                                                                                                            "version":0
-                                                                                                          },
-                                                                                                          "gizmo":{
-                                                                                                            "id": { "string": "" }
-                                                                                                          }
-                                                                                                        },
                                                                                                         "finder": {
                                                                                                           "meta":{
-                                                                                                            "className":"ComponentDescriptor",
-                                                                                                            "version":1
+                                                                                                            "className":"ComponentFinderWithName",
+                                                                                                            "version":8
                                                                                                           },
                                                                                                           "gizmo":{
-                                                                                                            "applicationFinder": {
+                                                                                                            "name": {
                                                                                                               "meta":{
-                                                                                                                "className":"ApplicationDescriptor",
-                                                                                                                "version":1
+                                                                                                                "className":"FinderName",
+                                                                                                                "version":0
                                                                                                               },
                                                                                                               "gizmo":{
-                                                                                                                "deviceFinder": {
+                                                                                                                "id": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "finder": {
+                                                                                                              "meta":{
+                                                                                                                "className":"ComponentContentSubFilter",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "componentFinder": {
                                                                                                                   "meta":{
-                                                                                                                    "className":"DeviceReference",
-                                                                                                                    "version":0
+                                                                                                                    "className":"ComponentDescriptor",
+                                                                                                                    "version":1
                                                                                                                   },
                                                                                                                   "gizmo":{
-                                                                                                                    "reference": {
+                                                                                                                    "applicationFinder": {
                                                                                                                       "meta":{
-                                                                                                                        "className":"NamedFinderReference",
+                                                                                                                        "className":"ApplicationDescriptor",
+                                                                                                                        "version":1
+                                                                                                                      },
+                                                                                                                      "gizmo":{
+                                                                                                                        "deviceFinder": {
+                                                                                                                          "meta":{
+                                                                                                                            "className":"DeviceReference",
+                                                                                                                            "version":0
+                                                                                                                          },
+                                                                                                                          "gizmo":{
+                                                                                                                            "reference": {
+                                                                                                                              "meta":{
+                                                                                                                                "className":"NamedFinderReference",
+                                                                                                                                "version":0
+                                                                                                                              },
+                                                                                                                              "gizmo":{
+                                                                                                                                "id": { "string": "local" }
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        },
+                                                                                                                        "applicationSelector": {
+                                                                                                                          "meta":{
+                                                                                                                            "className":"Expression",
+                                                                                                                            "version":0
+                                                                                                                          },
+                                                                                                                          "gizmo":{
+                                                                                                                            "text": { "string": "cef" }
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    },
+                                                                                                                    "componentSelector": {
+                                                                                                                      "meta":{
+                                                                                                                        "className":"Expression",
                                                                                                                         "version":0
                                                                                                                       },
                                                                                                                       "gizmo":{
-                                                                                                                        "id": { "string": "local" }
+                                                                                                                        "text": { "string": "SPAN" }
                                                                                                                       }
                                                                                                                     }
                                                                                                                   }
                                                                                                                 },
-                                                                                                                "applicationSelector": {
+                                                                                                                "contentMatcher": {
                                                                                                                   "meta":{
                                                                                                                     "className":"Expression",
                                                                                                                     "version":0
                                                                                                                   },
                                                                                                                   "gizmo":{
-                                                                                                                    "text": { "string": "cef" }
+                                                                                                                    "text": { "string": ".*\\s*Attualm\\.\\s*.*" }
                                                                                                                   }
                                                                                                                 }
-                                                                                                              }
-                                                                                                            },
-                                                                                                            "componentSelector": {
-                                                                                                              "meta":{
-                                                                                                                "className":"Expression",
-                                                                                                                "version":0
-                                                                                                              },
-                                                                                                              "gizmo":{
-                                                                                                                "text": { "string": "window" }
                                                                                                               }
                                                                                                             }
                                                                                                           }
                                                                                                         }
                                                                                                       }
                                                                                                     },
-                                                                                                    "outputVariable": {
+                                                                                                    "block": {
                                                                                                       "meta":{
-                                                                                                        "className":"LeftHandSide",
-                                                                                                        "version":1
-                                                                                                      },
-                                                                                                      "gizmo":{
-                                                                                                        "text": { "string": "img" }
-                                                                                                      }
-                                                                                                    }
-                                                                                                  }
-                                                                                                },
-                                                                                                {
-                                                                                                  "meta":{
-                                                                                                    "className":"WriteFileStep",
-                                                                                                    "version":2
-                                                                                                  },
-                                                                                                  "gizmo":{
-                                                                                                    "name": {
-                                                                                                      "meta":{
-                                                                                                        "className":"StepName",
-                                                                                                        "version":0
-                                                                                                      },
-                                                                                                      "gizmo":{
-                                                                                                        "customName": { "string": "" }
-                                                                                                      }
-                                                                                                    },
-                                                                                                    "comment": {
-                                                                                                      "meta":{
-                                                                                                        "className":"StepComment",
-                                                                                                        "version":0
-                                                                                                      },
-                                                                                                      "gizmo":{
-                                                                                                        "comment": { "string": "" }
-                                                                                                      }
-                                                                                                    },
-                                                                                                    "finder": {
-                                                                                                      "meta":{
-                                                                                                        "className":"DeviceFinderWithName",
+                                                                                                        "className":"Block",
                                                                                                         "version":2
                                                                                                       },
                                                                                                       "gizmo":{
-                                                                                                        "name": {
+                                                                                                        "steps": [{
                                                                                                           "meta":{
-                                                                                                            "className":"FinderName",
-                                                                                                            "version":0
+                                                                                                            "className":"MoveMouseStep",
+                                                                                                            "version":1
                                                                                                           },
                                                                                                           "gizmo":{
-                                                                                                            "id": { "string": "" }
-                                                                                                          }
-                                                                                                        },
-                                                                                                        "finder": {
-                                                                                                          "meta":{
-                                                                                                            "className":"DeviceReference",
-                                                                                                            "version":0
-                                                                                                          },
-                                                                                                          "gizmo":{
-                                                                                                            "reference": {
+                                                                                                            "name": {
                                                                                                               "meta":{
-                                                                                                                "className":"PreviousFinderReference",
+                                                                                                                "className":"StepName",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "customName": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "comment": {
+                                                                                                              "meta":{
+                                                                                                                "className":"StepComment",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "comment": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "finder": {
+                                                                                                              "meta":{
+                                                                                                                "className":"ComponentFinderWithName",
+                                                                                                                "version":8
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "name": {
+                                                                                                                  "meta":{
+                                                                                                                    "className":"FinderName",
+                                                                                                                    "version":0
+                                                                                                                  },
+                                                                                                                  "gizmo":{
+                                                                                                                    "id": { "string": "" }
+                                                                                                                  }
+                                                                                                                },
+                                                                                                                "finder": {
+                                                                                                                  "meta":{
+                                                                                                                    "className":"ComponentReference",
+                                                                                                                    "version":0
+                                                                                                                  },
+                                                                                                                  "gizmo":{
+                                                                                                                    "reference": {
+                                                                                                                      "meta":{
+                                                                                                                        "className":"PreviousFinderReference",
+                                                                                                                        "version":0
+                                                                                                                      },
+                                                                                                                      "gizmo":{
+                                                                                                                        
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "offset": {
+                                                                                                              "meta":{
+                                                                                                                "className":"NoOffset",
                                                                                                                 "version":0
                                                                                                               },
                                                                                                               "gizmo":{
@@ -17875,76 +17917,809 @@
                                                                                                               }
                                                                                                             }
                                                                                                           }
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "meta":{
+                                                                                                            "className":"ClickStep",
+                                                                                                            "version":2
+                                                                                                          },
+                                                                                                          "gizmo":{
+                                                                                                            "name": {
+                                                                                                              "meta":{
+                                                                                                                "className":"StepName",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "customName": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "comment": {
+                                                                                                              "meta":{
+                                                                                                                "className":"StepComment",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "comment": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "finder": {
+                                                                                                              "meta":{
+                                                                                                                "className":"ApplicationFinderWithName",
+                                                                                                                "version":5
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "name": {
+                                                                                                                  "meta":{
+                                                                                                                    "className":"FinderName",
+                                                                                                                    "version":0
+                                                                                                                  },
+                                                                                                                  "gizmo":{
+                                                                                                                    "id": { "string": "" }
+                                                                                                                  }
+                                                                                                                },
+                                                                                                                "finder": {
+                                                                                                                  "meta":{
+                                                                                                                    "className":"ApplicationReference",
+                                                                                                                    "version":0
+                                                                                                                  },
+                                                                                                                  "gizmo":{
+                                                                                                                    "reference": {
+                                                                                                                      "meta":{
+                                                                                                                        "className":"PreviousFinderReference",
+                                                                                                                        "version":0
+                                                                                                                      },
+                                                                                                                      "gizmo":{
+                                                                                                                        
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "mouseAction": {
+                                                                                                              "meta":{
+                                                                                                                "className":"ClickAction",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "button": {
+                                                                                                                  "meta":{
+                                                                                                                    "className":"FixedButton",
+                                                                                                                    "version":0
+                                                                                                                  },
+                                                                                                                  "gizmo":{
+                                                                                                                    "button": { "int": "0" }
+                                                                                                                  }
+                                                                                                                },
+                                                                                                                "count": {
+                                                                                                                  "meta":{
+                                                                                                                    "className":"Expression",
+                                                                                                                    "version":0
+                                                                                                                  },
+                                                                                                                  "gizmo":{
+                                                                                                                    "text": { "string": "1" }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }]
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                },
+                                                                                                {
+                                                                                                  "meta":{
+                                                                                                    "className":"GuardAndBlock",
+                                                                                                    "version":3
+                                                                                                  },
+                                                                                                  "gizmo":{
+                                                                                                    "guard": {
+                                                                                                      "meta":{
+                                                                                                        "className":"TimeOutGuard",
+                                                                                                        "version":0
+                                                                                                      },
+                                                                                                      "gizmo":{
+                                                                                                        "seconds": {
+                                                                                                          "meta":{
+                                                                                                            "className":"Expression",
+                                                                                                            "version":0
+                                                                                                          },
+                                                                                                          "gizmo":{
+                                                                                                            "text": { "string": "60" }
+                                                                                                          }
                                                                                                         }
                                                                                                       }
                                                                                                     },
-                                                                                                    "contents": {
+                                                                                                    "block": {
+                                                                                                      "meta":{
+                                                                                                        "className":"Block",
+                                                                                                        "version":2
+                                                                                                      },
+                                                                                                      "gizmo":{
+                                                                                                        "steps": [{
+                                                                                                          "meta":{
+                                                                                                            "className":"ExtractImageStep",
+                                                                                                            "version":1
+                                                                                                          },
+                                                                                                          "gizmo":{
+                                                                                                            "name": {
+                                                                                                              "meta":{
+                                                                                                                "className":"StepName",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "customName": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "comment": {
+                                                                                                              "meta":{
+                                                                                                                "className":"StepComment",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "comment": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "finder": {
+                                                                                                              "meta":{
+                                                                                                                "className":"ComponentFinderWithName",
+                                                                                                                "version":8
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "name": {
+                                                                                                                  "meta":{
+                                                                                                                    "className":"FinderName",
+                                                                                                                    "version":0
+                                                                                                                  },
+                                                                                                                  "gizmo":{
+                                                                                                                    "id": { "string": "" }
+                                                                                                                  }
+                                                                                                                },
+                                                                                                                "finder": {
+                                                                                                                  "meta":{
+                                                                                                                    "className":"ComponentDescriptor",
+                                                                                                                    "version":1
+                                                                                                                  },
+                                                                                                                  "gizmo":{
+                                                                                                                    "applicationFinder": {
+                                                                                                                      "meta":{
+                                                                                                                        "className":"ApplicationDescriptor",
+                                                                                                                        "version":1
+                                                                                                                      },
+                                                                                                                      "gizmo":{
+                                                                                                                        "deviceFinder": {
+                                                                                                                          "meta":{
+                                                                                                                            "className":"DeviceReference",
+                                                                                                                            "version":0
+                                                                                                                          },
+                                                                                                                          "gizmo":{
+                                                                                                                            "reference": {
+                                                                                                                              "meta":{
+                                                                                                                                "className":"NamedFinderReference",
+                                                                                                                                "version":0
+                                                                                                                              },
+                                                                                                                              "gizmo":{
+                                                                                                                                "id": { "string": "local" }
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        },
+                                                                                                                        "applicationSelector": {
+                                                                                                                          "meta":{
+                                                                                                                            "className":"Expression",
+                                                                                                                            "version":0
+                                                                                                                          },
+                                                                                                                          "gizmo":{
+                                                                                                                            "text": { "string": "cef" }
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    },
+                                                                                                                    "componentSelector": {
+                                                                                                                      "meta":{
+                                                                                                                        "className":"Expression",
+                                                                                                                        "version":0
+                                                                                                                      },
+                                                                                                                      "gizmo":{
+                                                                                                                        "text": { "string": "window" }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "outputVariable": {
+                                                                                                              "meta":{
+                                                                                                                "className":"LeftHandSide",
+                                                                                                                "version":1
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "text": { "string": "img" }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "meta":{
+                                                                                                            "className":"WriteFileStep",
+                                                                                                            "version":2
+                                                                                                          },
+                                                                                                          "gizmo":{
+                                                                                                            "name": {
+                                                                                                              "meta":{
+                                                                                                                "className":"StepName",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "customName": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "comment": {
+                                                                                                              "meta":{
+                                                                                                                "className":"StepComment",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "comment": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "finder": {
+                                                                                                              "meta":{
+                                                                                                                "className":"DeviceFinderWithName",
+                                                                                                                "version":2
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "name": {
+                                                                                                                  "meta":{
+                                                                                                                    "className":"FinderName",
+                                                                                                                    "version":0
+                                                                                                                  },
+                                                                                                                  "gizmo":{
+                                                                                                                    "id": { "string": "" }
+                                                                                                                  }
+                                                                                                                },
+                                                                                                                "finder": {
+                                                                                                                  "meta":{
+                                                                                                                    "className":"DeviceReference",
+                                                                                                                    "version":0
+                                                                                                                  },
+                                                                                                                  "gizmo":{
+                                                                                                                    "reference": {
+                                                                                                                      "meta":{
+                                                                                                                        "className":"PreviousFinderReference",
+                                                                                                                        "version":0
+                                                                                                                      },
+                                                                                                                      "gizmo":{
+                                                                                                                        
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "contents": {
+                                                                                                              "meta":{
+                                                                                                                "className":"Expression",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "text": { "string": "=img" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "file": {
+                                                                                                              "meta":{
+                                                                                                                "className":"DirectFileReference",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "file": {
+                                                                                                                  "meta":{
+                                                                                                                    "className":"Expression",
+                                                                                                                    "version":0
+                                                                                                                  },
+                                                                                                                  "gizmo":{
+                                                                                                                    "text": { "string": "=ScreenshotPath.Path+ random(1,100000) + \".jpg\"" }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "meta":{
+                                                                                                            "className":"ThrowStep",
+                                                                                                            "version":1
+                                                                                                          },
+                                                                                                          "gizmo":{
+                                                                                                            "name": {
+                                                                                                              "meta":{
+                                                                                                                "className":"StepName",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "customName": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "comment": {
+                                                                                                              "meta":{
+                                                                                                                "className":"StepComment",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "comment": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "exception": {
+                                                                                                              "meta":{
+                                                                                                                "className":"ExceptionUse",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "id": { "string": "TimeOutError" }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }]
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }]
+                                                                                              }
+                                                                                            },
+                                                                                            {
+                                                                                              "meta":{
+                                                                                                "className":"GuardedChoiceStep",
+                                                                                                "version":1
+                                                                                              },
+                                                                                              "gizmo":{
+                                                                                                "name": {
+                                                                                                  "meta":{
+                                                                                                    "className":"StepName",
+                                                                                                    "version":0
+                                                                                                  },
+                                                                                                  "gizmo":{
+                                                                                                    "customName": { "string": "Extract Value" }
+                                                                                                  }
+                                                                                                },
+                                                                                                "comment": {
+                                                                                                  "meta":{
+                                                                                                    "className":"StepComment",
+                                                                                                    "version":0
+                                                                                                  },
+                                                                                                  "gizmo":{
+                                                                                                    "comment": { "string": "" }
+                                                                                                  }
+                                                                                                },
+                                                                                                "branches": [{
+                                                                                                  "meta":{
+                                                                                                    "className":"GuardAndBlock",
+                                                                                                    "version":3
+                                                                                                  },
+                                                                                                  "gizmo":{
+                                                                                                    "guard": {
+                                                                                                      "meta":{
+                                                                                                        "className":"LocationFoundGuard",
+                                                                                                        "version":0
+                                                                                                      },
+                                                                                                      "gizmo":{
+                                                                                                        "finder": {
+                                                                                                          "meta":{
+                                                                                                            "className":"ComponentFinderWithName",
+                                                                                                            "version":8
+                                                                                                          },
+                                                                                                          "gizmo":{
+                                                                                                            "name": {
+                                                                                                              "meta":{
+                                                                                                                "className":"FinderName",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "id": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "finder": {
+                                                                                                              "meta":{
+                                                                                                                "className":"ComponentDescriptor",
+                                                                                                                "version":1
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "applicationFinder": {
+                                                                                                                  "meta":{
+                                                                                                                    "className":"ApplicationDescriptor",
+                                                                                                                    "version":1
+                                                                                                                  },
+                                                                                                                  "gizmo":{
+                                                                                                                    "deviceFinder": {
+                                                                                                                      "meta":{
+                                                                                                                        "className":"DeviceReference",
+                                                                                                                        "version":0
+                                                                                                                      },
+                                                                                                                      "gizmo":{
+                                                                                                                        "reference": {
+                                                                                                                          "meta":{
+                                                                                                                            "className":"NamedFinderReference",
+                                                                                                                            "version":0
+                                                                                                                          },
+                                                                                                                          "gizmo":{
+                                                                                                                            "id": { "string": "local" }
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    },
+                                                                                                                    "applicationSelector": {
+                                                                                                                      "meta":{
+                                                                                                                        "className":"Expression",
+                                                                                                                        "version":0
+                                                                                                                      },
+                                                                                                                      "gizmo":{
+                                                                                                                        "text": { "string": "cef" }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                },
+                                                                                                                "componentSelector": {
+                                                                                                                  "meta":{
+                                                                                                                    "className":"Expression",
+                                                                                                                    "version":0
+                                                                                                                  },
+                                                                                                                  "gizmo":{
+                                                                                                                    "text": { "string": "INPUT[name=\"InputField\"]" }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    },
+                                                                                                    "block": {
+                                                                                                      "meta":{
+                                                                                                        "className":"Block",
+                                                                                                        "version":2
+                                                                                                      },
+                                                                                                      "gizmo":{
+                                                                                                        "steps": [{
+                                                                                                          "meta":{
+                                                                                                            "className":"ConverterGroupStep",
+                                                                                                            "version":0
+                                                                                                          },
+                                                                                                          "gizmo":{
+                                                                                                            "name": {
+                                                                                                              "meta":{
+                                                                                                                "className":"StepName",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "customName": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "comment": {
+                                                                                                              "meta":{
+                                                                                                                "className":"StepComment",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "comment": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "converterSource": {
+                                                                                                              "meta":{
+                                                                                                                "className":"ExtractValueSource",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "finder": {
+                                                                                                                  "meta":{
+                                                                                                                    "className":"ComponentFinderWithName",
+                                                                                                                    "version":8
+                                                                                                                  },
+                                                                                                                  "gizmo":{
+                                                                                                                    "name": {
+                                                                                                                      "meta":{
+                                                                                                                        "className":"FinderName",
+                                                                                                                        "version":0
+                                                                                                                      },
+                                                                                                                      "gizmo":{
+                                                                                                                        "id": { "string": "" }
+                                                                                                                      }
+                                                                                                                    },
+                                                                                                                    "finder": {
+                                                                                                                      "meta":{
+                                                                                                                        "className":"ComponentReference",
+                                                                                                                        "version":0
+                                                                                                                      },
+                                                                                                                      "gizmo":{
+                                                                                                                        "reference": {
+                                                                                                                          "meta":{
+                                                                                                                            "className":"PreviousFinderReference",
+                                                                                                                            "version":0
+                                                                                                                          },
+                                                                                                                          "gizmo":{
+                                                                                                                            
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                },
+                                                                                                                "extractionType": {
+                                                                                                                  "meta":{
+                                                                                                                    "className":"AttributeExtraction",
+                                                                                                                    "version":0
+                                                                                                                  },
+                                                                                                                  "gizmo":{
+                                                                                                                    "name": {
+                                                                                                                      "meta":{
+                                                                                                                        "className":"Expression",
+                                                                                                                        "version":0
+                                                                                                                      },
+                                                                                                                      "gizmo":{
+                                                                                                                        "text": { "string": "value" }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "block": {
+                                                                                                              "meta":{
+                                                                                                                "className":"Block",
+                                                                                                                "version":2
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "steps": [{
+                                                                                                                  "meta":{
+                                                                                                                    "className":"StoreCurrentInStep",
+                                                                                                                    "version":0
+                                                                                                                  },
+                                                                                                                  "gizmo":{
+                                                                                                                    "name": {
+                                                                                                                      "meta":{
+                                                                                                                        "className":"StepName",
+                                                                                                                        "version":0
+                                                                                                                      },
+                                                                                                                      "gizmo":{
+                                                                                                                        "customName": { "string": "" }
+                                                                                                                      }
+                                                                                                                    },
+                                                                                                                    "comment": {
+                                                                                                                      "meta":{
+                                                                                                                        "className":"StepComment",
+                                                                                                                        "version":0
+                                                                                                                      },
+                                                                                                                      "gizmo":{
+                                                                                                                        "comment": { "string": "" }
+                                                                                                                      }
+                                                                                                                    },
+                                                                                                                    "leftHandSide": {
+                                                                                                                      "meta":{
+                                                                                                                        "className":"LeftHandSide",
+                                                                                                                        "version":1
+                                                                                                                      },
+                                                                                                                      "gizmo":{
+                                                                                                                        "text": { "string": "status" }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }]
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }]
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                },
+                                                                                                {
+                                                                                                  "meta":{
+                                                                                                    "className":"GuardAndBlock",
+                                                                                                    "version":3
+                                                                                                  },
+                                                                                                  "gizmo":{
+                                                                                                    "guard": {
+                                                                                                      "meta":{
+                                                                                                        "className":"TimeOutGuard",
+                                                                                                        "version":0
+                                                                                                      },
+                                                                                                      "gizmo":{
+                                                                                                        "seconds": {
+                                                                                                          "meta":{
+                                                                                                            "className":"Expression",
+                                                                                                            "version":0
+                                                                                                          },
+                                                                                                          "gizmo":{
+                                                                                                            "text": { "string": "60" }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    },
+                                                                                                    "block": {
+                                                                                                      "meta":{
+                                                                                                        "className":"Block",
+                                                                                                        "version":2
+                                                                                                      },
+                                                                                                      "gizmo":{
+                                                                                                        "steps": [{
+                                                                                                          "meta":{
+                                                                                                            "className":"ThrowStep",
+                                                                                                            "version":1
+                                                                                                          },
+                                                                                                          "gizmo":{
+                                                                                                            "name": {
+                                                                                                              "meta":{
+                                                                                                                "className":"StepName",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "customName": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "comment": {
+                                                                                                              "meta":{
+                                                                                                                "className":"StepComment",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "comment": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "exception": {
+                                                                                                              "meta":{
+                                                                                                                "className":"ExceptionUse",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "id": { "string": "TimeOutError" }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }]
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }]
+                                                                                              }
+                                                                                            },
+                                                                                            {
+                                                                                              "meta":{
+                                                                                                "className":"ConditionalStep",
+                                                                                                "version":1
+                                                                                              },
+                                                                                              "gizmo":{
+                                                                                                "name": {
+                                                                                                  "meta":{
+                                                                                                    "className":"StepName",
+                                                                                                    "version":0
+                                                                                                  },
+                                                                                                  "gizmo":{
+                                                                                                    "customName": { "string": "" }
+                                                                                                  }
+                                                                                                },
+                                                                                                "comment": {
+                                                                                                  "meta":{
+                                                                                                    "className":"StepComment",
+                                                                                                    "version":0
+                                                                                                  },
+                                                                                                  "gizmo":{
+                                                                                                    "comment": { "string": "" }
+                                                                                                  }
+                                                                                                },
+                                                                                                "branches": [{
+                                                                                                  "meta":{
+                                                                                                    "className":"ConditionAndBlock",
+                                                                                                    "version":2
+                                                                                                  },
+                                                                                                  "gizmo":{
+                                                                                                    "condition": {
                                                                                                       "meta":{
                                                                                                         "className":"Expression",
                                                                                                         "version":0
                                                                                                       },
                                                                                                       "gizmo":{
-                                                                                                        "text": { "string": "=img" }
+                                                                                                        "text": { "string": "=contains(status,\"PDF creato\")" }
                                                                                                       }
                                                                                                     },
-                                                                                                    "file": {
+                                                                                                    "block": {
                                                                                                       "meta":{
-                                                                                                        "className":"DirectFileReference",
-                                                                                                        "version":0
+                                                                                                        "className":"Block",
+                                                                                                        "version":2
                                                                                                       },
                                                                                                       "gizmo":{
-                                                                                                        "file": {
+                                                                                                        "steps": [{
                                                                                                           "meta":{
-                                                                                                            "className":"Expression",
-                                                                                                            "version":0
+                                                                                                            "className":"BreakStep",
+                                                                                                            "version":1
                                                                                                           },
                                                                                                           "gizmo":{
-                                                                                                            "text": { "string": "=ScreenshotPath.Path+ random(1,100000) + \".jpg\"" }
+                                                                                                            "name": {
+                                                                                                              "meta":{
+                                                                                                                "className":"StepName",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "customName": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "comment": {
+                                                                                                              "meta":{
+                                                                                                                "className":"StepComment",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "comment": { "string": "" }
+                                                                                                              }
+                                                                                                            }
                                                                                                           }
-                                                                                                        }
+                                                                                                        }]
                                                                                                       }
                                                                                                     }
                                                                                                   }
                                                                                                 },
                                                                                                 {
                                                                                                   "meta":{
-                                                                                                    "className":"ThrowStep",
-                                                                                                    "version":1
+                                                                                                    "className":"ConditionAndBlock",
+                                                                                                    "version":2
                                                                                                   },
                                                                                                   "gizmo":{
-                                                                                                    "name": {
+                                                                                                    "condition": {
                                                                                                       "meta":{
-                                                                                                        "className":"StepName",
+                                                                                                        "className":"Expression",
                                                                                                         "version":0
                                                                                                       },
                                                                                                       "gizmo":{
-                                                                                                        "customName": { "string": "" }
+                                                                                                        "text": { "string": "=index &gt; 10" }
                                                                                                       }
                                                                                                     },
-                                                                                                    "comment": {
+                                                                                                    "block": {
                                                                                                       "meta":{
-                                                                                                        "className":"StepComment",
-                                                                                                        "version":0
+                                                                                                        "className":"Block",
+                                                                                                        "version":2
                                                                                                       },
                                                                                                       "gizmo":{
-                                                                                                        "comment": { "string": "" }
-                                                                                                      }
-                                                                                                    },
-                                                                                                    "exception": {
-                                                                                                      "meta":{
-                                                                                                        "className":"ExceptionUse",
-                                                                                                        "version":0
-                                                                                                      },
-                                                                                                      "gizmo":{
-                                                                                                        "id": { "string": "TimeOutError" }
+                                                                                                        "steps": [{
+                                                                                                          "meta":{
+                                                                                                            "className":"ThrowStep",
+                                                                                                            "version":1
+                                                                                                          },
+                                                                                                          "gizmo":{
+                                                                                                            "name": {
+                                                                                                              "meta":{
+                                                                                                                "className":"StepName",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "customName": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "comment": {
+                                                                                                              "meta":{
+                                                                                                                "className":"StepComment",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "comment": { "string": "" }
+                                                                                                              }
+                                                                                                            },
+                                                                                                            "exception": {
+                                                                                                              "meta":{
+                                                                                                                "className":"ExceptionUse",
+                                                                                                                "version":0
+                                                                                                              },
+                                                                                                              "gizmo":{
+                                                                                                                "id": { "string": "ErrorSaveFile" }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }]
                                                                                                       }
                                                                                                     }
                                                                                                   }
                                                                                                 }]
                                                                                               }
-                                                                                            }
+                                                                                            }]
                                                                                           }
-                                                                                        }]
+                                                                                        }
                                                                                       }
                                                                                     },
                                                                                     {
@@ -19247,7 +20022,7 @@
                                                                                         "version":0
                                                                                       },
                                                                                       "gizmo":{
-                                                                                        "text": { "string": "60" }
+                                                                                        "text": { "string": "120" }
                                                                                       }
                                                                                     }
                                                                                   }
@@ -20553,7 +21328,7 @@
                                                                                         "version":0
                                                                                       },
                                                                                       "gizmo":{
-                                                                                        "text": { "string": "4" }
+                                                                                        "text": { "string": "10" }
                                                                                       }
                                                                                     }
                                                                                   }
@@ -21148,6 +21923,66 @@
                                                                                 "text": { "string": "pdf" }
                                                                               }
                                                                             }
+                                                                          }
+                                                                        },
+                                                                        {
+                                                                          "meta":{
+                                                                            "className":"GuardedChoiceStep",
+                                                                            "version":1
+                                                                          },
+                                                                          "gizmo":{
+                                                                            "name": {
+                                                                              "meta":{
+                                                                                "className":"StepName",
+                                                                                "version":0
+                                                                              },
+                                                                              "gizmo":{
+                                                                                "customName": { "string": "" }
+                                                                              }
+                                                                            },
+                                                                            "comment": {
+                                                                              "meta":{
+                                                                                "className":"StepComment",
+                                                                                "version":0
+                                                                              },
+                                                                              "gizmo":{
+                                                                                "comment": { "string": "" }
+                                                                              }
+                                                                            },
+                                                                            "branches": [{
+                                                                              "meta":{
+                                                                                "className":"GuardAndBlock",
+                                                                                "version":3
+                                                                              },
+                                                                              "gizmo":{
+                                                                                "guard": {
+                                                                                  "meta":{
+                                                                                    "className":"TimeOutGuard",
+                                                                                    "version":0
+                                                                                  },
+                                                                                  "gizmo":{
+                                                                                    "seconds": {
+                                                                                      "meta":{
+                                                                                        "className":"Expression",
+                                                                                        "version":0
+                                                                                      },
+                                                                                      "gizmo":{
+                                                                                        "text": { "string": "2" }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                },
+                                                                                "block": {
+                                                                                  "meta":{
+                                                                                    "className":"Block",
+                                                                                    "version":2
+                                                                                  },
+                                                                                  "gizmo":{
+                                                                                    "steps": []
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }]
                                                                           }
                                                                         }]
                                                                       }

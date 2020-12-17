@@ -3478,16 +3478,7 @@
 select CurrentLegalEntity as RagSoc,Plateid as targa, AssignmentStatus,
 if(AssignmentStatus = 'Pool' || AssignmentStatus= 'Available', 'A DISPOSIZIONE',CurrentResource ) risorsa,
 -- MapBuGen.BUGen,
-if(AssignmentStatus = 'Pool' || AssignmentStatus= 'Available', 
-		-- se seconda parte BU = Off tutto maiuscolo altrimenti maiuscolo solo prima parte
-        if(substring(MapBuGen.BUGen,Locate('_',MapBuGen.BUGen)+1, Locate('_',MapBuGen.BUGen, Locate('_',MapBuGen.BUGen)+1) - (Locate('_',MapBuGen.BUGen)+1)) = 'Off',
-					upper(MapBuGen.BUGen),
-                    Concat(Upper(left(MapBuGen.BUGen,Instr(MapBuGen.BUGen,'_')-1)), Substring(MapBuGen.BUGen,Instr(MapBuGen.BUGen,'_')) )) ,
-         -- se seconda parte BU = Off tutto maiuscolo altrimenti maiuscolo solo prima parte
-         if(substring(BU,Locate('_',BU)+1, Locate('_',BU, Locate('_',BU)+1) - (Locate('_',BU)+1)) = 'Off',
-					upper(BU),
-                    Concat(Upper(left(BU,Instr(BU,'_')-1)), Substring(BU,Instr(BU,'_')) ))
-	) BU ,
+if(AssignmentStatus = 'Pool' || AssignmentStatus= 'Available', MapBuGen.BUGen,BU) BU ,
     MapSoc.CodSocietà as CodSap
 from reply_rpa.ca_viacard_inputreportauto
 Left join reply_rpa.ca_viacard_mappaturabugeneriche MapBuGen on ca_viacard_inputreportauto.CurrentLegalEntity = MapBuGen.Societa
@@ -3546,11 +3537,17 @@ from viacard left join Amministratori on viacard.risorsa = Amministratori.Cognom
 )
  
  
-  select targa, BU, risorsa, FlagIndetr, CodSap, RagSoc, 'reportauto' as Sorgente from reportauto_amministratori
+  select targa, 
+   if(substring(BU,Locate('_',BU)+1, Locate('_',BU, Locate('_',BU)+1) - (Locate('_',BU)+1)) = 'Off', upper(BU), Concat(Upper(left(BU,Instr(BU,'_')-1)), Substring(BU,Instr(BU,'_')) )) as BU, 
+	Upper(risorsa) risorsa, FlagIndetr, CodSap, RagSoc, 'reportauto' as Sorgente from reportauto_amministratori
   union all
-  select NrViaCard, BU, risorsa, FlagIndetr, CodSAP, RagSoc, 'viacard' as Sorgente from viacard_amministratori   where NrViaCard is not null   
+  select NrViaCard, 
+    if(substring(BU,Locate('_',BU)+1, Locate('_',BU, Locate('_',BU)+1) - (Locate('_',BU)+1)) = 'Off', upper(BU), Concat(Upper(left(BU,Instr(BU,'_')-1)), Substring(BU,Instr(BU,'_')) )) as BU,  
+  Upper(risorsa) risorsa, FlagIndetr, CodSAP, RagSoc, 'viacard' as Sorgente from viacard_amministratori   where NrViaCard is not null   
   union all
-  select NrTelepass, BU, risorsa, FlagIndetr, CodSap, RagSoc, 'viacard_telepass' as Sorgente from viacard_amministratori where NrTelepass is not null
+  select NrTelepass, 
+    if(substring(BU,Locate('_',BU)+1, Locate('_',BU, Locate('_',BU)+1) - (Locate('_',BU)+1)) = 'Off', upper(BU), Concat(Upper(left(BU,Instr(BU,'_')-1)), Substring(BU,Instr(BU,'_')) )) as BU, 
+  Upper(risorsa) risorsa, FlagIndetr, CodSap, RagSoc, 'viacard_telepass' as Sorgente from viacard_amministratori where NrTelepass is not null
  "</property>
           <property name="columnAttributeMappings" class="kapow.robot.plugin.common.support.database.ColumnAttributeMappings">
             <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
