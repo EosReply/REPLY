@@ -13044,7 +13044,7 @@
                                         "version":0
                                       },
                                       "gizmo":{
-                                        "text": { "string": "DIV:nth-of-type(6) SPAN[class=\"sapUiIcon sapUiIconMirrorInRTL sapUiIconPointer sapMTokenIcon\"]" }
+                                        "text": { "string": "DIV:nth-of-type(6) DIV &gt; SPAN[class=\"sapUiIcon sapUiIconMirrorInRTL sapUiIconPointer sapMTokenIcon\"]" }
                                       }
                                     }
                                   }
