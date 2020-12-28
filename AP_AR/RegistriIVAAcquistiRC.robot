@@ -257,7 +257,7 @@
             <property name="lastKnownAttributeType" idref="1"/>
           </property>
           <property name="NomeJob" class="AttributeAssignment">
-            <property name="attributeValue" class="String">ALL RC UE</property>
+            <property name="attributeValue" class="String">ALL RC IT,ALL RC EXUE,ALL RC UE</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="1"/>
           </property>
