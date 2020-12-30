@@ -4229,6 +4229,117 @@
                         "version":0
                       },
                       "gizmo":{
+                        "customName": { "string": "" }
+                      }
+                    },
+                    "comment": {
+                      "meta":{
+                        "className":"StepComment",
+                        "version":0
+                      },
+                      "gizmo":{
+                        "comment": { "string": "" }
+                      }
+                    },
+                    "branches": [{
+                      "meta":{
+                        "className":"GuardAndBlock",
+                        "version":3
+                      },
+                      "gizmo":{
+                        "guard": {
+                          "meta":{
+                            "className":"TreeStopsChangingGuard",
+                            "version":0
+                          },
+                          "gizmo":{
+                            "finder": {
+                              "meta":{
+                                "className":"ApplicationFinderWithName",
+                                "version":5
+                              },
+                              "gizmo":{
+                                "name": {
+                                  "meta":{
+                                    "className":"FinderName",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    "id": { "string": "" }
+                                  }
+                                },
+                                "finder": {
+                                  "meta":{
+                                    "className":"ApplicationDescriptor",
+                                    "version":1
+                                  },
+                                  "gizmo":{
+                                    "deviceFinder": {
+                                      "meta":{
+                                        "className":"DeviceReference",
+                                        "version":0
+                                      },
+                                      "gizmo":{
+                                        "reference": {
+                                          "meta":{
+                                            "className":"NamedFinderReference",
+                                            "version":0
+                                          },
+                                          "gizmo":{
+                                            "id": { "string": "local" }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "applicationSelector": {
+                                      "meta":{
+                                        "className":"Expression",
+                                        "version":0
+                                      },
+                                      "gizmo":{
+                                        "text": { "string": "cef" }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "milliseconds": {
+                              "meta":{
+                                "className":"Expression",
+                                "version":0
+                              },
+                              "gizmo":{
+                                "text": { "string": "2000" }
+                              }
+                            }
+                          }
+                        },
+                        "block": {
+                          "meta":{
+                            "className":"Block",
+                            "version":2
+                          },
+                          "gizmo":{
+                            "steps": []
+                          }
+                        }
+                      }
+                    }]
+                  }
+                },
+                {
+                  "meta":{
+                    "className":"GuardedChoiceStep",
+                    "version":1
+                  },
+                  "gizmo":{
+                    "name": {
+                      "meta":{
+                        "className":"StepName",
+                        "version":0
+                      },
+                      "gizmo":{
                         "customName": { "string": "ConfigurazioneEstrazioneDati.ModelloJob1" }
                       }
                     },
@@ -4569,6 +4680,41 @@
                                   },
                                   "gizmo":{
                                     "text": { "string": "1" }
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "meta":{
+                                "className":"WriteLogStep",
+                                "version":1
+                              },
+                              "gizmo":{
+                                "name": {
+                                  "meta":{
+                                    "className":"StepName",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    "customName": { "string": "" }
+                                  }
+                                },
+                                "comment": {
+                                  "meta":{
+                                    "className":"StepComment",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    "comment": { "string": "" }
+                                  }
+                                },
+                                "message": {
+                                  "meta":{
+                                    "className":"Expression",
+                                    "version":0
+                                  },
+                                  "gizmo":{
+                                    "text": { "string": "=\"NomeJob: \" + ConfigurazioneEstrazioneDati.ModelloJob1+\"_\"+ConfigurazioneEstrazioneDati.CodiceSocietà+\"_\"+ConfigurazioneEstrazioneDati.DataString" }
                                   }
                                 }
                               }
