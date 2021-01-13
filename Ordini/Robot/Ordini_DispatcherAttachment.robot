@@ -160,7 +160,7 @@ Fatto suca
             <property name="lastKnownAttributeType" idref="3"/>
           </property>
           <property name="CheckFileSharepoint" class="AttributeAssignment">
-            <property name="attributeValue" class="String">http://localhost:51677/common/CheckFileSharepoint</property>
+            <property name="attributeValue" class="String">http://to0eosrpat01/eoscommon/common/CheckFileSharepoint</property>
             <property name="currentlyAssigned" class="Boolean">true</property>
             <property name="lastKnownAttributeType" idref="3"/>
           </property>
@@ -333,12 +333,14 @@ Fatto suca
     </object>
     <object class="Variable" serializationversion="1">
       <property name="name" class="String">year</property>
+      <property name="global" class="Boolean">true</property>
       <property name="initialAssignment" class="InitialVariableAssignment">
         <property name="type" idref="10"/>
       </property>
     </object>
     <object class="Variable" serializationversion="1">
       <property name="name" class="String">month</property>
+      <property name="global" class="Boolean">true</property>
       <property name="initialAssignment" class="InitialVariableAssignment">
         <property name="type" idref="10"/>
       </property>
@@ -787,10 +789,8 @@ and DateTimeExtraction &lt; (select DateTimeExtraction from ordini_email where o
                   <property name="name" class="String">Ordine.DataOrdine</property>
                 </property>
               </element>
-              <element class="ExtractYear" serializationversion="1">
-                <property name="pattern" class="kapow.robot.plugin.common.support.expression.stringexpr.YearExtractorPatternValueStringExpression">
-                  <property name="value" class="String">yy</property>
-                </property>
+              <element class="FormatDate">
+                <property name="pattern" class="String">yyyy</property>
               </element>
             </property>
           </property>

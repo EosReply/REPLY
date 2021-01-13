@@ -45,6 +45,24 @@
           }
         }
       }
+    },
+    {
+      "meta":{
+        "className":"VariableDef",
+        "version":0
+      },
+      "gizmo":{
+        "id": { "string": "PathScrenShotLog" },
+        "typ": {
+          "meta":{
+            "className":"TypeUse",
+            "version":0
+          },
+          "gizmo":{
+            "id": { "string": "Text" }
+          }
+        }
+      }
     }],
     "treeModes": [],
     "types": [],
@@ -719,6 +737,32 @@
                                                                   },
                                                                   "gizmo":{
                                                                     "text": { "string": "=InputPar.UrlApp" }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        },
+                                                        {
+                                                          "meta":{
+                                                            "className":"DasFieldValue",
+                                                            "version":0
+                                                          },
+                                                          "gizmo":{
+                                                            "name": { "string": "Accept Language List" },
+                                                            "value": {
+                                                              "meta":{
+                                                                "className":"ExpressionDasValue",
+                                                                "version":0
+                                                              },
+                                                              "gizmo":{
+                                                                "expression": {
+                                                                  "meta":{
+                                                                    "className":"Expression",
+                                                                    "version":0
+                                                                  },
+                                                                  "gizmo":{
+                                                                    "text": { "string": "it-IT" }
                                                                   }
                                                                 }
                                                               }
@@ -2560,7 +2604,7 @@
                                                     "version":0
                                                   },
                                                   "gizmo":{
-                                                    "text": { "string": "=\"\\\\\\\\to0eosrpat01\\\\Temporary\\\\screen\\\\RitenuteAutonomi\\\\\" + random(1,100000) + \"ExtractFirstRagSocFromPanel.jpg\"" }
+                                                    "text": { "string": "=PathScrenShotLog + random(1,100000) + \"ExtractFirstRagSocFromPanel.jpg\"" }
                                                   }
                                                 }
                                               }
@@ -2879,7 +2923,7 @@
                                                     "version":0
                                                   },
                                                   "gizmo":{
-                                                    "text": { "string": "=\"\\\\\\\\to0eosrpat01\\\\Temporary\\\\screen\\\\RitenuteAutonomi\\\\\" + random(1,100000) + \"RagSocNotCorresponding.jpg\"" }
+                                                    "text": { "string": "=PathScrenShotLog + random(1,100000) + \"RagSocNotCorresponding.jpg\"" }
                                                   }
                                                 }
                                               }
@@ -3409,7 +3453,7 @@
                                                     "version":0
                                                   },
                                                   "gizmo":{
-                                                    "text": { "string": "=\"\\\\\\\\to0eosrpat01\\\\Temporary\\\\screen\\\\RitenuteAutonomi\\\\\" + random(1,100000) + \".jpg\"" }
+                                                    "text": { "string": "=PathScrenShotLog + random(1,100000) + \".jpg\"" }
                                                   }
                                                 }
                                               }
@@ -4171,7 +4215,7 @@
                                         "version":0
                                       },
                                       "gizmo":{
-                                        "text": { "string": "=\"\\\\\\\\to0eosrpat01\\\\Temporary\\\\screen\\\\RitenuteAutonomi\\\\\" + random(1,100000) + \".jpg\"" }
+                                        "text": { "string": "=PathScrenShotLog + random(1,100000) + \".jpg\"" }
                                       }
                                     }
                                   }
@@ -5102,7 +5146,7 @@
                                         "version":0
                                       },
                                       "gizmo":{
-                                        "text": { "string": "=\"\\\\\\\\to0eosrpat01\\\\Temporary\\\\screen\\\\RitenuteAutonomi\\\\\" + random(1,100000) + \".jpg\"" }
+                                        "text": { "string": "=PathScrenShotLog + random(1,100000) + \".jpg\"" }
                                       }
                                     }
                                   }
@@ -5732,7 +5776,7 @@
                                                 "version":0
                                               },
                                               "gizmo":{
-                                                "text": { "string": "=\"\\\\\\\\to0eosrpat01\\\\Temporary\\\\screen\\\\RitenuteAutonomi\\\\\" + random(1,100000) + \".jpg\"" }
+                                                "text": { "string": "=PathScrenShotLog + random(1,100000) + \".jpg\"" }
                                               }
                                             }
                                           }
@@ -6295,7 +6339,7 @@
                                                 "version":0
                                               },
                                               "gizmo":{
-                                                "text": { "string": "=\"\\\\\\\\to0eosrpat01\\\\Temporary\\\\screen\\\\RitenuteAutonomi\\\\\" + random(1,100000) + \"ExtractImageTitle.jpg\"" }
+                                                "text": { "string": "=PathScrenShotLog + random(1,100000) + \"ExtractImageTitle.jpg\"" }
                                               }
                                             }
                                           }
@@ -6379,7 +6423,7 @@
                                     "version":0
                                   },
                                   "gizmo":{
-                                    "text": { "string": "=ImageTitle ==\"Created\"" }
+                                    "text": { "string": "=ImageTitle ==\"Creato\"" }
                                   }
                                 },
                                 "block": {
@@ -7149,7 +7193,7 @@
                                         "version":0
                                       },
                                       "gizmo":{
-                                        "text": { "string": "=\"\\\\\\\\to0eosrpat01\\\\Temporary\\\\screen\\\\RitenuteAutonomi\\\\\" + random(1,100000) + \"IconDownloadReport.jpg\"" }
+                                        "text": { "string": "=PathScrenShotLog + random(1,100000) + \"IconDownloadReport.jpg\"" }
                                       }
                                     }
                                   }
@@ -7644,7 +7688,7 @@
                                         "version":0
                                       },
                                       "gizmo":{
-                                        "text": { "string": "=\"\\\\\\\\to0eosrpat01\\\\Temporary\\\\screen\\\\RitenuteAutonomi\\\\\" + random(1,100000) + \".jpg\"" }
+                                        "text": { "string": "=PathScrenShotLog + random(1,100000) + \".jpg\"" }
                                       }
                                     }
                                   }
@@ -8174,7 +8218,7 @@
                                         "version":0
                                       },
                                       "gizmo":{
-                                        "text": { "string": "=\"\\\\\\\\to0eosrpat01\\\\Temporary\\\\screen\\\\RitenuteAutonomi\\\\\" + random(1,100000) + \".jpg\"" }
+                                        "text": { "string": "=PathScrenShotLog + random(1,100000) + \".jpg\"" }
                                       }
                                     }
                                   }
@@ -8917,7 +8961,7 @@
                             "version":0
                           },
                           "gizmo":{
-                            "text": { "string": "=ErrorDesc" }
+                            "text": { "string": "Errore:Ragione sociale non trovata" }
                           }
                         },
                         "variable": {
