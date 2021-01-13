@@ -789,10 +789,8 @@ and DateTimeExtraction &lt; (select DateTimeExtraction from ordini_email where o
                   <property name="name" class="String">Ordine.DataOrdine</property>
                 </property>
               </element>
-              <element class="ExtractYear" serializationversion="1">
-                <property name="pattern" class="kapow.robot.plugin.common.support.expression.stringexpr.YearExtractorPatternValueStringExpression">
-                  <property name="value" class="String">yyyy</property>
-                </property>
+              <element class="FormatDate">
+                <property name="pattern" class="String">yyyy</property>
               </element>
             </property>
           </property>
