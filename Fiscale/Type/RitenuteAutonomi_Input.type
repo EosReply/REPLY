@@ -32,7 +32,7 @@
     <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
       <property name="name" class="String">Password</property>
       <property name="type" class="kapow.robot.plugin.common.domain.PasswordAttributeType"/>
-      <property name="defaultValue" class="String">Reply2020</property>
+      <property name="defaultValue" class="String">Reply2021</property>
     </object>
   </property>
 </object>
