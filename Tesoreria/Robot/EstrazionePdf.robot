@@ -2269,7 +2269,7 @@
             <property name="text" class="String">mailConfiguration.soggetto + Credenziali.Source</property>
           </property>
           <property name="message" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-            <property name="value" class="String">Errore Generico nel processare piu di 40 elementi</property>
+            <property name="value" class="String">Errore Generico nel processare piu di 20 elementi</property>
           </property>
           <property name="mailServer" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -2439,7 +2439,7 @@
             <property name="text" class="String">mailConfiguration.soggetto + Credenziali.Source</property>
           </property>
           <property name="message" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-            <property name="value" class="String">Errore Generico nel processare piu di 40 elementi</property>
+            <property name="value" class="String">Errore Generico nel processare piu di 20 elementi</property>
           </property>
           <property name="mailServer" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
