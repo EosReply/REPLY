@@ -2129,7 +2129,7 @@
         <property name="name" idref="38"/>
         <property name="stepAction" class="TestValue" serializationversion="0">
           <property name="condition" class="Expression" serializationversion="1">
-            <property name="text" class="String">PitecoOpened == true</property>
+            <property name="text" class="String">PitecoOpened == false</property>
           </property>
         </property>
         <property name="elementFinders" class="ElementFinders"/>
@@ -2488,7 +2488,7 @@
           <property name="message" class="Expression" serializationversion="1">
             <property name="text" class="String">"Robot Name: " +Robot.name+ "\n" +
 "Robot ExecutionID: " +Robot.executionId+ "\n" +
-"Robot Message: " + &gt;&gt;File Excel non riconosciuto &lt;&lt; </property>
+"Robot Message: " + &gt;&gt;Errore durante la chiusura di piteco &lt;&lt; </property>
           </property>
           <property name="mailServer" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
