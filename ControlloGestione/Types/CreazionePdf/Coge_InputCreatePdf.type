@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="kapow.robot.common.domain.Type" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>11.0.0.1</version>
+    </saved-by-versions>
+    <file-type>type</file-type>
+  </prologue>
+  <property name="attributes" class="kapow.robot.common.domain.Attributes">
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">SoloMappatura</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.BooleanAttributeType"/>
+      <property name="defaultValue" class="String">true</property>
+      <property name="required" class="Boolean">true</property>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Web</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.BooleanAttributeType"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">InputFile</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.BinaryAttributeType"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">PathOutputExcel</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="0"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Configuration</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.BinaryAttributeType"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">PathOutputZip</property>
+      <property name="type" idref="0"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">NameStart</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">PathTempConvert</property>
+      <property name="type" idref="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">PathOutput</property>
+      <property name="type" idref="1"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">PathFolder</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.StringAttributeType" id="2"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">FileName</property>
+      <property name="type" idref="2"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">sheetFinal</property>
+      <property name="type" class="kapow.robot.plugin.common.domain.DoubleAttributeType"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">CompanyName</property>
+      <property name="type" idref="2"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">BUName</property>
+      <property name="type" idref="2"/>
+    </object>
+    <object class="kapow.robot.common.domain.Attribute" serializationversion="0">
+      <property name="name" class="String">Mail</property>
+      <property name="type" idref="2"/>
+    </object>
+  </property>
+</object>
