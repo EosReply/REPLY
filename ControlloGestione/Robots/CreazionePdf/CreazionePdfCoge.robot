@@ -402,7 +402,7 @@
             </property>
           </property>
           <property name="subject" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-            <property name="value" class="String">RPA EstrazioneCespiti - inizio eseuzione</property>
+            <property name="value" class="String">RPA COGE Creazione PDF - inizio eseuzione</property>
           </property>
           <property name="message" class="Expression" serializationversion="1">
             <property name="text" class="String">"Robot Name: " +Robot.name+ "\n" +
@@ -1202,7 +1202,11 @@
           <property name="mode" class="Integer">1</property>
         </property>
         <property name="elementFinders" class="ElementFinders"/>
-        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative"/>
+        </property>
         <property name="comment">
           <null/>
         </property>
@@ -4272,13 +4276,14 @@ Saluti."</property>
             </property>
           </property>
           <property name="subject" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-            <property name="value" class="String">RPA EstrazioneCespiti - Esecuzione Terminata</property>
+            <property name="value" class="String">RPA COGE Creazione PDF - Esecuzione Terminata</property>
           </property>
           <property name="message" class="Expression" serializationversion="1">
             <property name="text" class="String">"Robot Name: " +Robot.name+ "\n" +
 "Robot ExecutionID: " +Robot.executionId+ "\n" +
 "Robot Message: Fine Esecuzione." +
-"FileName :"  + cogeInputCreatePdf.FileName</property>
+"FileName :"  + cogeInputCreatePdf.FileName + 
+"Folder : " +cogeInputCreatePdf.PathFolder </property>
           </property>
           <property name="mailServer" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
@@ -4396,13 +4401,14 @@ Saluti."</property>
             </property>
           </property>
           <property name="subject" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
-            <property name="value" class="String">RPA EstrazioneCespiti - Esecuzione Terminata</property>
+            <property name="value" class="String">RPA COGE Creazione PDF - Esecuzione Terminata</property>
           </property>
           <property name="message" class="Expression" serializationversion="1">
             <property name="text" class="String">"Robot Name: " +Robot.name+ "\n" +
 "Robot ExecutionID: " +Robot.executionId+ "\n" +
 "Robot Message: Fine Esecuzione." +
-"FileName :"  + cogeInputCreatePdf.FileName</property>
+"FileName :"  + cogeInputCreatePdf.FileName + 
+"Folder : " +cogeInputCreatePdf.PathFolder </property>
           </property>
           <property name="mailServer" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
             <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
